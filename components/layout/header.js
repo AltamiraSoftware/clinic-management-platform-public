@@ -9,7 +9,7 @@ export default function Header({ openLogin, openRegister }) {
   const [scrolled, setScrolled] = useState(false);
 
   const authPrimaryClassName =
-    "rounded-xl border border-[#e4efc7] bg-[#c6db8f] px-4 py-2.5 font-semibold text-[#062f40] shadow-[0_14px_30px_rgba(10,77,104,0.22)] transition hover:bg-[#d3e4a6]";
+    "rounded-xl border border-[#eef4d8] bg-[#d6e6ab] px-4 py-2.5 font-semibold text-[#052b37] shadow-[0_14px_30px_rgba(10,77,104,0.22)] transition hover:bg-[#e0ecbc]";
   const authSecondaryClassName =
     "rounded-xl border border-white/24 bg-white/14 px-4 py-2.5 font-semibold text-white shadow-sm transition hover:bg-white/20";
 

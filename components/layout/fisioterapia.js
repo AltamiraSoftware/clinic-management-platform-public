@@ -35,7 +35,7 @@ export default function Fisioterapia() {
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-2xl font-bold text-[#A4BE7B]">Borja Estarellas</h3>
+                <p className="text-2xl font-bold text-[#A4BE7B]">Borja Estarellas</p>
                 <p className="font-medium text-[#A4BE7B]">Fisioterapeuta</p>
                 <p className="text-sm text-[#A4BE7B]">Col. 15388</p>
               </div>

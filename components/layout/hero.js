@@ -52,7 +52,7 @@ export default function Hero() {
       <div className=" max-w-xs text-center mx-auto">
         <IconCheck className=" mx-auto sm:w-16 sm:h-16 2xl:w-24 2xl:h-24 w-14 h-14 text-[#A4BE7B] " />
         <div>
-          <h3 className="text-white! text-center mt-1 font-semibold">Especialistas acreditados</h3>
+          <p className="text-white! text-center mt-1 font-semibold">Especialistas acreditados</p>
           <p className="text-center text-white/80 text-sm">
             Formación universitaria y experiencia clínica
           </p>
@@ -62,7 +62,7 @@ export default function Hero() {
       <div className="mx-auto  max-w-xs text-center gap-4">
         <IconSync className="mx-auto sm:w-16 sm:h-16 2xl:w-24 2xl:h-24 w-14 h-14 text-[#A4BE7B]" />
         <div>
-          <h3 className="text-center text-white! mt-1 font-semibold">Flexibilidad en tu terapia</h3>
+          <p className="text-center text-white! mt-1 font-semibold">Flexibilidad en tu terapia</p>
           <p className="text-center text-white/80 text-sm">
             Terapia online o presencial, fisioterapia a domicilio.
           </p>
@@ -72,7 +72,7 @@ export default function Hero() {
       <div className="mx-auto max-w-xs text-center sm:col-span-2 lg:col-span-1">
         <IconLaptop className="mx-auto lg:mx-auto sm:w-16 sm:h-16 2xl:w-24 2xl:h-24 w-14 h-14 text-[#A4BE7B]" />
         <div className=" mx-auto">
-        <h3 className="text-center text-white! mt-1 font-semibold">Plataforma digital</h3>
+        <p className="text-center text-white! mt-1 font-semibold">Plataforma digital</p>
           <p className="text-white/80 text-sm text-center">
             Administra las citas con tus especialistas desde una única plataforma.
 

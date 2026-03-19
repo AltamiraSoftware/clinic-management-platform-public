@@ -72,7 +72,7 @@ export default function Psicologia({ openRegister }) {
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-2xl font-bold !text-[#0A4D68]">Daniela Lopez</h3>
+                <p className="text-2xl font-bold !text-[#0A4D68]">Daniela Lopez</p>
                 <p className="font-medium text-[#0A4D68]">Psicologa General Sanitaria</p>
                 <p className="text-sm text-[#0A4D68]">Col. M-41829</p>
               </div>
