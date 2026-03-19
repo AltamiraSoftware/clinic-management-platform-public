@@ -1,10 +1,9 @@
 "use client";
 import Header from "@/components/layout/header";
+import { useAuthModal } from "@/hooks/useAuthModal";
 
 export default function HeaderClient() {
-  // stubs seguros (luego los conectas a tu modal)
-  const openLogin = () => {};
-  const openRegister = () => {};
+  const { openLogin, openRegister } = useAuthModal();
 
   return <Header openLogin={openLogin} openRegister={openRegister} />;
 }

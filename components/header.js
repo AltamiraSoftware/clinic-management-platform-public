@@ -22,7 +22,7 @@ export default function Header({ onOpenServicios }) {
             height={32}
             className="h-8 w-auto"
           />
-          <span className="text-xl font-black leading-none text-white">
+          <span className="text-xl font-black leading-none !text-white">
             Panel del Profesional
           </span>
         </Link>

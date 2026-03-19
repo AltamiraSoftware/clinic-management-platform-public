@@ -398,7 +398,10 @@ export default function DisponibilidadPage() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <button onClick={() => cambiarSemana(-1)} className="bv-btn bv-btn-ghost bv-btn-lg">
+            <button
+              onClick={() => cambiarSemana(-1)}
+              className="rounded-2xl border border-[#c7dddb] bg-white px-5 py-3 text-sm font-semibold text-[#0A4D68] shadow-[0_12px_30px_rgba(10,77,104,0.08)] transition hover:bg-[#f3f8f7]"
+            >
               Semana anterior
             </button>
 
@@ -409,7 +412,10 @@ export default function DisponibilidadPage() {
               Hoy
             </button>
 
-            <button onClick={() => cambiarSemana(1)} className="bv-btn bv-btn-ghost bv-btn-lg">
+            <button
+              onClick={() => cambiarSemana(1)}
+              className="rounded-2xl border border-[#c7dddb] bg-white px-5 py-3 text-sm font-semibold text-[#0A4D68] shadow-[0_12px_30px_rgba(10,77,104,0.08)] transition hover:bg-[#f3f8f7]"
+            >
               Semana siguiente
             </button>
           </div>

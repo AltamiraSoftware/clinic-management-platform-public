@@ -40,7 +40,7 @@ export default function Header() {
           />
         </Link>
 
-        <Link href="/cliente" className="hidden text-2xl font-extrabold text-white md:block">
+        <Link href="/cliente" className="hidden text-2xl font-extrabold !text-white md:block">
           Panel del usuario
         </Link>
 

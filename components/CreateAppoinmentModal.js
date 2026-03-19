@@ -5,6 +5,9 @@ import { CalendarDaysIcon } from "@heroicons/react/24/solid";
 const fieldClassName =
   "w-full rounded-xl border border-[#c7dddb] bg-white px-4 py-3 text-sm text-[#0A4D68] shadow-[0_12px_30px_rgba(10,77,104,0.08)] outline-none transition placeholder:text-[#6b8b92] focus:border-[#088395] focus:ring-2 focus:ring-[#088395]/20";
 
+const secondaryButtonClassName =
+  "rounded-2xl border border-[#c7dddb] bg-white px-5 py-3 text-sm font-semibold text-[#0A4D68] shadow-[0_12px_30px_rgba(10,77,104,0.08)] transition hover:bg-[#f3f8f7]";
+
 export default function CreateAppointmentModal({
   open,
   onClose,
@@ -76,7 +79,7 @@ export default function CreateAppointmentModal({
                   <button
                     type="button"
                     onClick={() => setShowNuevoPaciente(!showNuevoPaciente)}
-                    className="bv-btn bv-btn-ghost bv-btn-lg whitespace-nowrap"
+                    className={`${secondaryButtonClassName} whitespace-nowrap`}
                   >
                     {showNuevoPaciente ? "Cancelar nuevo paciente" : "Nuevo paciente"}
                   </button>
@@ -226,7 +229,7 @@ export default function CreateAppointmentModal({
         </div>
 
         <div className="flex flex-col gap-3 border-t border-[#d8e7e5] bg-[#f5faf8] px-6 py-4 sm:flex-row sm:justify-end">
-          <button type="button" onClick={onClose} className="bv-btn bv-btn-ghost bv-btn-lg">
+          <button type="button" onClick={onClose} className={secondaryButtonClassName}>
             Cancelar
           </button>
           <button
