@@ -36,7 +36,7 @@ export default function Psicologia({ openRegister }) {
             </p>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold !text-[#0A4D68]">Tratamientos</h3>
+              <h3 className="text-lg font-semibold !  text-[#0A4D68]">Tratamientos</h3>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {tratamientos.map((tratamiento) => (
                   <div key={tratamiento} className="flex items-center gap-2 text-[#245953]">

@@ -188,19 +188,56 @@ export default function PsicologiaPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-20 bg-[radial-gradient(circle_at_top_left,_rgba(164,190,123,0.34),_transparent_32%),radial-gradient(circle_at_85%_18%,_rgba(8,131,149,0.24),_transparent_28%),linear-gradient(135deg,_#d6ebe4_0%,_#e8f5f1_44%,_#c8dfd6_100%)]">
+      <section className="relative overflow-hidden py-20 bv-hero min-h-[92vh]">
         <div className="pointer-events-none absolute -top-24 -left-20 h-80 w-80 rounded-full bg-[#A4BE7B]/30 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -right-20 h-80 w-80 rounded-full bg-[#0A4D68]/16 blur-3xl" />
 
         <div className="container relative mx-auto max-w-6xl px-6">
           <div className="grid gap-8 lg:grid-cols-2">
-            <div className="rounded-[30px] border border-white/65 bg-gradient-to-br from-white/88 to-[#f4fbf8]/88 p-8 shadow-[0_24px_70px_rgba(10,77,104,0.12)] backdrop-blur-sm">
+           
+
+            <div id="contacto" className="rounded-[30px] border border-white/65 bv-glass p-8  backdrop-blur-sm">
+            <div className="flex flex-col items-center text-center space-y-4">
+                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#A4BE7B] to-[#61764B] flex items-center justify-center text-4xl font-bold text-white">
+                  DL
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white!">Daniela López Meléndez</h3>
+                  <p className="text-[#A4BE7B] font-medium">Psicóloga General Sanitaria</p>
+                </div>
+                <div className="flex flex-wrap justify-center gap-2 pt-2">
+                  <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Infanto-juvenil</span>
+                  <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Adultos</span>
+                  <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Crisis</span>
+                </div>
+                <p className="text-white/70 text-sm pt-2">
+                  Colegiada | Universidad Nebrija | Máster Universidad Europea
+                </p>
+                <div className="w-full bv-divider mt-2" />
+
+                <div id="contacto" className="w-full space-y-2 text-white/85 text-sm">
+                  <div className="flex items-center justify-center gap-2">
+                    <Phone className="w-4 h-4 text-[#A4BE7B]" />
+                    <span>+34 674547577</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <Mail className="w-4 h-4 text-[#A4BE7B]" />
+                    <span>danilopezme1004@gmail.com</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <MapPin className="w-4 h-4 text-[#A4BE7B]" />
+                    <span>Madrid</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-[30px] border border-white/65 bv-glass rounded-3xl p-8 backdrop-blur-sm">
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#A4BE7B] to-[#61764B] shadow-[0_10px_24px_rgba(164,190,123,0.28)]">
                   <GraduationCap className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#088395]">Trayectoria</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white">Trayectoria</p>
                   <h3 className="text-2xl font-bold text-[#0A4D68]" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formación académica</h3>
                 </div>
               </div>
@@ -211,40 +248,12 @@ export default function PsicologiaPage() {
                 {formacion.map((item, index) => (
                   <div
                     key={index}
-                    className="rounded-2xl border border-[#A4BE7B]/18 bg-gradient-to-r from-white to-[#f6faf7] p-4 shadow-[0_10px_26px_rgba(10,77,104,0.05)]"
+                    className="rounded-2xl border border-[#A4BE7B]/18 bv-glass p-4 text-white"
                   >
                     <div className="flex items-start gap-3">
                       <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#A4BE7B]" />
-                      <span className="text-[#245953]">{item}</span>
+                      <span className="text-white">{item}</span>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-[30px] border border-white/65 bg-gradient-to-br from-white/88 to-[#f4fbf8]/88 p-8 shadow-[0_24px_70px_rgba(10,77,104,0.12)] backdrop-blur-sm">
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#088395] to-[#0A4D68] shadow-[0_10px_24px_rgba(8,131,149,0.24)]">
-                  <Briefcase className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#088395]">Experiencia</p>
-                  <h3 className="text-2xl font-bold text-[#0A4D68]" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Experiencia profesional</h3>
-                </div>
-              </div>
-
-              <div className="bv-divider my-6" />
-
-              <div className="space-y-4">
-                {experiencia.map((exp, index) => (
-                  <div
-                    key={index}
-                    className="rounded-2xl border border-[#088395]/14 bg-gradient-to-br from-white to-[#f4fbfb] p-5 shadow-[0_10px_28px_rgba(10,77,104,0.06)]"
-                  >
-                    <p className="text-sm font-semibold text-[#088395]">{exp.periodo}</p>
-                    <h4 className="mt-2 font-semibold text-[#0A4D68]">{exp.puesto}</h4>
-                    <p className="mt-1 text-sm font-medium text-[#61764B]">{exp.empresa}</p>
-                    <p className="mt-3 text-sm text-[#245953]">{exp.descripcion}</p>
                   </div>
                 ))}
               </div>
@@ -325,7 +334,5 @@ export default function PsicologiaPage() {
     </main>
   );
 }
-
-
 
 
