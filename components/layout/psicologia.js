@@ -61,9 +61,7 @@ export default function Psicologia({ openRegister }) {
           <div className="rounded-2xl border border-[#A4BE7B]/15 bg-white/10 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] sm:rounded-3xl sm:p-7 md:p-8">
             <div className="flex flex-col items-center space-y-6 text-center">
               <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-[#0A4D68]/60 shadow-lg">
-              import Image from "next/image";
-
-<Image
+              <Image
   src="/Daniela.webp"
   alt="Daniela, psicóloga en Bivalente"
   width={600}
