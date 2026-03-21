@@ -93,7 +93,7 @@ export default function CreateAppointmentModal({
                       Crear nuevo paciente
                     </h3>
                     <p className="text-sm text-[#4c6d73]">
-                      Anade los datos basicos antes de registrar la cita.
+                      Añade los datos básicos antes de registrar la cita.
                     </p>
                   </div>
 
@@ -136,7 +136,7 @@ export default function CreateAppointmentModal({
 
                     <div>
                       <label className="mb-2 block text-sm font-medium text-[#245953]">
-                        Telefono opcional
+                        Teléfono opcional
                       </label>
                       <input
                         type="tel"

@@ -8,10 +8,10 @@ export default function Fisioterapia() {
   const tratamientos = [
     "Dolor de espalda y cervicales",
     "Lesiones deportivas",
-    "Rehabilitacion postoperatoria",
-    "Fisioterapia neurologica",
+    "Rehabilitación postoperatoria",
+    "Fisioterapia neurológica",
     "Terapia manual y masajes",
-    "Ejercicio terapeutico",
+    "Ejercicio terapéutico",
   ];
 
   return (
@@ -41,11 +41,11 @@ export default function Fisioterapia() {
               </div>
 
               <p className="leading-relaxed text-white">
-                Especialista en terapia manual y ejercicio terapeutico. Amplia experiencia en lesiones deportivas y rehabilitacion. Atencion a domicilio disponible en Madrid.
+                Especialista en terapia manual y ejercicio terapéutico. Amplia experiencia en lesiones deportivas y rehabilitación. Atención a domicilio disponible en Madrid.
               </p>
 
               <div className="flex flex-wrap justify-center gap-2">
-                {["Terapia Manual", "Deportivo", "Domicilio", "Rehabilitacion"].map((tag) => (
+                {["Terapia manual", "Deportivo", "Domicilio", "Rehabilitación"].map((tag) => (
                   <span key={tag} className="rounded-full bg-[#088395]/20 px-3 py-1 text-sm text-white">
                     {tag}
                   </span>
@@ -53,7 +53,7 @@ export default function Fisioterapia() {
               </div>
 
               <Link
-                href="/fisioterapia"
+                href="/fisioterapia#formulario"
                 className="bv-btn bv-btn-primary bv-btn-lg w-full justify-center"
               >
                 Reservar cita con Borja
@@ -72,7 +72,7 @@ export default function Fisioterapia() {
             </div>
 
             <p className="text-lg leading-relaxed text-white">
-              En Bivalente ofrecemos fisioterapia a domicilio especializada en Madrid para el tratamiento del dolor lumbar, cervical y lesiones deportivas. Trabajamos con terapia manual avanzada y ejercicio terapeutico basado en evidencia cientifica.
+              En Bivalente ofrecemos fisioterapia a domicilio especializada en Madrid para el tratamiento del dolor lumbar, cervical y lesiones deportivas. Trabajamos con terapia manual avanzada y ejercicio terapéutico basado en la evidencia científica.
             </p>
 
             <div className="space-y-4">
@@ -88,7 +88,7 @@ export default function Fisioterapia() {
             </div>
 
             <Link href="/fisioterapia" className="bv-btn bv-btn-ghost bv-btn-lg">
-              Ver mas sobre Fisioterapia
+              Ver más sobre Fisioterapia
             </Link>
           </div>
         </div>

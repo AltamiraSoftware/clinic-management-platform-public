@@ -23,7 +23,7 @@ export default function AuthModal() {
     });
 
     if (error) {
-      setErrorMsg("Email o contrasena incorrectos");
+      setErrorMsg("Email o contraseña incorrectos");
       return;
     }
 
@@ -71,7 +71,7 @@ export default function AuthModal() {
       <div className="relative w-full max-w-md overflow-hidden rounded-[28px] border border-white/70 bg-white/92 shadow-[0_24px_70px_rgba(10,77,104,0.18)] animate-scaleIn">
         <div className="bg-[linear-gradient(90deg,#0A4D68_0%,#088395_52%,#61764B_100%)] p-6 text-white">
           <h2 className="text-center text-2xl font-bold">
-            {mode === "login" ? "Iniciar sesion" : "Crear cuenta"}
+            {mode === "login" ? "Iniciar sesión" : "Crear cuenta"}
           </h2>
         </div>
 
@@ -94,7 +94,7 @@ export default function AuthModal() {
               <input
                 type="password"
                 className={inputClassName}
-                placeholder="Contrasena"
+                placeholder="Contraseña"
                 onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
               />
 
@@ -125,7 +125,7 @@ export default function AuthModal() {
 
               <input
                 className={inputClassName}
-                placeholder="Telefono"
+                placeholder="Teléfono"
                 type="tel"
                 onChange={(e) => setForm((f) => ({ ...f, phone: e.target.value }))}
               />
@@ -133,7 +133,7 @@ export default function AuthModal() {
               <input
                 type="password"
                 className={inputClassName}
-                placeholder="Contrasena"
+                placeholder="Contraseña"
                 onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
                 required
               />
@@ -149,16 +149,16 @@ export default function AuthModal() {
           <p className="mt-2 text-center text-sm text-[#245953]">
             {mode === "login" ? (
               <>
-                No tienes cuenta?{" "}
+                ¿No tienes cuenta?{" "}
                 <button onClick={openRegister} className="font-semibold underline text-[#0A4D68]">
                   Crear una nueva
                 </button>
               </>
             ) : (
               <>
-                Ya tienes cuenta?{" "}
+                ¿Ya tienes cuenta?{" "}
                 <button onClick={openLogin} className="font-semibold underline text-[#0A4D68]">
-                  Iniciar sesion
+                  Iniciar sesión
                 </button>
               </>
             )}

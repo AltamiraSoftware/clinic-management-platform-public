@@ -19,9 +19,9 @@ import {
 import Link from "next/link";
 
 export const metadata = {
-  title: "Fisioterapia a domicilio en Madrid | Borja Estarellas Botin - Bivalente",
+  title: "Fisioterapia a domicilio en Madrid | Borja Estarellas Botín - Bivalente",
   description:
-    "Fisioterapia deportiva y musculoesqueletica con Borja Estarellas Botin. Ecografia, ejercicio terapeutico y atencion a domicilio en Madrid.",
+    "Fisioterapia deportiva y musculoesquelética con Borja Estarellas Botín. Ecografía, ejercicio terapéutico y atención a domicilio en Madrid.",
 };
 
 const servicios = [
@@ -29,19 +29,19 @@ const servicios = [
     icon: Home,
     title: "Fisioterapia a domicilio",
     description:
-      "Sesiones en tu hogar en Madrid. Tratamientos personalizados y planificacion de ejercicios para tu recuperacion.",
+      "Sesiones en tu hogar en Madrid. Tratamientos personalizados y planificación de ejercicios para tu recuperación.",
   },
   {
     icon: Dumbbell,
-    title: "Readaptacion y ejercicio terapeutico",
+    title: "Readaptación y ejercicio terapéutico",
     description:
-      "Trabajo de fuerza, control motor y progresion al ejercicio para volver a moverte con seguridad.",
+      "Trabajo de fuerza, control motor y progresión al ejercicio para volver a moverte con seguridad.",
   },
   {
     icon: Scan,
-    title: "Ecografia musculoesqueletica",
+    title: "Ecografía musculoesquelética",
     description:
-      "Valoracion y apoyo al tratamiento con enfoque basado en precision y seguimiento.",
+      "Valoración y apoyo al tratamiento con enfoque basado en precisión y seguimiento.",
   },
   {
     icon: Activity,
@@ -53,52 +53,52 @@ const servicios = [
 
 const formacion = [
   "Grado en Fisioterapia - Universidad Antonio de Nebrija (2020)",
-  "Master en Fisioterapia Manual Avanzada y Ejercicio Terapeutico - UCM (07/2024)",
-  "Master Experto en ecografia, anatomia palpatoria e investigacion del cuerpo humano en vivo - UCM (2026)",
+  "Máster en Fisioterapia Manual Avanzada y Ejercicio Terapéutico - UCM (07/2024)",
+  "Máster Experto en ecografía, anatomía palpatoria e investigación del cuerpo humano en vivo - UCM (2026)",
 ];
 
 const experiencia = [
   {
     periodo: "12/2021 - Actual",
     puesto: "Fisioterapeuta",
-    empresa: "Clinica Natal (San Sebastian de los Reyes, Madrid)",
+    empresa: "Clínica Natal (San Sebastián de los Reyes, Madrid)",
     descripcion:
-      "Tratamientos personalizados (sesiones de 1 hora), pacientes privados y derivados. Trabajo con ejercicio terapeutico, hipopresivos y pilates (grupal e individual).",
+      "Tratamientos personalizados (sesiones de 1 hora), pacientes privados y derivados. Trabajo con ejercicio terapéutico, hipopresivos y pilates (grupal e individual).",
   },
   {
     periodo: "03/2021 - 12/2021",
     puesto: "Fisioterapeuta",
     empresa: "UrbanFisio (Madrid)",
     descripcion:
-      "Atencion a pacientes privados con tratamientos personalizados (1 hora) a domicilio.",
+      "Atención a pacientes privados con tratamientos personalizados (1 hora) a domicilio.",
   },
 ];
 
 const formacionComplementaria = [
-  "Curso de puncion seca",
+  "Curso de punción seca",
   "Pilates suelo (nivel experto)",
-  "Valoracion y tratamiento de la ATM / Disfuncion craneomandibular",
-  "Valoracion y tratamiento de alteraciones linfatico-venosas (Drenaje linfatico manual)",
+  "Valoración y tratamiento de la ATM / disfunción craneomandibular",
+  "Valoración y tratamiento de alteraciones linfático-venosas (drenaje linfático manual)",
 ];
 
 const proceso = [
   {
     icon: ClipboardList,
-    title: "Valoracion inicial",
+    title: "Valoración inicial",
     description:
-      "Revisamos dolor, limitaciones, antecedentes y objetivos para definir un plan de trabajo realista.",
+      "Revisamos el dolor, las limitaciones, los antecedentes y los objetivos para definir un plan de trabajo realista.",
   },
   {
     icon: CalendarDays,
     title: "Plan de tratamiento",
     description:
-      "Combinamos tratamiento manual, ejercicio terapeutico y seguimiento para cada fase de recuperacion.",
+      "Combinamos tratamiento manual, ejercicio terapéutico y seguimiento para cada fase de recuperación.",
   },
   {
     icon: MessageSquareHeart,
     title: "Seguimiento cercano",
     description:
-      "Resolvemos dudas y ajustamos la progresion para consolidar resultados y prevenir recaidas.",
+      "Resolvemos dudas y ajustamos la progresión para consolidar resultados y prevenir recaídas.",
   },
 ];
 
@@ -121,8 +121,8 @@ export default function FisioterapiaPage() {
               </h1>
 
               <p className="text-lg text-white/85 leading-relaxed">
-                Fisioterapia musculoesqueletica y deportiva con enfoque en ejercicio terapeutico,
-                valoracion funcional y ecografia. Atencion a domicilio en Madrid.
+                Fisioterapia musculoesquelética y deportiva con enfoque en ejercicio terapéutico,
+                valoración funcional y ecografía. Atención a domicilio en Madrid.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -154,7 +154,7 @@ export default function FisioterapiaPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-white!">Borja Estarellas Botin</h2>
+                  <h2 className="text-2xl font-bold text-white!">Borja Estarellas Botín</h2>
                   <p className="text-[#A4BE7B] font-semibold">Fisioterapeuta</p>
                 </div>
 
@@ -166,12 +166,12 @@ export default function FisioterapiaPage() {
                     Deportiva
                   </span>
                   <span className="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm border border-white/15">
-                    Ecografia
+                    Ecografía
                   </span>
                 </div>
 
                 <p className="text-white/75 text-sm">
-                  Formacion en Fisioterapia Manual Avanzada y Ejercicio Terapeutico (UCM) y especializacion en ecografia.
+                  Formación en Fisioterapia Manual Avanzada y Ejercicio Terapéutico (UCM) y especialización en ecografía.
                 </p>
 
                 <div className="w-full bv-divider mt-2" />
@@ -191,7 +191,7 @@ export default function FisioterapiaPage() {
                   </div>
                 </div>
 
-                <p className="text-white/60 text-xs">Datos de contacto y trayectoria segun CV.</p>
+                <p className="text-white/60 text-xs">Datos de contacto y trayectoria según CV.</p>
               </div>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function FisioterapiaPage() {
               Servicios de fisioterapia
             </h2>
             <p className="text-[#245953] max-w-2xl mx-auto">
-              Tratamientos personalizados orientados a mejorar dolor, funcion y rendimiento, con seguimiento y progresion.
+              Tratamientos personalizados orientados a mejorar el dolor, la función y el rendimiento, con seguimiento y progresión.
             </p>
           </div>
 
@@ -236,7 +236,7 @@ export default function FisioterapiaPage() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#088395]">Trayectoria</p>
-                  <h3 className="text-2xl font-bold text-[#0A4D68]" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formacion</h3>
+                  <h3 className="text-2xl font-bold text-[#0A4D68]" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formación</h3>
                 </div>
               </div>
 
@@ -257,7 +257,7 @@ export default function FisioterapiaPage() {
               </div>
 
               <div className="pt-6">
-                <h4 className="text-lg font-bold text-[#0A4D68] mb-3" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formacion complementaria</h4>
+                <h4 className="text-lg font-bold text-[#0A4D68] mb-3" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formación complementaria</h4>
                 <div className="space-y-3">
                   {formacionComplementaria.map((c, idx) => (
                     <div
@@ -302,24 +302,24 @@ export default function FisioterapiaPage() {
               </div>
 
               <div className="mt-5 rounded-[26px] border border-[#088395]/14 bg-gradient-to-br from-white to-[#f2fbfb] p-6 shadow-[0_10px_28px_rgba(10,77,104,0.05)]">
-                <h4 className="text-lg font-bold text-[#0A4D68] mb-3" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Como trabajo</h4>
+                <h4 className="text-lg font-bold text-[#0A4D68] mb-3" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Cómo trabajo</h4>
                 <ul className="space-y-3 text-[#245953]">
                   <li className="flex gap-3">
                     <CheckCircle className="mt-0.5 w-5 h-5 text-[#A4BE7B]" />
-                    Valoracion inicial + objetivos claros y realistas.
+                    Valoración inicial + objetivos claros y realistas.
                   </li>
                   <li className="flex gap-3">
                     <CheckCircle className="mt-0.5 w-5 h-5 text-[#A4BE7B]" />
-                    Tratamiento + ejercicio terapeutico con progresion.
+                    Tratamiento + ejercicio terapéutico con progresión.
                   </li>
                   <li className="flex gap-3">
                     <CheckCircle className="mt-0.5 w-5 h-5 text-[#A4BE7B]" />
-                    Seguimiento para consolidar resultados y prevenir recaidas.
+                    Seguimiento para consolidar resultados y prevenir recaídas.
                   </li>
                 </ul>
               </div>
 
-              <p className="mt-5 text-xs text-[#245953]/80">Formacion y experiencia segun CV de Borja.</p>
+              <p className="mt-5 text-xs text-[#245953]/80">Formación y experiencia según CV de Borja.</p>
             </div>
           </div>
         </div>
@@ -330,7 +330,7 @@ export default function FisioterapiaPage() {
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <ServiceContactForm
               service="Fisioterapia"
-              professionalName="Borja Estarellas Botin"
+              professionalName="Borja Estarellas Botín"
               recipientEmail="estarellas11088@gmail.com"
             />
 
@@ -339,10 +339,10 @@ export default function FisioterapiaPage() {
                 Primer paso
               </p>
               <h2 className="mt-3 text-3xl font-bold text-white!">
-                Cuentanos tu caso y te orientamos antes de reservar
+                Cuéntanos tu caso y te orientamos antes de reservar
               </h2>
               <p className="mt-4 text-white/80 leading-relaxed">
-                Esta seccion convierte la pagina en una pieza de captacion real del MVP: permite recibir solicitudes, priorizar casos y dar una respuesta personalizada sin romper la experiencia actual.
+                Esta sección convierte la página en una pieza de captación real del MVP: permite recibir solicitudes, priorizar casos y dar una respuesta personalizada sin romper la experiencia actual.
               </p>
 
               <div className="mt-8 space-y-4">
@@ -377,7 +377,7 @@ export default function FisioterapiaPage() {
       <section className="py-20 bv-hero">
         <div className="container mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Empezamos con tu recuperacion?
+            ¿Empezamos con tu recuperación?
           </h2>
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Agenda una cita y definimos un plan de tratamiento para que vuelvas a moverte con confianza.

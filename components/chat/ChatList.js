@@ -48,7 +48,7 @@ export default function ChatList({ clientes, clienteActivo, onSelect }) {
                   {cliente.nombre_completo}
                 </p>
                 <p className={`text-xs ${isActive ? "text-white/80" : "text-[#6b8b92]"}`}>
-                  Ver conversacion
+                  Ver conversación
                 </p>
               </div>
             </div>

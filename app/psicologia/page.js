@@ -19,70 +19,70 @@ import HeaderClient from "@/components/layout/HeaderClient";
 import ServiceContactForm from "@/components/forms/ServiceContactForm";
 
 export const metadata = {
-  title: "Psicologia | Bivalente - Daniela Lopez Melendez",
-  description: "Servicios de psicologia con Daniela Lopez Melendez. Evaluacion e intervencion para poblacion infanto juvenil y adultos. Ansiedad, estres, bienestar emocional.",
+  title: "Psicología | Bivalente - Daniela López Meléndez",
+  description: "Servicios de psicología con Daniela López Meléndez. Evaluación e intervención para población infantojuvenil y adultos. Ansiedad, estrés y bienestar emocional.",
 };
 
 const tratamientos = [
   {
     icon: Heart,
-    title: "Ansiedad y estres",
-    description: "Tecnicas para gestionar la ansiedad, ataques de panico y estres cronico.",
+    title: "Ansiedad y estrés",
+    description: "Técnicas para gestionar la ansiedad, ataques de pánico y estrés crónico.",
   },
   {
     icon: Brain,
     title: "Bienestar emocional",
-    description: "Trabajo en autoestima, regulacion emocional y desarrollo personal.",
+    description: "Trabajo en autoestima, regulación emocional y desarrollo personal.",
   },
   {
     icon: Users,
     title: "Terapia infanto-juvenil",
-    description: "Atencion especializada para ninos y adolescentes en dificultades emocionales.",
+    description: "Atención especializada para niños y adolescentes con dificultades emocionales.",
   },
   {
     icon: Sparkles,
-    title: "Intervencion en crisis",
-    description: "Apoyo psicologico en situaciones de crisis y momentos dificiles.",
+    title: "Intervención en crisis",
+    description: "Apoyo psicológico en situaciones de crisis y momentos difíciles.",
   },
 ];
 
 const formacion = [
-  "Grado en Psicologia - Universidad Nebrija",
-  "Master en Psicologia General Sanitaria - Universidad Europea",
-  "Formacion en intervencion en crisis - Fundacion ANAR",
+  "Grado en Psicología - Universidad Nebrija",
+  "Máster en Psicología General Sanitaria - Universidad Europea",
+  "Formación en intervención en crisis - Fundación ANAR",
 ];
 
 const experiencia = [
   {
     periodo: "Abril 2025 - Actual",
-    puesto: "Psicologa general sanitaria",
-    empresa: "CREE Logopedia y Psicologia",
-    descripcion: "Evaluacion e intervencion a poblacion infanto juvenil y adultos.",
+    puesto: "Psicóloga general sanitaria",
+    empresa: "CREE Logopedia y Psicología",
+    descripcion: "Evaluación e intervención con población infantojuvenil y adultos.",
   },
   {
     periodo: "Junio 2022 - Marzo 2025",
-    puesto: "Psicologa",
-    empresa: "Fundacion ANAR",
-    descripcion: "Atencion psicologica a ninos/as y adolescentes en riesgo por las lineas de ayuda ANAR.",
+    puesto: "Psicóloga",
+    empresa: "Fundación ANAR",
+    descripcion: "Atención psicológica a niños, niñas y adolescentes en riesgo a través de las líneas de ayuda ANAR.",
   },
   {
     periodo: "Octubre 2024 - Marzo 2025",
-    puesto: "Psicologa sanitaria en practicas",
-    empresa: "Psicalma Psicologia",
-    descripcion: "Evaluacion e intervencion psicologica. Realizacion de talleres grupales y charlas informativas.",
+    puesto: "Psicóloga sanitaria en prácticas",
+    empresa: "Psicalma Psicología",
+    descripcion: "Evaluación e intervención psicológica. Realización de talleres grupales y charlas informativas.",
   },
 ];
 
 const proceso = [
   {
     icon: ClipboardList,
-    title: "Valoracion inicial",
+    title: "Valoración inicial",
     description:
       "Escuchamos tu motivo de consulta y revisamos el contexto para orientar bien el primer paso.",
   },
   {
     icon: CalendarDays,
-    title: "Plan terapeutico",
+    title: "Plan terapéutico",
     description:
       "Definimos un enfoque de trabajo adaptado a tu momento vital, objetivos y ritmo.",
   },
@@ -90,7 +90,7 @@ const proceso = [
     icon: MessageSquareHeart,
     title: "Seguimiento cercano",
     description:
-      "Ajustamos el proceso de forma progresiva para que la terapia sea util, clara y sostenible.",
+      "Ajustamos el proceso de forma progresiva para que la terapia sea útil, clara y sostenible.",
   },
 ];
 
@@ -105,13 +105,13 @@ export default function PsicologiaPage() {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm text-white">
                 <Brain className="w-4 h-4 text-[#A4BE7B]" />
-                Psicologia Bivalente
+                Psicología Bivalente
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white! leading-tight text-balance">
                 Tu bienestar <span className="text-[#A4BE7B]">emocional</span> es nuestra <span className="text-[#A4BE7B]">prioridad</span>
               </h1>
               <p className="text-lg text-white/80! leading-relaxed">
-                Evaluacion e intervencion psicologica para poblacion infanto-juvenil y adultos.
+                Evaluación e intervención psicológica para población infantojuvenil y adultos.
                 Sesiones presenciales en Madrid y online.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -119,7 +119,7 @@ export default function PsicologiaPage() {
                   Reservar cita
                 </a>
                 <a href="#tratamientos" className="bv-btn bv-btn-ghost bv-btn-lg">
-                  Conocer mas
+                  Conocer más
                 </a>
               </div>
             </div>
@@ -130,8 +130,8 @@ export default function PsicologiaPage() {
                   DL
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white!">Daniela Lopez Melendez</h3>
-                  <p className="text-[#A4BE7B] font-medium">Psicologa General Sanitaria</p>
+                  <h3 className="text-2xl font-bold text-white!">Daniela López Meléndez</h3>
+                  <p className="text-[#A4BE7B] font-medium">Psicóloga General Sanitaria</p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 pt-2">
                   <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Infanto-juvenil</span>
@@ -139,14 +139,14 @@ export default function PsicologiaPage() {
                   <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Crisis</span>
                 </div>
                 <p className="text-white/70 text-sm pt-2">
-                  Colegiada | Universidad Nebrija | Master Universidad Europea
+                  Colegiada | Universidad Nebrija | Máster Universidad Europea
                 </p>
                 <div className="w-full bv-divider mt-2" />
 
                 <div id="contacto" className="w-full space-y-2 text-white/85 text-sm">
                   <div className="flex items-center justify-center gap-2">
                     <Phone className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>674547577</span>
+                    <span>+34 674547577</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Mail className="w-4 h-4 text-[#A4BE7B]" />
@@ -167,10 +167,10 @@ export default function PsicologiaPage() {
         <div className="container mx-auto max-w-6xl px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0A4D68]! mb-4">
-              Areas de tratamiento
+              Áreas de tratamiento
             </h2>
             <p className="text-[#0A4D68]! max-w-2xl mx-auto">
-              Ofrecemos atencion psicologica especializada en diversas areas para ayudarte a recuperar tu equilibrio emocional.
+              Ofrecemos atención psicológica especializada en diversas áreas para ayudarte a recuperar tu equilibrio emocional.
             </p>
           </div>
 
@@ -201,7 +201,7 @@ export default function PsicologiaPage() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#088395]">Trayectoria</p>
-                  <h3 className="text-2xl font-bold text-[#0A4D68]" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formacion academica</h3>
+                  <h3 className="text-2xl font-bold text-[#0A4D68]" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formación académica</h3>
                 </div>
               </div>
 
@@ -258,7 +258,7 @@ export default function PsicologiaPage() {
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <ServiceContactForm
               service="Psicologia"
-              professionalName="Daniela Lopez Melendez"
+              professionalName="Daniela López Meléndez"
               recipientEmail="danilopezme1004@gmail.com"
             />
 
@@ -267,10 +267,10 @@ export default function PsicologiaPage() {
                 Primer paso
               </p>
               <h2 className="mt-3 text-3xl font-bold text-white!">
-                Comparte tu situacion y te orientamos antes de reservar
+                Comparte tu situación y te orientamos antes de reservar
               </h2>
               <p className="mt-4 text-white/80 leading-relaxed">
-                Esta seccion convierte la pagina en una entrada real de captacion para el MVP: ayuda a detectar necesidad, responder con criterio y facilitar la primera conversacion terapeutica.
+                Esta sección convierte la página en una entrada real de captación para el MVP: ayuda a detectar necesidades, responder con criterio y facilitar la primera conversación terapéutica.
               </p>
 
               <div className="mt-8 space-y-4">

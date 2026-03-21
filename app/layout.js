@@ -14,38 +14,38 @@ export const metadata = {
   metadataBase: new URL("https://clinicabivalente.com"),
 
   title: {
-    default: "Clinica Bivalente | Psicologia y Fisioterapia en Madrid",
-    template: "%s | Clinica Bivalente",
+    default: "Clínica Bivalente | Psicología y Fisioterapia en Madrid",
+    template: "%s | Clínica Bivalente",
   },
 
   description:
-    "Clinica Bivalente en Madrid. Especialistas en psicologia y fisioterapia. Tratamientos personalizados basados en terapia manual y ejercicio terapeutico. Reserva tu cita online.",
+    "Clínica Bivalente en Madrid. Especialistas en psicología y fisioterapia. Tratamientos personalizados basados en terapia manual y ejercicio terapéutico. Reserva tu cita online.",
 
   keywords: [
-    "psicologia Madrid",
+    "psicología Madrid",
     "fisioterapia Madrid",
-    "clinica psicologia Madrid",
+    "clínica psicología Madrid",
     "fisioterapia terapia manual Madrid",
-    "psicologo Madrid cita",
+    "psicólogo Madrid cita",
     "fisioterapeuta Madrid",
-    "Clinica Bivalente",
+    "Clínica Bivalente",
   ],
 
   openGraph: {
-    title: "Clinica Bivalente | Psicologia y Fisioterapia en Madrid",
+    title: "Clínica Bivalente | Psicología y Fisioterapia en Madrid",
     description:
-      "Centro especializado en psicologia y fisioterapia en Madrid. Tratamientos personalizados para mejorar bienestar, salud y rendimiento.",
+      "Centro especializado en psicología y fisioterapia en Madrid. Tratamientos personalizados para mejorar bienestar, salud y rendimiento.",
     url: "https://clinicabivalente.com",
-    siteName: "Clinica Bivalente",
+    siteName: "Clínica Bivalente",
     locale: "es_ES",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Clinica Bivalente | Psicologia y Fisioterapia en Madrid",
+    title: "Clínica Bivalente | Psicología y Fisioterapia en Madrid",
     description:
-      "Psicologia y fisioterapia en Madrid con tratamientos personalizados y reserva de citas online.",
+      "Psicología y fisioterapia en Madrid con tratamientos personalizados y reserva de citas online.",
   },
 
   robots: {

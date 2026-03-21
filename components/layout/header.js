@@ -64,7 +64,7 @@ export default function Header({ openLogin, openRegister }) {
           ].join(" ")}
         >
           <Link href="/psicologia" className="font-medium transition hover:opacity-90">
-            Psicologia
+            Psicología
           </Link>
 
           <Link href="/fisioterapia" className="font-medium transition hover:opacity-90">
@@ -76,7 +76,7 @@ export default function Header({ openLogin, openRegister }) {
           </Link>
 
           <button onClick={openLogin} className={authSecondaryClassName}>
-            Iniciar sesion
+            Iniciar sesión
           </button>
 
           <button onClick={openRegister} className={authPrimaryClassName}>

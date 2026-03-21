@@ -13,12 +13,12 @@ export default function CTA({ openLogin }) {
           </h2>
 
           <p className="mx-auto max-w-2xl px-2 text-base text-[#0A4D68] sm:text-lg">
-            Utiliza nuestra aplicacion web para reservar tu cita de psicologia. Solicita tambien nuestro servicio de fisioterapia a domicilio.
+            Utiliza nuestra aplicación web para reservar tu cita de psicología. Solicita también nuestro servicio de fisioterapia a domicilio.
           </p>
 
           <div className="flex flex-col justify-center gap-3 pt-4 sm:flex-row sm:gap-5 sm:pt-8">
             <button onClick={openLogin} className="bv-btn bv-btn-primary bv-btn-lg w-full sm:w-auto">
-              Psicologia
+              Psicología
             </button>
             <button onClick={openLogin} className="bv-btn bv-btn-ghost bv-btn-lg w-full sm:w-auto">
               Fisioterapia
@@ -28,7 +28,7 @@ export default function CTA({ openLogin }) {
           <div className="grid grid-cols-1 gap-6 border-t border-gray-300/60 pt-8 sm:grid-cols-3 sm:gap-8 sm:pt-12">
             <div className="space-y-2 py-4 sm:py-0">
               <TelephoneIcon className="mx-auto mb-2 h-7 w-7 text-[#0A4D68] sm:h-8 sm:w-8" />
-              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">Telefono</p>
+              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">Teléfono</p>
               <p className="text-center text-sm text-gray-600 sm:text-base">+34</p>
             </div>
             <div className="space-y-2 border-t border-gray-200/80 py-4 sm:border-t-0 sm:py-0">
@@ -40,8 +40,8 @@ export default function CTA({ openLogin }) {
             </div>
             <div className="space-y-2 border-t border-gray-200/80 py-4 sm:border-t-0 sm:py-0">
               <LocationIcon className="mx-auto mb-2 h-7 w-7 text-[#0A4D68] sm:h-8 sm:w-8" />
-              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">Ubicacion</p>
-              <p className="text-center text-sm text-gray-600 sm:text-base">Madrid, Espana</p>
+              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">Ubicación</p>
+              <p className="text-center text-sm text-gray-600 sm:text-base">Madrid, España</p>
             </div>
           </div>
         </div>

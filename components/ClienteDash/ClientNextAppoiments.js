@@ -34,21 +34,21 @@ export default function ClienteNextAppointments({ userId }) {
   hoy.setHours(0, 0, 0, 0);
 
   const futuras = citas.filter(
-    (c) => new Date(c.hora_inicio) >= hoy && c.estado_cita !== "cancelada"
+    (cita) => new Date(cita.hora_inicio) >= hoy && cita.estado_cita !== "cancelada"
   );
 
   return (
     <div className="mt-2 rounded-2xl border border-[#e6efe8] bg-white p-6 shadow-[0_18px_40px_rgba(10,77,104,0.08)]">
       {futuras.length === 0 ? (
-        <p className="text-[#245953]">No tienes citas proximas.</p>
+        <p className="text-[#245953]">No tienes citas próximas.</p>
       ) : (
-        futuras.map((c) => (
-          <div key={c.id} className="mb-4 border-l-4 border-[#088395] pl-4">
-            <p className="font-semibold text-[#0A4D68]">{c.servicios.nombre}</p>
+        futuras.map((cita) => (
+          <div key={cita.id} className="mb-4 border-l-4 border-[#088395] pl-4">
+            <p className="font-semibold text-[#0A4D68]">{cita.servicios.nombre}</p>
             <p className="text-[#245953]">
-              {new Date(c.hora_inicio).toLocaleDateString("es-ES")}
+              {new Date(cita.hora_inicio).toLocaleDateString("es-ES")}
               {" • "}
-              {new Date(c.hora_inicio).toLocaleTimeString("es-ES", {
+              {new Date(cita.hora_inicio).toLocaleTimeString("es-ES", {
                 hour: "2-digit",
                 minute: "2-digit",
               })}
@@ -57,10 +57,10 @@ export default function ClienteNextAppointments({ userId }) {
               Estado:{" "}
               <span
                 className={
-                  c.estado_cita === "confirmada" ? "text-[#61764B]" : "text-[#088395]"
+                  cita.estado_cita === "confirmada" ? "text-[#61764B]" : "text-[#088395]"
                 }
               >
-                {c.estado_cita}
+                {cita.estado_cita}
               </span>
             </p>
           </div>
@@ -111,7 +111,7 @@ function HistorialModal({ citas, onClose }) {
               </p>
 
               <p className="mt-1 text-sm">
-                Estado cita:{" "}
+                Estado de la cita:{" "}
                 <span
                   className={
                     cita.estado_cita === "confirmada"

@@ -19,7 +19,7 @@ export default function Footer() {
           />
               <span className="text-xl font-bold text-[#A4BE7B]">Bivalente</span>
             </div>
-            <p className="text-sm text-white">Fisioterapia y psicologia para tu bienestar integral</p>
+            <p className="text-sm text-white">Fisioterapia y psicología para tu bienestar integral</p>
           </div>
 
           <div className="space-y-4">
@@ -27,7 +27,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <Link href="/psicologia" className="hover:text-white transition">
-                  Psicologia
+                  Psicología
                 </Link>
               </li>
               <li>
@@ -74,7 +74,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#" className="hover:text-white transition">
-                  Terminos
+                  Términos
                 </Link>
               </li>
               <li>
@@ -88,7 +88,7 @@ export default function Footer() {
 
         <div className="border-t border-white/20 pt-8">
           <p className="text-center text-sm text-white/70">
-            2025 Bivalente. Todos los derechos reservados. | Madrid, Espana
+            2025 Bivalente. Todos los derechos reservados. | Madrid, España
           </p>
         </div>
       </div>

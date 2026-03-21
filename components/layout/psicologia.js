@@ -5,12 +5,12 @@ import Link from "next/link";
 import { Brain, CheckCircle } from "lucide-react";
 
 const tratamientos = [
-  "Ansiedad y ataques de panico",
-  "Depresion y estado de animo",
-  "Gestion del estres",
+  "Ansiedad y ataques de pánico",
+  "Depresión y estado de ánimo",
+  "Gestión del estrés",
   "Autoestima y crecimiento personal",
   "Terapia de pareja",
-  "Duelo y perdidas",
+  "Duelo y pérdidas",
 ];
 
 export default function Psicologia({ openRegister }) {
@@ -27,12 +27,12 @@ export default function Psicologia({ openRegister }) {
                 <Brain className="h-6 w-6 text-emerald-600" />
               </div>
               <h2 className="text-3xl font-bold !text-[#0A4D68] md:text-4xl">
-                Psicologia Sanitaria en Madrid - Bivalente
+                Psicología Sanitaria en Madrid - Bivalente
               </h2>
             </div>
 
             <p className="text-lg leading-relaxed text-[#0A4D68]">
-              En Bivalente te acompanamos con psicologia sanitaria en Madrid para ayudarte a comprender lo que te pasa, regular tus emociones y construir herramientas utiles para tu dia a dia. Ofrecemos terapia presencial y online, adaptandonos a tu ritmo y a tus necesidades.
+              En Bivalente te acompañamos con psicología sanitaria en Madrid para ayudarte a comprender lo que te pasa, regular tus emociones y construir herramientas útiles para tu día a día. Ofrecemos terapia presencial y online, adaptándonos a tu ritmo y a tus necesidades.
             </p>
 
             <div className="space-y-4">
@@ -53,7 +53,7 @@ export default function Psicologia({ openRegister }) {
               </button>
 
               <Link href="/psicologia" className="bv-btn bv-btn-ghost bv-btn-lg text-center">
-                Ver mas sobre Psicologia
+                Ver más sobre Psicología
               </Link>
             </div>
           </div>
@@ -61,28 +61,29 @@ export default function Psicologia({ openRegister }) {
           <div className="rounded-2xl border border-[#A4BE7B]/15 bg-white/10 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)] sm:rounded-3xl sm:p-7 md:p-8">
             <div className="flex flex-col items-center space-y-6 text-center">
               <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-[#0A4D68]/60 shadow-lg">
-                <Image
-                  src="/daniela.jpeg"
-                  alt="Daniela Lopez, psicologa sanitaria en Madrid"
-                  fill
-                  sizes="144px"
-                  priority
-                  className="object-cover object-[50%_20%]"
-                />
+              import Image from "next/image";
+
+<Image
+  src="/Daniela.webp"
+  alt="Daniela, psicóloga en Bivalente"
+  width={600}
+  height={800}
+  className="object-cover rounded-xl"
+/>
               </div>
 
               <div className="space-y-2">
-                <p className="text-2xl font-bold !text-[#0A4D68]">Daniela Lopez</p>
-                <p className="font-medium text-[#0A4D68]">Psicologa General Sanitaria</p>
+                <p className="text-2xl font-bold !text-[#0A4D68]">Daniela López</p>
+                <p className="font-medium text-[#0A4D68]">Psicóloga General Sanitaria</p>
                 <p className="text-sm text-[#0A4D68]">Col. M-41829</p>
               </div>
 
               <p className="leading-relaxed text-[#0A4D68]">
-                Terapia para adultos, adolescentes, ninos y parejas desde un enfoque integrador, cercano y basado en evidencia. Especializada en ansiedad, trauma, duelo y dificultades relacionales.
+                Terapia para adultos, adolescentes, niños y parejas desde un enfoque integrador, cercano y basado en la evidencia científica. Especializada en ansiedad, trauma, duelo y dificultades relacionales.
               </p>
 
               <div className="flex flex-wrap justify-center gap-2">
-                {["Ansiedad", "Depresion", "EMDR", "Parejas"].map((tag) => (
+                {["Ansiedad", "Depresión", "EMDR", "Parejas"].map((tag) => (
                   <span key={tag} className="rounded-full bg-[#A4BE7B]/20 px-3 py-1 text-sm text-[#0A4D68]">
                     {tag}
                   </span>
@@ -90,7 +91,7 @@ export default function Psicologia({ openRegister }) {
               </div>
 
               <Link
-                href="/reservar/psicologia"
+                href="/psicologia#formulario"
                 className="bv-btn bv-btn-primary bv-btn-lg w-full justify-center"
               >
                 Reservar cita con Daniela

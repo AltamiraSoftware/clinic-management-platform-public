@@ -128,7 +128,7 @@ export default function AppointmentDetailsModal({
         <div className="bg-gradient-to-r from-[#0A4D68] via-[#088395] to-[#61764B] px-6 py-6 text-white">
           <h2 className="text-2xl font-bold">Detalles de la cita</h2>
           <p className="mt-1 text-sm text-white/82">
-            Revision clinica y gestion de seguimiento.
+            Revisión clínica y gestión de seguimiento.
           </p>
         </div>
 
@@ -186,10 +186,10 @@ export default function AppointmentDetailsModal({
           )}
 
           <section className="rounded-[24px] border border-[#d4e5e2] bg-white/92 p-5 shadow-[0_18px_40px_rgba(10,77,104,0.08)]">
-            <p className="text-sm font-semibold text-[#245953]">Notas de sesion</p>
+            <p className="text-sm font-semibold text-[#245953]">Notas de sesión</p>
 
             {notasSesion.length === 0 ? (
-              <p className="mt-3 text-sm text-[#6b8b92]">Todavia no hay notas registradas.</p>
+              <p className="mt-3 text-sm text-[#6b8b92]">Todavía no hay notas registradas.</p>
             ) : (
               <ul className="mt-4 space-y-3">
                 {notasSesion.map((nota) => (
@@ -211,7 +211,7 @@ export default function AppointmentDetailsModal({
               onChange={(e) => setNuevaNota(e.target.value)}
               rows={4}
               className={`mt-4 ${textareaClassName}`}
-              placeholder="Anadir nota profesional..."
+              placeholder="Añadir nota profesional..."
             />
 
             <button

@@ -34,13 +34,14 @@ export default function Hero() {
           Centro sanitario especializado en terapia psicológica y fisioterapia musculoesquelética en Madrid. Atención presencial, online y a domicilio.
           </p>
         </div>
-          <Image
-  src="/ChatGPT7.png"
+        <Image
+  src="/BivalenteSalud.webp"
   alt="Logo-Bivalente"
-  width={650}
-  height={650}
-  unoptimized
-  className=" mt-1 mx-auto"
+  width={900}
+  height={600}
+  priority
+  sizes="(max-width: 768px) 90vw, 813px"
+  className="mt-1 mx-auto h-auto w-full max-w-[813px]"
 />
 
 
