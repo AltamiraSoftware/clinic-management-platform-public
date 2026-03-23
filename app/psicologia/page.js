@@ -1,11 +1,11 @@
 ﻿import Footer from "@/components/layout/footer";
+import Image from "next/image";
 import {
   Brain,
   Heart,
   Users,
   Sparkles,
   GraduationCap,
-  Briefcase,
   CheckCircle,
   Phone,
   Mail,
@@ -13,6 +13,7 @@ import {
   ClipboardList,
   CalendarDays,
   MessageSquareHeart,
+  FileText,
 } from "lucide-react";
 import Link from "next/link";
 import HeaderClient from "@/components/layout/HeaderClient";
@@ -94,74 +95,163 @@ const proceso = [
   },
 ];
 
+const precios = [
+  {
+    titulo: "Terapia individual presencial",
+    etiqueta: "Primera sesión",
+    precio: "40 euros",
+    detalle: "Un primer encuentro presencial para valorar tu situación con calma y empezar a orientarte.",
+    extra: "Sesiones sucesivas: 65 euros.",
+  },
+  {
+    titulo: "Terapia individual online",
+    etiqueta: "Primera sesión",
+    precio: "40 euros",
+    detalle: "La misma primera toma de contacto, con la comodidad de hacerlo online desde donde estés.",
+    extra: "Sesiones sucesivas: 60 euros.",
+  },
+  {
+    titulo: "Terapia de pareja o familia",
+    etiqueta: "Desde la primera sesión",
+    precio: "75 euros",
+    detalle: "Sesiones online o presenciales para trabajar la dinámica relacional con un enfoque claro y estructurado.",
+    extra: "Mismo precio desde la primera sesión.",
+  },
+];
+
+const faqs = [
+  {
+    pregunta: "¿Cómo es la primera sesión de psicología?",
+    respuesta:
+      "La primera sesión está pensada para comprender tu motivo de consulta, el momento en el que te encuentras y qué tipo de apoyo puede encajar mejor contigo. A partir de ahí se orientan los siguientes pasos.",
+  },
+  {
+    pregunta: "¿Puedo hacer terapia online?",
+    respuesta:
+      "Sí. Las terapias online se pueden realizar por Skype, Teams, Zoom o Google Meet. Antes de comenzar el proceso terapéutico, se indicará el medio por el que se tendrán las sesiones. Para las sesiones online, es recomendable contar con un espacio agradable en casa y una mesa donde poder apoyar el dispositivo que uses para la videollamada.",
+  },
+  {
+    pregunta: "¿Trabajas con adultos e infanto-juvenil?",
+    respuesta:
+      "Sí. La atención está orientada a población infanto-juvenil y adultos, con intervención ajustada a la etapa vital y al motivo de consulta.",
+  },
+  {
+    pregunta: "¿También se ofrece terapia de pareja o familia?",
+    respuesta:
+      "Sí. Existe la opción de terapia de pareja o familia, tanto online como presencial, con una tarifa específica desde la primera sesión.",
+  },
+  {
+    pregunta: "¿Dónde se realizan las sesiones presenciales?",
+    respuesta:
+      "Las terapias presenciales se realizan en el centro sanitario Eduardo Torres Psicología, en Calle Bravo Murillo, 50, planta 1, puerta B, con acceso cercano desde Canal y Cuatro Caminos.",
+  },
+  {
+    pregunta: "¿Puedo resolver dudas antes de reservar?",
+    respuesta:
+      "Sí. Puedes usar el formulario de contacto para explicar tu situación y recibir una orientación inicial antes de agendar la primera sesión.",
+  },
+];
+
 export default function PsicologiaPage() {
   return (
     <main className="min-h-screen">
-      <section className="relative bv-hero pt-5 min-h-[92vh]">
-        <HeaderClient />
+      <section className="relative bv-hero pt-5 min-h-[92vh] overflow-hidden">
+  <HeaderClient />
 
-        <div className="container mx-auto max-w-7xl px-6 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm text-white">
-                <Brain className="w-4 h-4 text-[#A4BE7B]" />
-                Psicología Bivalente
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white! leading-tight text-balance">
-                Tu bienestar <span className="text-[#A4BE7B]">emocional</span> es nuestra <span className="text-[#A4BE7B]">prioridad</span>
-              </h1>
-              <p className="text-lg text-white/80! leading-relaxed">
-                Evaluación e intervención psicológica para población infantojuvenil y adultos.
-                Sesiones presenciales en Madrid y online.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a href="#formulario" className="bv-btn bv-btn-primary bv-btn-lg">
-                  Reservar cita
-                </a>
-                <a href="#tratamientos" className="bv-btn bv-btn-ghost bv-btn-lg">
-                  Conocer más
-                </a>
-              </div>
-            </div>
+  <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#A4BE7B]/20 blur-3xl" />
+  <div className="pointer-events-none absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-[#088395]/20 blur-3xl" />
 
-            <div className="bv-glass rounded-3xl p-8">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#A4BE7B] to-[#61764B] flex items-center justify-center text-4xl font-bold text-white">
-                  DL
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white!">Daniela López Meléndez</h3>
-                  <p className="text-[#A4BE7B] font-medium">Psicóloga General Sanitaria</p>
-                </div>
-                <div className="flex flex-wrap justify-center gap-2 pt-2">
-                  <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Infanto-juvenil</span>
-                  <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Adultos</span>
-                  <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Crisis</span>
-                </div>
-                <p className="text-white/70 text-sm pt-2">
-                  Colegiada | Universidad Nebrija | Máster Universidad Europea
+  <div className="container mx-auto max-w-7xl px-6 py-14 sm:py-16 lg:py-20">
+    <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+      
+      {/* IMAGEN: primero en móvil */}
+      <div className="order-1 lg:order-2 relative flex justify-center">
+        <div className="absolute -z-10 h-[260px] w-[260px] sm:h-[320px] sm:w-[320px] rounded-full bg-[#A4BE7B]/25 blur-3xl" />
+
+        <div className="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[440px]">
+          <div className="rounded-[28px] border border-white/15 bg-white/10 p-2 sm:p-3 shadow-[0_24px_70px_rgba(10,77,104,0.24)] backdrop-blur-md">
+            <div className="relative overflow-hidden rounded-[24px] bg-gradient-to-br from-white/30 to-white/10">
+              <Image
+                src="/Daniela.webp"
+                alt="Daniela López Meléndez, psicóloga general sanitaria en Madrid"
+                width={900}
+                height={1200}
+                priority
+                sizes="(max-width: 640px) 82vw, (max-width: 1024px) 60vw, 440px"
+                className="h-auto w-full object-cover object-top"
+              />
+
+              <div className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 rounded-2xl border border-white/40 bg-white/88 p-3 sm:p-4 shadow-lg backdrop-blur">
+                <p className="text-sm sm:text-base font-semibold text-[#0A4D68]">
+                  Daniela López Meléndez
                 </p>
-                <div className="w-full bv-divider mt-2" />
+                <p className="mt-1 text-xs sm:text-sm text-[#61764B]">
+                  Psicóloga General Sanitaria
+                </p>
 
-                <div id="contacto" className="w-full space-y-2 text-white/85 text-sm">
-                  <div className="flex items-center justify-center gap-2">
-                    <Phone className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>+34 674547577</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <Mail className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>danilopezme1004@gmail.com</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <MapPin className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>Madrid</span>
-                  </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <span className="rounded-full bg-[#A4BE7B]/20 px-3 py-1 text-[11px] sm:text-xs font-medium text-[#61764B]">
+                    Infanto-juvenil
+                  </span>
+                  <span className="rounded-full bg-[#A4BE7B]/20 px-3 py-1 text-[11px] sm:text-xs font-medium text-[#61764B]">
+                    Adultos
+                  </span>
+                  <span className="rounded-full bg-[#A4BE7B]/20 px-3 py-1 text-[11px] sm:text-xs font-medium text-[#61764B]">
+                    Crisis
+                  </span>
                 </div>
               </div>
             </div>
           </div>
+
+          
         </div>
-      </section>
+      </div>
+
+      {/* TEXTO: segundo en móvil */}
+      <div className="order-2 lg:order-1 space-y-6 text-center lg:text-left">
+        <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white">
+          <Brain className="h-4 w-4 text-[#A4BE7B]" />
+          Psicología Bivalente
+        </div>
+
+        <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white! text-balance">
+          Tu bienestar <span className="text-[#A4BE7B]">emocional</span> es nuestra{" "}
+          <span className="text-[#A4BE7B]">prioridad</span>
+        </h1>
+
+        <p className="mx-auto max-w-xl text-lg leading-relaxed text-white/80! lg:mx-0">
+          Evaluación e intervención psicológica para población infanto-juvenil y adultos.
+          Sesiones presenciales en Madrid y online.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
+          <a href="#formulario" className="bv-btn bv-btn-primary bv-btn-lg">
+            Reservar cita
+          </a>
+          <a href="#tratamientos" className="bv-btn bv-btn-ghost bv-btn-lg">
+            Conocer más
+          </a>
+        </div>
+
+        <div className="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-3">
+          <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-sm">
+            <p className="text-sm font-semibold text-[#A4BE7B]">Especialidad</p>
+            <p className="mt-1 text-sm text-white/80">Infanto-juvenil y adultos</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-sm">
+            <p className="text-sm font-semibold text-[#A4BE7B]">Modalidad</p>
+            <p className="mt-1 text-sm text-white/80">Presencial y online</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-sm">
+            <p className="text-sm font-semibold text-[#A4BE7B]">Enfoque</p>
+            <p className="mt-1 text-sm text-white/80">Cercano y estructurado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section id="tratamientos" className="min-h-[92vh] relative py-20 md:py-28 bg-gradient-to-br from-[#f8faf5] to-[#A4BE7B] overflow-hidden">
         <div className="container mx-auto max-w-6xl px-6">
@@ -176,12 +266,15 @@ export default function PsicologiaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {tratamientos.map((tratamiento, index) => (
-              <div key={index} className="card rounded-2xl p-6 border border-[#0A4D68]/20 hover:shadow-lg transition">
-                <div className="w-12 h-12 rounded-xl bg-[#A4BE7B]/20 flex items-center justify-center mb-4">
+              <div
+                key={index}
+                className="rounded-[28px] border border-white/65 bg-white/18 p-6 text-center shadow-[0_24px_60px_rgba(10,77,104,0.12)] backdrop-blur-md transition hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(10,77,104,0.16)]"
+              >
+                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/28 shadow-[0_12px_24px_rgba(10,77,104,0.10)]">
                   <tratamiento.icon className="w-6 h-6 text-[#0A4D68]" />
                 </div>
                 <h3 className="font-semibold text-[#0A4D68]! mb-2">{tratamiento.title}</h3>
-                <p className="text-sm text-[#0A4D68]!">{tratamiento.description}</p>
+                <p className="text-sm leading-relaxed text-[#245953]">{tratamiento.description}</p>
               </div>
             ))}
           </div>
@@ -193,13 +286,29 @@ export default function PsicologiaPage() {
         <div className="pointer-events-none absolute -bottom-24 -right-20 h-80 w-80 rounded-full bg-[#0A4D68]/16 blur-3xl" />
 
         <div className="container relative mx-auto max-w-6xl px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white! mb-4">
+              Formación y perfil profesional
+            </h2>
+            <p className="mx-auto max-w-2xl text-white/80">
+              Un resumen claro de la trayectoria, la formación académica y el enfoque clínico de Daniela.
+            </p>
+          </div>
           <div className="grid gap-8 lg:grid-cols-2">
            
 
             <div id="contacto" className="rounded-[30px] border border-white/65 bv-glass p-8  backdrop-blur-sm">
             <div className="flex flex-col items-center text-center space-y-4">
                 <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#A4BE7B] to-[#61764B] flex items-center justify-center text-4xl font-bold text-white">
-                  DL
+                <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-[#0A4D68]/60 shadow-lg">
+              <Image
+  src="/Daniela.webp"
+  alt="Daniela, psicóloga en Bivalente"
+  width={600}
+  height={800}
+  className="object-cover rounded-xl"
+/>
+              </div>
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white!">Daniela López Meléndez</h3>
@@ -211,8 +320,21 @@ export default function PsicologiaPage() {
                   <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Crisis</span>
                 </div>
                 <p className="text-white/70 text-sm pt-2">
-                  Colegiada | Universidad Nebrija | Máster Universidad Europea
+                  Colegiada | Universidad Nebrija | Máster en Psicología General Sanitaria
                 </p>
+                <div className="w-full space-y-3 pt-3">
+                  {formacion.map((item, index) => (
+                    <div
+                      key={index}
+                      className="rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-left"
+                    >
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#A4BE7B]" />
+                        <span className="text-sm text-white/88">{item}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
                 <div className="w-full bv-divider mt-2" />
 
                 <div id="contacto" className="w-full space-y-2 text-white/85 text-sm">
@@ -238,25 +360,88 @@ export default function PsicologiaPage() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white">Trayectoria</p>
-                  <h3 className="text-2xl font-bold text-[#0A4D68]" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formación académica</h3>
+                  <h3 className="text-2xl font-bold text-white!" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Mi enfoque terapéutico</h3>
                 </div>
               </div>
 
               <div className="bv-divider my-6" />
 
-              <div className="space-y-3">
-                {formacion.map((item, index) => (
-                  <div
-                    key={index}
-                    className="rounded-2xl border border-[#A4BE7B]/18 bv-glass p-4 text-white"
-                  >
-                    <div className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#A4BE7B]" />
-                      <span className="text-white">{item}</span>
-                    </div>
-                  </div>
-                ))}
+              <div className="space-y-5 text-white/88">
+                <p className="leading-relaxed">
+                  Soy psicóloga general sanitaria comprometida con el acompañamiento a personas que buscan comprenderse mejor, sanar sus heridas emocionales y construir relaciones más seguras consigo mismas y con los demás.
+                </p>
+                <p className="leading-relaxed">
+                  Trabajo desde un enfoque integrador, combinando herramientas de diferentes corrientes psicológicas para adaptarme a la historia, las necesidades y el ritmo de cada paciente. Atiendo a adultos, adolescentes, niños y parejas, ofreciendo un espacio cercano, respetuoso y orientado al bienestar emocional.
+                </p>
+                <p className="leading-relaxed">
+                  Mi experiencia incluye intervención en situaciones de crisis, atención a población infanto-juvenil y adultos. Mi compromiso es ofrecer un espacio seguro y de confianza donde puedas explorar lo que sientes con calma, fortalecer tu bienestar y desarrollar nuevas formas de relacionarte contigo y con quienes te rodean.
+                </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="min-h-[92vh] relative py-20 md:py-28 bg-gradient-to-br from-[#f8faf5] to-[#A4BE7B] overflow-hidden">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A4D68]! mb-4">
+              Precios de psicología
+            </h2>
+            <p className="text-[#0A4D68]! max-w-2xl mx-auto">
+              Una primera sesión accesible para empezar con claridad y tarifas definidas para continuar tu proceso con seguridad.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {precios.map((item) => (
+              <div
+                key={item.titulo}
+                className="rounded-[28px] border border-white/65 bg-white/18 p-8 text-center shadow-[0_24px_60px_rgba(10,77,104,0.12)] backdrop-blur-md transition hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(10,77,104,0.16)]"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/28 shadow-[0_12px_24px_rgba(10,77,104,0.10)]">
+                    <CheckCircle className="h-7 w-7 text-[#0A4D68]" />
+                  </div>
+
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#61764B]">
+                    {item.etiqueta}
+                  </p>
+                  <h3 className="mt-3 text-xl font-semibold text-[#0A4D68]!">
+                    {item.titulo}
+                  </h3>
+                  <p className="mt-5 text-4xl font-bold leading-none text-[#0A4D68]!">
+                    {item.precio}
+                  </p>
+                  <p className="mt-3 text-sm font-semibold text-[#61764B]">
+                    {item.titulo === "Terapia individual presencial" && "Primera sesión presencial individual"}
+                    {item.titulo === "Terapia individual online" && "Primera sesión online individual"}
+                    {item.titulo === "Terapia de pareja o familia" && "Online o presencial desde la primera sesión"}
+                  </p>
+                  <p className="mt-5 text-sm leading-relaxed text-[#245953]">
+                    {item.detalle}
+                  </p>
+                  <div className="mt-5 w-full rounded-2xl border border-white/55 bg-white/24 px-4 py-3">
+                    <p className="text-sm font-semibold text-[#245953]">{item.extra}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-[24px] border border-white/65 bg-white/18 p-6 text-center shadow-[0_24px_60px_rgba(10,77,104,0.10)] backdrop-blur-md">
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-sm text-[#245953]">
+                Los informes solicitados por el paciente tendrán un coste adicional.
+              </p>
+              <a
+                href="/condiciones-funcionamiento-terapia.pdf"
+                download
+                className="bv-btn bv-btn-primary-dark bv-btn-lg"
+              >
+                <FileText className="h-5 w-5" />
+                Descargar condiciones de la terapia
+              </a>
             </div>
           </div>
         </div>
@@ -264,6 +449,14 @@ export default function PsicologiaPage() {
 
       <section id="formulario" className="py-20 bv-hero">
         <div className="container mx-auto max-w-6xl px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white! mb-4">
+              Solicita información o reserva tu primera sesión
+            </h2>
+            <p className="mx-auto max-w-2xl text-white/80">
+              Cuéntanos tu situación y te orientamos antes de empezar el proceso terapéutico.
+            </p>
+          </div>
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <ServiceContactForm
               service="Psicologia"
@@ -311,6 +504,38 @@ export default function PsicologiaPage() {
         </div>
       </section>
 
+      <section className="min-h-[92vh] relative py-20 md:py-28 bg-gradient-to-br from-[#f8faf5] to-[#A4BE7B] overflow-hidden">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A4D68]! mb-4">
+              Preguntas frecuentes
+            </h2>
+            <p className="text-[#0A4D68]! max-w-2xl mx-auto">
+              Respuestas rápidas para entender cómo funciona este espacio terapéutico antes de reservar.
+            </p>
+          </div>
+
+          <div className="grid gap-5">
+            {faqs.map((item) => (
+              <details
+                key={item.pregunta}
+                className="rounded-[28px] border border-white/65 bg-white/18 p-6 shadow-[0_24px_60px_rgba(10,77,104,0.12)] backdrop-blur-md transition"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-semibold text-[#0A4D68]">
+                  <span>{item.pregunta}</span>
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/28 shadow-[0_12px_24px_rgba(10,77,104,0.10)]">
+                    <CheckCircle className="h-5 w-5 text-[#0A4D68]" />
+                  </span>
+                </summary>
+                <p className="mt-4 pr-2 text-sm leading-relaxed text-[#245953]">
+                  {item.respuesta}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-br from-[#A4BE7B] to-[#61764B]">
         <div className="container mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -320,7 +545,7 @@ export default function PsicologiaPage() {
             Da el primer paso. Reserva tu primera consulta con Daniela y empieza a cuidar tu salud mental.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="#formulario" className="bv-btn bv-btn-primary bv-btn-lg">
+            <a href="#formulario" className="bv-btn bv-btn-primary-dark bv-btn-lg">
               Reservar cita
             </a>
             <Link href="/" className="bv-btn bv-btn-ghost bv-btn-lg">

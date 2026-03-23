@@ -1,13 +1,13 @@
 ﻿import HeaderClient from "@/components/layout/HeaderClient";
 import Footer from "@/components/layout/footer";
 import ServiceContactForm from "@/components/forms/ServiceContactForm";
+import Image from "next/image";
 import {
   Activity,
   Dumbbell,
   Home,
   Scan,
   GraduationCap,
-  Briefcase,
   CheckCircle,
   Phone,
   Mail,
@@ -57,23 +57,6 @@ const formacion = [
   "Máster Experto en ecografía, anatomía palpatoria e investigación del cuerpo humano en vivo - UCM (2026)",
 ];
 
-const experiencia = [
-  {
-    periodo: "12/2021 - Actual",
-    puesto: "Fisioterapeuta",
-    empresa: "Clínica Natal (San Sebastián de los Reyes, Madrid)",
-    descripcion:
-      "Tratamientos personalizados (sesiones de 1 hora), pacientes privados y derivados. Trabajo con ejercicio terapéutico, hipopresivos y pilates (grupal e individual).",
-  },
-  {
-    periodo: "03/2021 - 12/2021",
-    puesto: "Fisioterapeuta",
-    empresa: "UrbanFisio (Madrid)",
-    descripcion:
-      "Atención a pacientes privados con tratamientos personalizados (1 hora) a domicilio.",
-  },
-];
-
 const formacionComplementaria = [
   "Curso de punción seca",
   "Pilates suelo (nivel experto)",
@@ -102,30 +85,118 @@ const proceso = [
   },
 ];
 
+const precios = [
+  {
+    titulo: "Fisioterapia a domicilio",
+    etiqueta: "Primera sesión",
+    precio: "50 euros",
+    detalle:
+      "Una sesión completa en tu domicilio para valorar tu caso, aliviar el dolor y definir un plan de recuperación adaptado a ti.",
+    extra: "Atención en Madrid con tratamiento y orientación desde la primera visita.",
+  },
+];
+
+const faqs = [
+  {
+    pregunta: "¿Vas al domicilio?",
+    respuesta:
+      "Sí. Borja atiende a domicilio en muchas zonas de Madrid. Si quieres confirmar disponibilidad en tu zona, puedes consultarlo sin compromiso antes de reservar.",
+  },
+  {
+    pregunta: "¿Qué se necesita para la sesión en el domicilio?",
+    respuesta:
+      "Normalmente solo hace falta un espacio cómodo en casa para poder valorar y trabajar con seguridad. Si hiciera falta algo concreto para tu caso, se te indicará previamente.",
+  },
+  {
+    pregunta: "¿Puedo pedir factura?",
+    respuesta:
+      "Sí. Si necesitas factura de la sesión, puedes solicitarla directamente al hacer la reserva o durante el contacto previo.",
+  },
+  {
+    pregunta: "¿Cuál es la duración de cada sesión?",
+    respuesta:
+      "Las sesiones están planteadas con una duración aproximada de una hora, para poder valorar, tratar y pautar el trabajo de forma completa.",
+  },
+  {
+    pregunta: "¿Cómo se abona la sesión?",
+    respuesta:
+      "El modo de pago puede confirmarse directamente con Borja en el momento de la reserva o del primer contacto, para adaptarlo a la logística de la atención a domicilio.",
+  },
+  {
+    pregunta: "¿Los fines de semana se puede pedir sesión?",
+    respuesta:
+      "Depende de disponibilidad. Si necesitas una cita en fin de semana, lo mejor es consultarlo previamente para valorar si hay opción.",
+  },
+];
+
 export default function FisioterapiaPage() {
   return (
     <main>
-      <section className="relative bv-hero pt-5 min-h-[92vh]">
+      <section className="relative bv-hero pt-5 min-h-[92vh] overflow-hidden">
         <HeaderClient />
 
-        <div className="container mx-auto max-w-7xl px-6 pt-24 pb-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+        <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#A4BE7B]/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-[#088395]/20 blur-3xl" />
+
+        <div className="container mx-auto max-w-7xl px-6 py-14 sm:py-16 lg:py-20">
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="order-1 lg:order-2 relative flex justify-center">
+              <div className="absolute -z-10 h-[260px] w-[260px] sm:h-[320px] sm:w-[320px] rounded-full bg-[#088395]/25 blur-3xl" />
+
+              <div className="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[440px]">
+                <div className="rounded-[28px] border border-white/15 bg-white/10 p-2 sm:p-3 shadow-[0_24px_70px_rgba(10,77,104,0.24)] backdrop-blur-md">
+                  <div className="relative overflow-hidden rounded-[24px] bg-gradient-to-br from-white/30 to-white/10">
+                    <Image
+                      src="/borja.png"
+                      alt="Borja Estarellas Botín, fisioterapeuta en Madrid"
+                      width={900}
+                      height={1200}
+                      priority
+                      sizes="(max-width: 640px) 82vw, (max-width: 1024px) 60vw, 440px"
+                      className="h-auto w-full object-cover object-top"
+                    />
+
+                    <div className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 rounded-2xl border border-white/40 bg-white/88 p-3 sm:p-4 shadow-lg backdrop-blur">
+                      <p className="text-sm sm:text-base font-semibold text-[#0A4D68]">
+                        Borja Estarellas Botín
+                      </p>
+                      <p className="mt-1 text-xs sm:text-sm text-[#61764B]">
+                        Fisioterapeuta
+                      </p>
+
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        <span className="rounded-full bg-[#A4BE7B]/20 px-3 py-1 text-[11px] sm:text-xs font-medium text-[#61764B]">
+                          Domicilio
+                        </span>
+                        <span className="rounded-full bg-[#A4BE7B]/20 px-3 py-1 text-[11px] sm:text-xs font-medium text-[#61764B]">
+                          Deportiva
+                        </span>
+                        <span className="rounded-full bg-[#A4BE7B]/20 px-3 py-1 text-[11px] sm:text-xs font-medium text-[#61764B]">
+                          Ecografía
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="order-2 lg:order-1 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm text-white">
                 <Home className="w-4 h-4 text-[#A4BE7B]" />
                 Fisioterapia a domicilio - Madrid
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold text-white! leading-tight text-balance">
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white! leading-tight text-balance">
                 Recupera <span className="text-[#A4BE7B]">movimiento</span>, reduce <span className="text-[#A4BE7B]">dolor</span> y vuelve a tu rutina
               </h1>
 
-              <p className="text-lg text-white/85 leading-relaxed">
+              <p className="mx-auto max-w-xl text-lg text-white/85 leading-relaxed lg:mx-0">
                 Fisioterapia musculoesquelética y deportiva con enfoque en ejercicio terapéutico,
                 valoración funcional y ecografía. Atención a domicilio en Madrid.
               </p>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
                 <a href="#formulario" className="bv-btn bv-btn-primary bv-btn-lg">
                   Reservar cita
                 </a>
@@ -134,64 +205,19 @@ export default function FisioterapiaPage() {
                 </a>
               </div>
 
-              <div className="flex flex-wrap gap-4 text-white/80 text-sm pt-2">
-                <span className="inline-flex items-center gap-2">
-                  <MapPin className="w-4 h-4" /> Madrid
-                </span>
-                <span className="inline-flex items-center gap-2">
-                  <Home className="w-4 h-4" /> Domicilio
-                </span>
-                <span className="inline-flex items-center gap-2">
-                  <Dumbbell className="w-4 h-4" /> Ejercicio terapeutico
-                </span>
-              </div>
-            </div>
-
-            <div className="bv-glass rounded-3xl p-8">
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#088395] to-[#0A4D68] flex items-center justify-center text-3xl font-extrabold text-white">
-                  BE
+              <div className="grid grid-cols-1 gap-3 pt-2 sm:grid-cols-3">
+                <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-sm">
+                  <p className="text-sm font-semibold text-[#A4BE7B]">Zona</p>
+                  <p className="mt-1 text-sm text-white/80">Madrid</p>
                 </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white!">Borja Estarellas Botín</h2>
-                  <p className="text-[#A4BE7B] font-semibold">Fisioterapeuta</p>
+                <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-sm">
+                  <p className="text-sm font-semibold text-[#A4BE7B]">Modalidad</p>
+                  <p className="mt-1 text-sm text-white/80">A domicilio</p>
                 </div>
-
-                <div className="flex flex-wrap justify-center gap-2 pt-1">
-                  <span className="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm border border-white/15">
-                    Domicilio
-                  </span>
-                  <span className="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm border border-white/15">
-                    Deportiva
-                  </span>
-                  <span className="bg-white/10 text-white/90 px-3 py-1 rounded-full text-sm border border-white/15">
-                    Ecografía
-                  </span>
+                <div className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur-sm">
+                  <p className="text-sm font-semibold text-[#A4BE7B]">Enfoque</p>
+                  <p className="mt-1 text-sm text-white/80">Dolor, función y ejercicio</p>
                 </div>
-
-                <p className="text-white/75 text-sm">
-                  Formación en Fisioterapia Manual Avanzada y Ejercicio Terapéutico (UCM) y especialización en ecografía.
-                </p>
-
-                <div className="w-full bv-divider mt-2" />
-
-                <div id="contacto" className="w-full space-y-2 text-white/85 text-sm">
-                  <div className="flex items-center justify-center gap-2">
-                    <Phone className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>618 417 971</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <Mail className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>estarellas11088@gmail.com</span>
-                  </div>
-                  <div className="flex items-center justify-center gap-2">
-                    <MapPin className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>Madrid</span>
-                  </div>
-                </div>
-
-                <p className="text-white/60 text-xs">Datos de contacto y trayectoria según CV.</p>
               </div>
             </div>
           </div>
@@ -211,32 +237,89 @@ export default function FisioterapiaPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {servicios.map((s, index) => (
-              <div key={index} className="card rounded-2xl p-6 border border-[#088395]/15 hover:shadow-lg transition">
-                <div className="w-12 h-12 rounded-xl bg-[#0A4D68]/15 flex items-center justify-center mb-4">
+              <div
+                key={index}
+                className="rounded-[28px] border border-white/65 bg-white/18 p-6 text-center shadow-[0_24px_60px_rgba(10,77,104,0.12)] backdrop-blur-md transition hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(10,77,104,0.16)]"
+              >
+                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/28 shadow-[0_12px_24px_rgba(10,77,104,0.10)]">
                   <s.icon className="w-6 h-6 text-[#0A4D68]" />
                 </div>
                 <h3 className="font-semibold text-[#0A4D68]! mb-2">{s.title}</h3>
-                <p className="text-sm text-[#0A4D68]!">{s.description}</p>
+                <p className="text-sm leading-relaxed text-[#245953]">{s.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-20 bg-[radial-gradient(circle_at_top_left,_rgba(8,131,149,0.30),_transparent_30%),radial-gradient(circle_at_88%_20%,_rgba(164,190,123,0.28),_transparent_30%),linear-gradient(135deg,_#d0e8e3_0%,_#e7f5f1_42%,_#c5dfd7_100%)]">
-        <div className="pointer-events-none absolute -top-24 -left-20 h-80 w-80 rounded-full bg-[#088395]/28 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -right-20 h-80 w-80 rounded-full bg-[#A4BE7B]/30 blur-3xl" />
+      <section className="relative overflow-hidden py-20 bv-hero min-h-[92vh]">
+        <div className="pointer-events-none absolute -top-24 -left-20 h-80 w-80 rounded-full bg-[#A4BE7B]/30 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -right-20 h-80 w-80 rounded-full bg-[#0A4D68]/16 blur-3xl" />
 
         <div className="container relative mx-auto max-w-6xl px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white! mb-4">
+              Formación y perfil profesional
+            </h2>
+            <p className="mx-auto max-w-2xl text-white/80">
+              Un resumen directo de la trayectoria, la formación y el enfoque de trabajo de Borja.
+            </p>
+          </div>
           <div className="grid gap-8 lg:grid-cols-2">
-            <div className="rounded-[30px] border border-white/65 bg-gradient-to-br from-white/88 to-[#f0fbfb]/88 p-8 shadow-[0_24px_70px_rgba(10,77,104,0.12)] backdrop-blur-sm">
+            <div id="contacto" className="rounded-[30px] border border-white/65 bv-glass p-8 backdrop-blur-sm">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-[#0A4D68]/60 shadow-lg">
+                  <Image
+                    src="/borja.png"
+                    alt="Borja Estarellas Botín, fisioterapeuta en Bivalente"
+                    width={600}
+                    height={800}
+                    className="h-full w-full object-cover object-top"
+                  />
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-white!">Borja Estarellas Botín</h3>
+                  <p className="text-[#A4BE7B] font-medium">Fisioterapeuta</p>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-2 pt-2">
+                  <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Domicilio</span>
+                  <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Deportiva</span>
+                  <span className="bg-[#A4BE7B]/20 text-[#A4BE7B] px-3 py-1 rounded-full text-sm">Ecografía</span>
+                </div>
+
+                <p className="text-white/70 text-sm pt-2">
+                  Universidad Nebrija | UCM | Ejercicio terapéutico y ecografía
+                </p>
+
+                <div className="w-full bv-divider mt-2" />
+
+                <div className="w-full space-y-2 text-white/85 text-sm">
+                  <div className="flex items-center justify-center gap-2">
+                    <Phone className="w-4 h-4 text-[#A4BE7B]" />
+                    <span>618 417 971</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <Mail className="w-4 h-4 text-[#A4BE7B]" />
+                    <span>estarellas11088@gmail.com</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <MapPin className="w-4 h-4 text-[#A4BE7B]" />
+                    <span>Madrid</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-[30px] border border-white/65 bv-glass p-8 backdrop-blur-sm">
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#088395] to-[#0A4D68] shadow-[0_10px_24px_rgba(8,131,149,0.24)]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#A4BE7B] to-[#61764B] shadow-[0_10px_24px_rgba(164,190,123,0.28)]">
                   <GraduationCap className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#088395]">Trayectoria</p>
-                  <h3 className="text-2xl font-bold text-[#0A4D68]" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formación</h3>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white">Trayectoria</p>
+                  <h3 className="text-2xl font-bold text-white!" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formación académica</h3>
                 </div>
               </div>
 
@@ -246,87 +329,90 @@ export default function FisioterapiaPage() {
                 {formacion.map((item, index) => (
                   <div
                     key={index}
-                    className="rounded-2xl border border-[#088395]/14 bg-gradient-to-r from-white to-[#f3fbfb] p-4 shadow-[0_10px_26px_rgba(10,77,104,0.05)]"
+                    className="rounded-2xl border border-white/15 bg-white/10 p-4"
                   >
                     <div className="flex items-start gap-3">
-                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#088395]" />
-                      <span className="text-[#245953]">{item}</span>
+                      <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#A4BE7B]" />
+                      <span className="text-white">{item}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
               <div className="pt-6">
-                <h4 className="text-lg font-bold text-[#0A4D68] mb-3" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formación complementaria</h4>
+                <h4 className="text-lg font-bold text-white! mb-3" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Formación complementaria</h4>
                 <div className="space-y-3">
-                  {formacionComplementaria.map((c, idx) => (
-                    <div
-                      key={idx}
-                      className="rounded-2xl border border-[#A4BE7B]/18 bg-gradient-to-r from-white to-[#f7faf4] p-4 shadow-[0_10px_26px_rgba(10,77,104,0.04)]"
-                    >
+                  {formacionComplementaria.map((item, index) => (
+                    <div key={index} className="rounded-2xl border border-white/15 bg-white/10 p-4">
                       <div className="flex items-start gap-3">
                         <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#A4BE7B]" />
-                        <span className="text-[#245953]">{c}</span>
+                        <span className="text-white">{item}</span>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="rounded-[30px] border border-white/65 bg-gradient-to-br from-white/88 to-[#f0fbfb]/88 p-8 shadow-[0_24px_70px_rgba(10,77,104,0.12)] backdrop-blur-sm">
-              <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[#A4BE7B] to-[#61764B] shadow-[0_10px_24px_rgba(164,190,123,0.26)]">
-                  <Briefcase className="w-5 h-5 text-[#0A4D68]" />
-                </div>
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#088395]">Experiencia</p>
-                  <h3 className="text-2xl font-bold text-[#0A4D68]" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Experiencia</h3>
-                </div>
-              </div>
+      <section className="min-h-[92vh] relative py-20 md:py-28 bg-gradient-to-br from-[#f8faf5] to-[#A4BE7B] overflow-hidden">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A4D68]! mb-4">
+              Precios de fisioterapia
+            </h2>
+            <p className="text-[#0A4D68]! max-w-2xl mx-auto">
+              Una tarifa clara para empezar tu tratamiento a domicilio con una sesión completa desde la primera visita.
+            </p>
+          </div>
 
-              <div className="bv-divider my-6" />
-
-              <div className="space-y-4">
-                {experiencia.map((exp, index) => (
-                  <div
-                    key={index}
-                    className="rounded-2xl border border-[#A4BE7B]/18 bg-gradient-to-br from-white to-[#f7faf4] p-5 shadow-[0_10px_28px_rgba(10,77,104,0.05)]"
-                  >
-                    <p className="text-sm font-semibold text-[#088395]">{exp.periodo}</p>
-                    <h4 className="mt-2 font-semibold text-[#0A4D68]">{exp.puesto}</h4>
-                    <p className="mt-1 text-sm font-medium text-[#61764B]">{exp.empresa}</p>
-                    <p className="mt-3 text-sm text-[#245953]">{exp.descripcion}</p>
+          <div className="mx-auto grid max-w-2xl gap-6">
+            {precios.map((item) => (
+              <div
+                key={item.titulo}
+                className="rounded-[28px] border border-white/65 bg-white/18 p-8 text-center shadow-[0_24px_60px_rgba(10,77,104,0.12)] backdrop-blur-md transition hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(10,77,104,0.16)]"
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/28 shadow-[0_12px_24px_rgba(10,77,104,0.10)]">
+                    <CheckCircle className="h-7 w-7 text-[#0A4D68]" />
                   </div>
-                ))}
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#61764B]">
+                    {item.etiqueta}
+                  </p>
+                  <h3 className="mt-3 text-xl font-semibold text-[#0A4D68]!">
+                    {item.titulo}
+                  </h3>
+                  <p className="mt-5 text-4xl font-bold leading-none text-[#0A4D68]!">
+                    {item.precio}
+                  </p>
+                  <p className="mt-3 text-sm font-semibold text-[#61764B]">
+                    Primera sesión a domicilio en Madrid
+                  </p>
+                  <p className="mt-5 text-sm leading-relaxed text-[#245953]">
+                    {item.detalle}
+                  </p>
+                  <div className="mt-5 w-full rounded-2xl border border-white/55 bg-white/24 px-4 py-3">
+                    <p className="text-sm font-semibold text-[#245953]">{item.extra}</p>
+                  </div>
+                </div>
               </div>
-
-              <div className="mt-5 rounded-[26px] border border-[#088395]/14 bg-gradient-to-br from-white to-[#f2fbfb] p-6 shadow-[0_10px_28px_rgba(10,77,104,0.05)]">
-                <h4 className="text-lg font-bold text-[#0A4D68] mb-3" style={{ fontFamily: "\"Apple Garamond\", Baskerville, serif" }}>Cómo trabajo</h4>
-                <ul className="space-y-3 text-[#245953]">
-                  <li className="flex gap-3">
-                    <CheckCircle className="mt-0.5 w-5 h-5 text-[#A4BE7B]" />
-                    Valoración inicial + objetivos claros y realistas.
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="mt-0.5 w-5 h-5 text-[#A4BE7B]" />
-                    Tratamiento + ejercicio terapéutico con progresión.
-                  </li>
-                  <li className="flex gap-3">
-                    <CheckCircle className="mt-0.5 w-5 h-5 text-[#A4BE7B]" />
-                    Seguimiento para consolidar resultados y prevenir recaídas.
-                  </li>
-                </ul>
-              </div>
-
-              <p className="mt-5 text-xs text-[#245953]/80">Formación y experiencia según CV de Borja.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section id="formulario" className="py-20 bv-hero">
         <div className="container mx-auto max-w-6xl px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white! mb-4">
+              Solicita información o reserva tu sesión
+            </h2>
+            <p className="mx-auto max-w-2xl text-white/80">
+              Explícanos tu caso y te orientamos antes de organizar la atención a domicilio.
+            </p>
+          </div>
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <ServiceContactForm
               service="Fisioterapia"
@@ -370,6 +456,38 @@ export default function FisioterapiaPage() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="min-h-[92vh] relative py-20 md:py-28 bg-gradient-to-br from-[#f8faf5] to-[#A4BE7B] overflow-hidden">
+        <div className="container mx-auto max-w-6xl px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A4D68]! mb-4">
+              Preguntas frecuentes
+            </h2>
+            <p className="text-[#0A4D68]! max-w-2xl mx-auto">
+              Respuestas rápidas para resolver las dudas más habituales antes de pedir una sesión de fisioterapia a domicilio.
+            </p>
+          </div>
+
+          <div className="grid gap-5">
+            {faqs.map((item) => (
+              <details
+                key={item.pregunta}
+                className="rounded-[28px] border border-white/65 bg-white/18 p-6 shadow-[0_24px_60px_rgba(10,77,104,0.12)] backdrop-blur-md transition"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-left text-lg font-semibold text-[#0A4D68]">
+                  <span>{item.pregunta}</span>
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-white/28 shadow-[0_12px_24px_rgba(10,77,104,0.10)]">
+                    <CheckCircle className="h-5 w-5 text-[#0A4D68]" />
+                  </span>
+                </summary>
+                <p className="mt-4 pr-2 text-sm leading-relaxed text-[#245953]">
+                  {item.respuesta}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

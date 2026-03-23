@@ -87,7 +87,7 @@ export default function Psicologia({ openRegister }) {
 
               <Link
                 href="/psicologia#formulario"
-                className="bv-btn bv-btn-primary bv-btn-lg w-full justify-center"
+                className="bv-btn bv-btn-primary-dark bv-btn-lg w-full justify-center"
               >
                 Reservar cita con Daniela
               </Link>

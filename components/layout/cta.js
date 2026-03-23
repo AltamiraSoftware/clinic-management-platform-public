@@ -17,12 +17,16 @@ export default function CTA({ openLogin }) {
           </p>
 
           <div className="flex flex-col justify-center gap-3 pt-4 sm:flex-row sm:gap-5 sm:pt-8">
-            <button onClick={openLogin} className="bv-btn bv-btn-primary bv-btn-lg w-full sm:w-auto">
+            <a href="/psicologia">
+            <button  className="bv-btn bv-btn-primary-dark bv-btn-lg w-full sm:w-auto">
               Psicología
             </button>
-            <button onClick={openLogin} className="bv-btn bv-btn-ghost bv-btn-lg w-full sm:w-auto">
+            </a>
+            <a href="/fisioterapia">
+            <button onClick={openLogin} className="bv-btn bv-btn-primary-dark bv-btn-lg w-full sm:w-auto">
               Fisioterapia
             </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 gap-6 border-t border-gray-300/60 pt-8 sm:grid-cols-3 sm:gap-8 sm:pt-12">

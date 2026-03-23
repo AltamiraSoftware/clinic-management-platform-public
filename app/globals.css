@@ -232,7 +232,22 @@ select::-ms-expand { display: none; }
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
+/* ---------------------------------------
+   PRIMARY DARK (azul corporativo)
+   para fondos claros / verdes
+---------------------------------------- */
+.bv-btn-primary-dark {
+  color: white;
+  background: linear-gradient(90deg, #0A4D68 0%, #0F6E7C 55%, #088395 100%);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 10px 22px rgba(10,77,104,0.25);
+}
 
+.bv-btn-primary-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(10,77,104,0.32), var(--btn-shadow-hover);
+  filter: saturate(1.02);
+}
 /* =======================================================
    7) MODALES PREMIUM (se respetan)
    ======================================================= */
