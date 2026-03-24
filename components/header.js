@@ -13,7 +13,7 @@ export default function Header({ onOpenServicios }) {
 
   return (
     <header className="sticky top-0 z-50 mb-5 w-full border-b border-white/10 bg-[linear-gradient(90deg,rgba(10,77,104,0.94)_0%,rgba(8,131,149,0.92)_48%,rgba(97,118,75,0.92)_100%)] shadow-[0_14px_30px_rgba(10,77,104,0.20)] backdrop-blur-lg">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-3 py-4 lg:px-4">
         <Link href="/dashboard" className="flex items-center gap-3">
         <Image
             src="/ChatGPT6.png"
@@ -28,7 +28,7 @@ export default function Header({ onOpenServicios }) {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="ml-8 hidden items-center gap-3 lg:ml-12 md:flex">
           <Link href="/dashboard/chat" className={linkClassName}>
             Chat
           </Link>

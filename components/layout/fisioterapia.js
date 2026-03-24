@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { CheckCircle, Dumbbell } from "lucide-react";
 import Link from "next/link";
@@ -6,12 +6,17 @@ import Image from "next/image";
 
 export default function Fisioterapia() {
   const tratamientos = [
-    "Dolor de espalda y cervicales",
+    "Dolor cervical (cervicalgia)",
+    "Dolor lumbar (lumbalgia, ciática mecánica)",
+    "Dorsalgia",
+    "Tendinopatías (hombro, codo, rodilla, Aquiles, etc.)",
+    "Contracturas y sobrecargas musculares",
+    "Síndrome miofascial y puntos gatillo",
+    "Esguinces y recuperaciones post-lesión",
     "Lesiones deportivas",
-    "Rehabilitación postoperatoria",
-    "Fisioterapia neurológica",
-    "Terapia manual y masajes",
-    "Ejercicio terapéutico",
+    "Artrosis y dolor articular mecánico",
+    "Síndrome subacromial y problemas de hombro",
+    "Fascitis plantar",
   ];
 
   return (
@@ -45,7 +50,7 @@ export default function Fisioterapia() {
               </p>
 
               <div className="flex flex-wrap justify-center gap-2">
-                {["Terapia manual", "Deportivo", "Domicilio", "Rehabilitación"].map((tag) => (
+                {["Terapia manual", "Deportivo", "Domicilio", "RehabilitaciÃ³n"].map((tag) => (
                   <span key={tag} className="rounded-full bg-[#088395]/20 px-3 py-1 text-sm text-white">
                     {tag}
                   </span>
@@ -72,7 +77,7 @@ export default function Fisioterapia() {
             </div>
 
             <p className="text-lg leading-relaxed text-white">
-              En Bivalente ofrecemos fisioterapia a domicilio especializada en Madrid para el tratamiento del dolor lumbar, cervical y lesiones deportivas. Trabajamos con terapia manual avanzada y ejercicio terapéutico basado en la evidencia científica.
+              En Bivalente ofrecemos fisioterapia a domicilio especializada en Madrid para el tratamiento del dolor lumbar, cervical y lesiones deportivas. Trabajamos con terapia manual avanzada y ejercicio terapÃ©utico basado en la evidencia cientí­fica.
             </p>
 
             <div className="space-y-4">
@@ -87,7 +92,7 @@ export default function Fisioterapia() {
               </div>
             </div>
 
-            <Link href="/fisioterapia" className="bv-btn bv-btn-ghost bv-btn-lg">
+            <Link href="/fisioterapia" className="bv-btn bv-btn-ghost bv-btn-lg mx-auto">
               Ver más sobre Fisioterapia
             </Link>
           </div>
@@ -96,3 +101,4 @@ export default function Fisioterapia() {
     </section>
   );
 }
+

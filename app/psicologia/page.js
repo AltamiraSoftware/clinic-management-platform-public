@@ -462,21 +462,7 @@ export default function PsicologiaPage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-[24px] border border-white/65 bg-white/18 p-6 text-center shadow-[0_24px_60px_rgba(10,77,104,0.10)] backdrop-blur-md">
-            <div className="flex flex-col items-center gap-4">
-              <p className="text-sm text-[#245953]">
-                Los informes solicitados por el paciente tendrán un coste adicional.
-              </p>
-              <a
-                href="/condiciones-funcionamiento-terapia.pdf"
-                download
-                className="bv-btn bv-btn-primary-dark bv-btn-lg"
-              >
-                <FileText className="h-5 w-5" />
-                Descargar condiciones de la terapia
-              </a>
-            </div>
-          </div>
+         
         </div>
       </section>
 
@@ -504,9 +490,7 @@ export default function PsicologiaPage() {
               <h2 className="mt-3 text-3xl font-bold text-white!">
                 Comparte tu situación y te orientamos antes de reservar
               </h2>
-              <p className="mt-4 text-white/80 leading-relaxed">
-                Esta sección convierte la página en una entrada real de captación para el MVP: ayuda a detectar necesidades, responder con criterio y facilitar la primera conversación terapéutica.
-              </p>
+              
 
               <div className="mt-8 space-y-4">
                 {proceso.map((item) => (

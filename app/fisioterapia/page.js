@@ -29,25 +29,57 @@ const servicios = [
     icon: Home,
     title: "Fisioterapia a domicilio",
     description:
-      "Sesiones en tu hogar en Madrid. Tratamientos personalizados y planificación de ejercicios para tu recuperación.",
-  },
-  {
-    icon: Dumbbell,
-    title: "Readaptación y ejercicio terapéutico",
-    description:
-      "Trabajo de fuerza, control motor y progresión al ejercicio para volver a moverte con seguridad.",
-  },
-  {
-    icon: Scan,
-    title: "Ecografía musculoesquelética",
-    description:
-      "Valoración y apoyo al tratamiento con enfoque basado en precisión y seguimiento.",
+      "Tratamiento en tu domicilio en Madrid para aliviar dolor, recuperar movimiento y empezar con un plan claro desde la primera sesión.",
+    href: "/fisioterapia/fisioterapia-domicilio",
   },
   {
     icon: Activity,
-    title: "Dolor y lesiones",
+    title: "Dolor cervical",
     description:
-      "Abordaje de lesiones musculares y articulares, dolor persistente y limitaciones funcionales.",
+      "Abordaje de cervicalgia, rigidez y sobrecarga de cuello con tratamiento manual y ejercicio terapéutico.",
+    href: "/fisioterapia/dolor-cervical",
+  },
+  {
+    icon: Scan,
+    title: "Dolor lumbar",
+    description:
+      "Fisioterapia para lumbalgia y dolor lumbar mecánico con progresión adaptada a tu actividad diaria.",
+    href: "/fisioterapia/dolor-lumbar",
+  },
+  {
+    icon: Dumbbell,
+    title: "Tendinopatías",
+    description:
+      "Tratamiento de tendinopatías en hombro, codo, rodilla o Aquiles con enfoque progresivo y funcional.",
+    href: "/fisioterapia/tendinopatias",
+  },
+  {
+    icon: ClipboardList,
+    title: "Contracturas",
+    description:
+      "Tratamiento de contracturas, sobrecargas y síndrome miofascial para recuperar movilidad y aliviar dolor.",
+    href: "/fisioterapia/contracturas",
+  },
+  {
+    icon: CalendarDays,
+    title: "Esguinces",
+    description:
+      "Recuperación funcional tras esguinces con trabajo progresivo para volver a apoyar y moverte con seguridad.",
+    href: "/fisioterapia/esguinces",
+  },
+  {
+    icon: MessageSquareHeart,
+    title: "Lesiones deportivas",
+    description:
+      "Fisioterapia deportiva y readaptación para volver a entrenar con una progresión coherente y segura.",
+    href: "/fisioterapia/lesiones-deportivas",
+  },
+  {
+    icon: CheckCircle,
+    title: "Fascitis plantar",
+    description:
+      "Abordaje del dolor plantar y mejora del apoyo con ejercicio terapéutico y seguimiento adaptado.",
+    href: "/fisioterapia/fascitis-plantar",
   },
 ];
 
@@ -235,7 +267,7 @@ export default function FisioterapiaPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {servicios.map((s, index) => (
               <div
                 key={index}
@@ -246,6 +278,11 @@ export default function FisioterapiaPage() {
                 </div>
                 <h3 className="font-semibold text-[#0A4D68]! mb-2">{s.title}</h3>
                 <p className="text-sm leading-relaxed text-[#245953]">{s.description}</p>
+                <div className="mt-5">
+                  <Link href={s.href} className="bv-btn bv-btn-primary-dark bv-btn-lg w-full justify-center">
+                    Ver tratamiento
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -290,7 +327,11 @@ export default function FisioterapiaPage() {
                 </div>
 
                 <p className="text-white/70 text-sm pt-2">
-                  Universidad Nebrija | UCM | Ejercicio terapéutico y ecografía
+                Fisioterapeuta especializado en fisioterapia musculoesquelética en Madrid, enfocado en el tratamiento del dolor, la recuperación de lesiones y la mejora de la funcionalidad.
+
+Trabajo con un enfoque basado en la evidencia científica, combinando terapia manual, ejercicio terapéutico y educación del paciente para ofrecer un tratamiento personalizado y adaptado a cada caso. Atiendo tanto en consulta como con servicio de fisioterapia a domicilio en Madrid.
+
+Experiencia en el tratamiento de dolor cervical y lumbar, lesiones deportivas, tendinopatías, problemas de hombro y disfunciones de la articulación temporomandibular (ATM). Mi objetivo es ayudarte a recuperarte, prevenir recaídas y mejorar tu calidad de vida.
                 </p>
 
                 <div className="w-full bv-divider mt-2" />
@@ -427,9 +468,7 @@ export default function FisioterapiaPage() {
               <h2 className="mt-3 text-3xl font-bold text-white!">
                 Cuéntanos tu caso y te orientamos antes de reservar
               </h2>
-              <p className="mt-4 text-white/80 leading-relaxed">
-                Esta sección convierte la página en una pieza de captación real del MVP: permite recibir solicitudes, priorizar casos y dar una respuesta personalizada sin romper la experiencia actual.
-              </p>
+             
 
               <div className="mt-8 space-y-4">
                 {proceso.map((item) => (
@@ -516,6 +555,8 @@ export default function FisioterapiaPage() {
     </main>
   );
 }
+
+
 
 
 

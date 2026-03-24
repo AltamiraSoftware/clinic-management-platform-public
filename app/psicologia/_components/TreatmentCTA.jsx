@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ClipboardList, CalendarDays, MessageSquareHeart } from "lucide-react";
 import ServiceContactForm from "@/components/forms/ServiceContactForm";
 
-const proceso = [
+const defaultProcess = [
   {
     icon: ClipboardList,
     title: "Valoración inicial",
@@ -23,45 +23,70 @@ const proceso = [
   },
 ];
 
-export default function TreatmentCTA({ treatment, professional }) {
+const defaultServiceConfig = {
+  contactEyebrow: "Contacto",
+  contactTitle: "Solicita información o reserva tu primera sesión",
+  contactDescription:
+    "Cuéntanos tu situación y te orientamos sobre si este proceso puede encajar contigo.",
+  formServiceLabel: "Psicología",
+  sideEyebrow: "Primer paso",
+  sideTitlePrefix: "Empieza a trabajar",
+  sideTitleSuffix: "con acompañamiento profesional",
+  sideDescription:
+    "Este formulario está pensado para que puedas explicar tu situación con calma y recibir una orientación inicial antes de reservar.",
+  backLinkHref: "/psicologia",
+  backLinkLabel: "Volver a psicología",
+  process: defaultProcess,
+  relatedEyebrow: "Tratamientos relacionados",
+};
+
+export default function TreatmentCTA({
+  treatment,
+  professional,
+  serviceConfig = defaultServiceConfig,
+}) {
+  const process = serviceConfig.process || defaultProcess;
+  const relatedLinks = treatment.relatedTreatments || [];
+
   return (
     <section id="formulario" className="relative overflow-hidden py-20 md:py-28 bv-hero">
       <div className="pointer-events-none absolute -top-20 -left-20 h-72 w-72 rounded-full bg-[#A4BE7B]/24 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-white/8 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 -bottom-20 h-72 w-72 rounded-full bg-white/8 blur-3xl" />
 
       <div className="container relative mx-auto max-w-6xl px-6">
         <div className="mb-12 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#A4BE7B]">
-            Contacto
+            {serviceConfig.contactEyebrow}
           </p>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white! mb-4">
-            Solicita información o reserva tu primera sesión
+          <h2 className="mt-3 mb-4 text-3xl font-bold text-white! md:text-4xl">
+            {serviceConfig.contactTitle}
           </h2>
           <p className="mx-auto max-w-2xl text-white/80">
-            Cuéntanos tu situación y te orientamos sobre si este proceso puede encajar contigo.
+            {serviceConfig.contactDescription}
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2 items-start">
+        <div className="grid items-start gap-8 lg:grid-cols-2">
           <ServiceContactForm
-            service={`Psicología - ${treatment.navLabel}`}
+            service={`${serviceConfig.formServiceLabel} - ${treatment.navLabel}`}
             professionalName={professional.name}
             recipientEmail={professional.recipientEmail}
           />
 
           <div className="rounded-[30px] border border-white/18 bg-white/8 p-8 text-white shadow-[0_24px_70px_rgba(0,0,0,0.14)] backdrop-blur-md">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">
-              Primer paso
+              {serviceConfig.sideEyebrow}
             </p>
             <h2 className="mt-3 text-3xl font-bold text-white!">
-              Empieza a trabajar {treatment.navLabel.toLowerCase()} con acompañamiento profesional
+              {serviceConfig.sideTitlePrefix} {treatment.navLabel.toLowerCase()}{" "}
+              {serviceConfig.sideTitleSuffix}
             </h2>
-            <p className="mt-4 text-white/80 leading-relaxed">
-              Este formulario está pensado para que puedas explicar tu situación con calma y recibir una orientación inicial antes de reservar.
+            <p className="mt-4 leading-relaxed text-white/80">
+              {serviceConfig.sideDescription}
             </p>
 
             <div className="mt-8 space-y-4">
-              {proceso.map((item) => (
+              {process.map((item) => (
                 <div key={item.title} className="rounded-2xl border border-white/12 bg-white/10 p-4">
                   <div className="flex items-start gap-3">
                     <div className="mt-0.5 flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
@@ -76,12 +101,31 @@ export default function TreatmentCTA({ treatment, professional }) {
               ))}
             </div>
 
+            {relatedLinks.length > 0 && (
+              <div className="mt-8">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+                  {serviceConfig.relatedEyebrow}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {relatedLinks.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="rounded-full border border-white/16 bg-white/10 px-4 py-2 text-sm text-white/85 transition hover:bg-white/16 hover:text-white"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#contacto" className="bv-btn bv-btn-ghost bv-btn-lg">
                 Ver contacto directo
               </a>
-              <Link href="/psicologia" className="bv-btn bv-btn-primary bv-btn-lg">
-                Volver a psicología
+              <Link href={serviceConfig.backLinkHref} className="bv-btn bv-btn-primary bv-btn-lg">
+                {serviceConfig.backLinkLabel}
               </Link>
             </div>
           </div>

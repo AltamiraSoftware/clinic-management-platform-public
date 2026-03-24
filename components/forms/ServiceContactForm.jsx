@@ -95,10 +95,10 @@ export default function ServiceContactForm({
           Contacto directo
         </p>
         <h3 className="mt-3 text-2xl sm:text-3xl font-bold text-white!">
-          Solicita informacion sobre {service.toLowerCase()}
+          Solicita información sobre {service.toLowerCase()}
         </h3>
         <p className="mt-3 text-white/74 leading-relaxed">
-          Completa este formulario y enviaremos tu solicitud directamente a {professionalName} en {recipientEmail}.
+         
         </p>
       </div>
 
@@ -141,8 +141,8 @@ export default function ServiceContactForm({
 
         <FieldShell
           icon={Phone}
-          label="Telefono"
-          helper="Opcional, por si prefieres contacto rapido"
+          label="Teléfono"
+          helper="Opcional, por si prefieres contacto rápido"
         >
           <input
             type="tel"

@@ -13,7 +13,7 @@ export default function Hero() {
       sm:pt-24 pb-14 sm:pb-16
       bg-gradient-to-br from-[#0A4D68] via-[#1B6B73] to-[#245953]
     "
-  >
+  > 
       {/* Brillos sutiles */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#A4BE7B]/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-[#A4BE7B]/20 blur-3xl" />
@@ -29,7 +29,7 @@ export default function Hero() {
             en Madrid
             </span>
             </h1>
-          <p className="text-base sm:text-lg text-white/90 max-w-xl mx-auto mt-5">
+                    <p className="mt-5 mx-auto max-w-xl px-3 text-base text-white/90 sm:px-0 sm:text-lg">
                       
           Centro sanitario especializado en terapia psicológica y fisioterapia musculoesquelética en Madrid. Atención presencial, online y a domicilio.
           </p>

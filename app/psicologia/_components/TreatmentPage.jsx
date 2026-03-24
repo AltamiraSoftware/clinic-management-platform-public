@@ -7,16 +7,36 @@ import TreatmentHero from "./TreatmentHero";
 import TreatmentIntro from "./TreatmentIntro";
 import TreatmentProfessionalCard from "./TreatmentProfessionalCard";
 
-export default function TreatmentPage({ treatment }) {
+const defaultServiceConfig = {
+  heroLabel: "Psicología Bivalente",
+};
+
+export default function TreatmentPage({
+  treatment,
+  professional = danielaProfile,
+  serviceConfig = defaultServiceConfig,
+}) {
   return (
     <main className="min-h-screen">
-      <TreatmentHero treatment={treatment} professional={danielaProfile} />
+      <TreatmentHero
+        treatment={treatment}
+        professional={professional}
+        serviceConfig={serviceConfig}
+      />
       <TreatmentIntro treatment={treatment} />
-      <TreatmentApproach treatment={treatment} />
-      <TreatmentProfessionalCard treatment={treatment} professional={danielaProfile} />
-      <TreatmentCTA treatment={treatment} professional={danielaProfile} />
+      <TreatmentApproach treatment={treatment} serviceConfig={serviceConfig} />
+      <TreatmentProfessionalCard
+        treatment={treatment}
+        professional={professional}
+        serviceConfig={serviceConfig}
+      />
+      <TreatmentCTA
+        treatment={treatment}
+        professional={professional}
+        serviceConfig={serviceConfig}
+      />
       <TreatmentFaqs treatment={treatment} />
-      
+
       <Footer />
     </main>
   );
