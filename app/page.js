@@ -1,33 +1,13 @@
-"use client";
-import dynamic from "next/dynamic";
-import Header from "@/components/layout/header";
-import { useAuthModal } from "@/hooks/useAuthModal";
-import Fisioterapia from "@/components/layout/fisioterapia";
-import Footer from "@/components/layout/footer";
+import HomePageClient from "@/app/_components/HomePageClient";
+import { buildMetadata } from "@/lib/seo";
 
-const Hero = dynamic(() => import("@/components/layout/hero"), {
-  loading: () => <div className="min-h-screen" />,
-});
-
-const Psicologia = dynamic(() => import("@/components/layout/psicologia"), {
-  loading: () => <div className="py-20" />,
-});
-
-const CTA = dynamic(() => import("@/components/layout/cta"), {
-  loading: () => <div className="py-20" />,
+export const metadata = buildMetadata({
+  title: "Psicología y Fisioterapia en Madrid | Bivalente Salud",
+  description:
+    "Clínica Bivalente Salud en Madrid: psicología y fisioterapia con un enfoque cercano, profesional y adaptado a cada persona.",
+  path: "/",
 });
 
 export default function Home() {
-  const { openLogin, openRegister } = useAuthModal();
-
-  return (
-    <main>
-      <Header openLogin={openLogin} openRegister={openRegister} />
-      <Hero openLogin={openLogin} openRegister={openRegister} />
-      <Psicologia openRegister={openRegister} />
-      <Fisioterapia />
-      <CTA openLogin={openLogin} openRegister={openRegister} />
-      <Footer />
-    </main>
-  );
+  return <HomePageClient />;
 }

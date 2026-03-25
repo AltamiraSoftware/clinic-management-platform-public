@@ -17,12 +17,14 @@ import {
   MessageSquareHeart,
 } from "lucide-react";
 import Link from "next/link";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Fisioterapia a domicilio en Madrid | Borja Estarellas Botín - Bivalente",
+export const metadata = buildMetadata({
+  title: "Fisioterapia a domicilio en Madrid | Bivalente Salud",
   description:
-    "Fisioterapia deportiva y musculoesquelética con Borja Estarellas Botín. Ecografía, ejercicio terapéutico y atención a domicilio en Madrid.",
-};
+    "Fisioterapia a domicilio en Madrid para dolor, lesiones y recuperación. Tratamiento profesional adaptado a cada caso.",
+  path: "/fisioterapia",
+});
 
 const servicios = [
   {

@@ -1,9 +1,14 @@
-﻿import TreatmentPage from "../_components/TreatmentPage";
-import { getTreatment, getTreatmentMetadata } from "../_data/tratamientos";
+import TreatmentPage from "../_components/TreatmentPage";
+import { buildMetadata } from "@/lib/seo";
+import { getTreatment } from "../_data/tratamientos";
 
 const treatment = getTreatment("fascitis-plantar");
 
-export const metadata = getTreatmentMetadata("fascitis-plantar");
+export const metadata = buildMetadata({
+  title: treatment.metaTitle,
+  description: treatment.metaDescription,
+  path: treatment.path,
+});
 
 export default function FascitisPlantarPage() {
   return <TreatmentPage treatment={treatment} />;

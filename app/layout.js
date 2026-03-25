@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import { AuthModalProvider } from "@/hooks/useAuthModal";
 import AuthModal from "@/components/Modal/AuthModal";
 import { siteUrl } from "@/lib/siteUrl";
+import { buildMetadata, SITE_NAME } from "@/lib/seo";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -14,52 +15,29 @@ const poppins = Poppins({
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-
-  title: {
-    default: " Bivalente Salud | Psicología y Fisioterapia en Madrid",
-    template: "%s |  Bivalente Salud",
-  },
-
-  description:
-    "Bivalente Salud en Madrid. Especialistas en psicología y fisioterapia. Tratamientos personalizados basados en terapia manual y ejercicio terapéutico. Contacta con nosotros y solicita tu cita.",
-
-  keywords: [
-    "psicología Madrid",
-    "fisioterapia Madrid",
-    "clínica psicología Madrid",
-    "fisioterapia a domicilio Madrid",
-    "terapia manual Madrid",
-    "ejercicio terapéutico Madrid",
-    "psicólogo Madrid",
-    "fisioterapeuta Madrid",
-    "Clínica Bivalente",
-  ],
-
-  openGraph: {
-    title: "Clínica Bivalente | Psicología y Fisioterapia en Madrid",
+  ...buildMetadata({
+    title: "Psicología y Fisioterapia en Madrid | Bivalente Salud",
     description:
-      "Centro especializado en psicología y fisioterapia en Madrid. Tratamientos personalizados para mejorar bienestar, salud y rendimiento.",
-    url: siteUrl,
-    siteName: "Bivalente Salud",
-    locale: "es_ES",
-    type: "website",
-  },
-
+      "Clínica Bivalente Salud en Madrid: psicología y fisioterapia con un enfoque cercano, profesional y adaptado a cada persona.",
+    path: "/",
+  }),
+  applicationName: SITE_NAME,
   twitter: {
     card: "summary_large_image",
-    title: "Bivalente Salud | Psicología y Fisioterapia en Madrid",
+    title: "Psicología y Fisioterapia en Madrid | Bivalente Salud",
     description:
-      "Psicología y fisioterapia en Madrid con tratamientos personalizados.",
+      "Clínica Bivalente Salud en Madrid: psicología y fisioterapia con un enfoque cercano, profesional y adaptado a cada persona.",
   },
-
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
-
   icons: {
     icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
 };
 

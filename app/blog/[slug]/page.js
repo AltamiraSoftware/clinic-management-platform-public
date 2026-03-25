@@ -5,13 +5,20 @@ import Footer from "@/components/layout/footer";
 import BlogCTA from "@/components/blog/BlogCTA";
 import BlogPostContent from "@/components/blog/BlogPostContent";
 import BlogProfessionalCard from "@/components/blog/BlogProfessionalCard";
-import { createSupabasePublicClient, createSupabaseServerClient } from "@/lib/supabaseServer";
-import { getAccessibleBlogPostBySlug } from "@/lib/blogQueries";
+import {
+  createSupabasePublicClient,
+  createSupabaseServerClient,
+} from "@/lib/supabaseServer";
+import {
+  getAccessibleBlogPostBySlug,
+  getPublishedBlogPosts,
+} from "@/lib/blogQueries";
 import {
   extractPlainText,
   formatBlogDate,
   getBlogCategoryKind,
 } from "@/lib/blogUtils";
+import { buildMetadata, DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -19,37 +26,44 @@ export async function generateMetadata({ params }) {
   const post = await getAccessibleBlogPostBySlug(supabase, slug);
 
   if (!post || post.estado !== "published") {
-    return {
-      title: "Artículo no encontrado",
+    return buildMetadata({
+      title: "Artículo no encontrado | Bivalente Salud",
+      description: "El artículo solicitado no está disponible.",
+      path: `/blog/${slug}`,
       robots: {
         index: false,
         follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
       },
-    };
+    });
   }
 
   const title = post.meta_title || post.titulo;
   const description =
-    post.meta_description || post.extracto || extractPlainText(post.contenido).slice(0, 160);
-  const image = post.imagen_destacada_url || "/ChatGPT6.png";
+    post.meta_description ||
+    post.extracto ||
+    extractPlainText(post.contenido).slice(0, 160);
+  const image = post.imagen_destacada_url || DEFAULT_OG_IMAGE;
 
-  return {
+  return buildMetadata({
     title,
     description,
-    openGraph: {
-      title,
-      description,
-      type: "article",
-      url: `/blog/${post.slug}`,
-      images: [{ url: image }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [image],
-    },
-  };
+    path: `/blog/${post.slug}`,
+    type: "article",
+    images: [image],
+  });
+}
+
+export async function generateStaticParams() {
+  const supabase = createSupabasePublicClient();
+  const posts = await getPublishedBlogPosts(supabase);
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 export default async function BlogPostPage({ params }) {
@@ -88,7 +102,9 @@ export default async function BlogPostPage({ params }) {
               </span>
             ) : null}
             <span>{formatBlogDate(post.publicado_en || post.creado_en)}</span>
-            {post.autor?.nombre_completo ? <span>Por {post.autor.nombre_completo}</span> : null}
+            {post.autor?.nombre_completo ? (
+              <span>Por {post.autor.nombre_completo}</span>
+            ) : null}
           </div>
 
           <h1 className="mt-6 text-4xl font-bold leading-tight text-white! md:text-5xl">

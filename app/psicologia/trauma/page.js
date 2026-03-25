@@ -1,9 +1,14 @@
 import TreatmentPage from "../_components/TreatmentPage";
-import { getTreatment, getTreatmentMetadata } from "../_data/tratamientos";
+import { buildMetadata } from "@/lib/seo";
+import { getTreatment } from "../_data/tratamientos";
 
 const treatment = getTreatment("trauma");
 
-export const metadata = getTreatmentMetadata("trauma");
+export const metadata = buildMetadata({
+  title: treatment.metaTitle,
+  description: treatment.metaDescription,
+  path: treatment.path,
+});
 
 export default function TraumaPage() {
   return <TreatmentPage treatment={treatment} />;

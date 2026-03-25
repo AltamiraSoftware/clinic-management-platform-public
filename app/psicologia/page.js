@@ -18,11 +18,14 @@ import {
 import Link from "next/link";
 import HeaderClient from "@/components/layout/HeaderClient";
 import ServiceContactForm from "@/components/forms/ServiceContactForm";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Psicología | Bivalente - Daniela López Meléndez",
-  description: "Servicios de psicología con Daniela López Meléndez. Evaluación e intervención para población infantojuvenil y adultos. Ansiedad, estrés y bienestar emocional.",
-};
+export const metadata = buildMetadata({
+  title: "Psicóloga en Madrid | Terapia presencial y online | Bivalente Salud",
+  description:
+    "Psicóloga en Madrid especializada en ansiedad, pareja y bienestar emocional. Terapia presencial y online en Bivalente Salud.",
+  path: "/psicologia",
+});
 
 const tratamientos = [
   {
