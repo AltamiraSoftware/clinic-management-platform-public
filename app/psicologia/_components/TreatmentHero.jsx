@@ -39,6 +39,7 @@ export default function TreatmentHero({
                     width={900}
                     height={1200}
                     priority
+                    loading="eager"
                     sizes="(max-width: 640px) 82vw, (max-width: 1024px) 60vw, 440px"
                     className="h-auto w-full object-cover object-top"
                   />

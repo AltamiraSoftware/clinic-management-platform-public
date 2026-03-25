@@ -40,80 +40,97 @@ export const tratamientosSeo = {
     navLabel: "Fisioterapia a domicilio",
     cardTitle: "Fisioterapia a domicilio",
     cardDescription:
-      "Tratamiento de fisioterapia en tu domicilio en Madrid, con valoración funcional, terapia manual y ejercicio terapéutico adaptado a tu caso.",
-    metaTitle: "Fisioterapia a domicilio en Madrid | Bivalente",
+      "Servicio de fisioterapia a domicilio en Madrid con valoración, tratamiento manual y ejercicio terapéutico adaptado a tu dolor, tu lesión y tu ritmo de recuperación.",
+    metaTitle: "Fisioterapia a domicilio en Madrid | Bivalente Salud",
     metaDescription:
-      "Fisioterapia a domicilio en Madrid con Borja Estarellas Botín. Tratamiento del dolor, lesiones y recuperación funcional con terapia manual y ejercicio terapéutico.",
+      "Fisioterapia a domicilio en Madrid con atención profesional, personalizada y cómoda. Tratamiento de dolor, lesiones y recuperación funcional en Bivalente Salud.",
     heroTitle: "Fisioterapia a domicilio en Madrid",
     heroSubtitle:
-      "Sesiones de fisioterapia en tu domicilio para reducir dolor, recuperar movimiento y avanzar con un tratamiento práctico, claro y adaptado a tu día a día.",
-    heroBadges: ["Domicilio en Madrid", "Ejercicio terapéutico", "Dolor y lesiones"],
-    introTitle: "Cuándo puede ayudarte la fisioterapia a domicilio",
+      "Un fisioterapeuta a domicilio en Madrid para valorar tu caso, tratar el dolor y ayudarte a recuperar movimiento con la comodidad de recibir la sesión en casa.",
+    heroBadges: ["Madrid", "Atención a domicilio", "Dolor y recuperación"],
+    introTitle: "Un servicio de fisioterapia a domicilio pensado para Madrid",
     introBody:
-      "La fisioterapia a domicilio es una buena opción cuando tienes dolor, una lesión o limitaciones de movimiento y necesitas tratamiento sin desplazarte. Permite valorar tu caso con tiempo, empezar a tratar desde la primera sesión y adaptar las pautas a tu entorno real.",
+      "Este servicio está pensado para personas que necesitan fisioterapia a domicilio en Madrid por dolor, lesión, limitación de movimiento o dificultad para desplazarse. La sesión se adapta a tu situación real, permite empezar a tratar desde el primer día y facilita una atención profesional, cómoda y personalizada en casa.",
     introPoints: [
-      "Cuando el dolor o la movilidad te dificultan acudir a una consulta.",
-      "Cuando necesitas un tratamiento práctico que encaje con tu rutina.",
-      "Cuando quieres empezar a mejorar desde casa con un plan claro.",
+      "Si buscas un fisio a domicilio en Madrid porque el dolor, la movilidad o la logística hacen difícil acudir a consulta.",
+      "Si necesitas un tratamiento claro para dolor cervical, dolor lumbar, contracturas, tendinopatías o molestias musculares y articulares.",
+      "Si quieres empezar una rehabilitación a domicilio en Madrid con un plan adaptado a tu rutina y a tu evolución.",
     ],
     symptoms: [
-      "Dolor cervical, lumbar o dorsal que interfiere en tu día a día.",
-      "Molestias al moverte, entrenar, caminar o trabajar.",
-      "Pérdida de fuerza, rigidez o sensación de bloqueo.",
-      "Recuperación tras una lesión deportiva o un esguince.",
-      "Tendinopatías o dolor mecánico en hombro, rodilla, codo o pie.",
-      "Necesidad de pautas claras para evitar recaídas.",
+      "Dolor cervical, dolor lumbar o rigidez que te limita en casa, en el trabajo o al caminar.",
+      "Contracturas, sobrecargas y molestias musculares o articulares que se repiten con frecuencia.",
+      "Tendinopatías o dolor mecánico en hombro, codo, rodilla, Aquiles o pie.",
+      "Fascitis plantar o dolor al apoyar que hace incómodo desplazarte.",
+      "Recuperación tras un esguince o después de una lesión deportiva.",
+      "Necesidad de tratamiento y pautas claras para avanzar sin depender solo del reposo.",
     ],
     approach: [
       {
-        title: "Valoración funcional en tu propio entorno",
+        title: "Valoración clínica desde la primera sesión",
         description:
-          "Analizamos dolor, movilidad, antecedentes y limitaciones para entender bien qué está pasando y qué necesita tu caso.",
+          "Borja revisa tu dolor, tu movilidad, los antecedentes y las limitaciones que tienes ahora mismo para entender qué está pasando y qué necesita tu caso.",
       },
       {
-        title: "Tratamiento manual y trabajo activo",
+        title: "Tratamiento manual y ejercicio terapéutico",
         description:
-          "Combinamos terapia manual, ejercicio terapéutico y educación para aliviar dolor y mejorar función desde la primera sesión.",
+          "La sesión combina tratamiento manual, ejercicio terapéutico y educación del paciente para aliviar dolor, mejorar función y darte pautas útiles desde el inicio.",
       },
       {
-        title: "Plan realista para recuperar y mantener resultados",
+        title: "Seguimiento adaptado a tu recuperación",
         description:
-          "La recuperación no se queda solo en tratar. También se pautan progresiones y ajustes para consolidar la mejoría.",
+          "El objetivo no es solo tratar en el momento, sino ayudarte a recuperar movimiento, prevenir recaídas y avanzar con un plan realista y personalizado.",
       },
     ],
     modality: {
       presencial:
-        "La atención principal se realiza a domicilio en Madrid, con un tratamiento adaptado al espacio disponible y a tu situación funcional real.",
+        "La atención principal se realiza a domicilio en Madrid, con una sesión adaptada al espacio disponible, a tus síntomas y al momento real de tu recuperación.",
       online:
-        "Cuando hace falta seguimiento o revisión de ejercicios, también se puede orientar la progresión y resolver dudas para dar continuidad al tratamiento.",
+        "Si hace falta revisar ejercicios o dar continuidad entre sesiones, el seguimiento online puede servir como complemento puntual, sin sustituir el foco principal de la atención a domicilio.",
     },
     professionalBlurb:
-      "Borja trabaja la fisioterapia musculoesquelética desde un enfoque basado en evidencia, combinando valoración funcional, terapia manual, ejercicio terapéutico y educación del paciente.",
+      "Borja es fisioterapeuta en Madrid y realiza atención a domicilio con un enfoque profesional, cercano y personalizado para dolor, lesiones y recuperación funcional.",
     professionalHighlights: [
-      "El tratamiento se adapta a tus síntomas, a tu nivel de actividad y al contexto en el que te mueves cada día, especialmente cuando la atención es a domicilio.",
-      "El objetivo no es solo aliviar el dolor, sino ayudarte a recuperar función, prevenir recaídas y volver a tu rutina con más seguridad.",
+      "Combina valoración, tratamiento manual, ejercicio terapéutico y educación del paciente para adaptar cada sesión a lo que realmente necesitas en ese momento.",
+      "La atención a domicilio permite trabajar con más comodidad y ajustar mejor el tratamiento a tu contexto diario, sin perder rigor clínico ni personalización.",
     ],
     faqs: [
       {
-        question: "¿La primera sesión a domicilio incluye valoración y tratamiento?",
+        question: "¿Qué incluye una sesión de fisioterapia a domicilio en Madrid?",
         answer:
-          "Sí. La primera sesión está planteada para valorar tu caso, empezar a tratar y orientarte con un plan de trabajo adaptado a tu situación.",
+          "La sesión incluye valoración, tratamiento manual si está indicado, ejercicio terapéutico y pautas para casa. La idea es que salgas con una orientación clara y con un primer paso de tratamiento desde la misma visita.",
+      },
+      {
+        question: "¿Cuánto dura una sesión de fisioterapia a domicilio?",
+        answer:
+          "La sesión suele durar alrededor de una hora, para poder valorar bien tu caso, tratar con calma y explicarte las pautas más útiles según tu evolución.",
+      },
+      {
+        question: "¿Cuándo se recomienda pedir un fisioterapeuta a domicilio en Madrid?",
+        answer:
+          "Se recomienda cuando tienes dolor, una lesión, limitación de movimiento o simplemente necesitas una opción más cómoda para empezar tratamiento en casa. Puede ser útil en dolor cervical, dolor lumbar, contracturas, tendinopatías, fascitis plantar o recuperación tras esguince.",
+      },
+      {
+        question: "¿Hace falta tener material en casa para la sesión?",
+        answer:
+          "No. Normalmente no necesitas material específico. Si para tu caso hiciera falta algo sencillo para continuar con ejercicios o pautas, Borja te lo indicará de forma clara.",
+      },
+      {
+        question: "¿Cómo puedo reservar una sesión o consultar mi caso?",
+        answer:
+          "Puedes escribir a través del formulario de esta página y explicar tu dolor o lesión. Se revisa tu caso contigo para orientarte y valorar el siguiente paso más adecuado.",
       },
       {
         question: "¿Cuánto cuesta la sesión de fisioterapia a domicilio?",
         answer:
-          "La primera sesión de fisioterapia a domicilio tiene un precio de 50 euros. Si necesitas más información antes de reservar, puedes consultarlo por formulario.",
-      },
-      {
-        question: "¿Se puede tratar dolor crónico o lesiones deportivas a domicilio?",
-        answer:
-          "Sí. La atención a domicilio puede ser útil en dolor mecánico, lesiones deportivas, tendinopatías, esguinces y otras limitaciones funcionales frecuentes.",
+          "La primera sesión de fisioterapia a domicilio tiene un precio de 50 euros. Si necesitas confirmar detalles antes de reservar, puedes consultarlo sin compromiso.",
       },
       ...commonFaqs,
     ],
     relatedTreatments: [
       { label: "Dolor cervical", href: "/fisioterapia/dolor-cervical" },
       { label: "Dolor lumbar", href: "/fisioterapia/dolor-lumbar" },
+      { label: "Esguinces", href: "/fisioterapia/esguinces" },
+      { label: "Fascitis plantar", href: "/fisioterapia/fascitis-plantar" },
       { label: "Lesiones deportivas", href: "/fisioterapia/lesiones-deportivas" },
     ],
   },

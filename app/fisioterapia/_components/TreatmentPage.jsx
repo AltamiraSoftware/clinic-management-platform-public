@@ -38,11 +38,35 @@ const serviceConfig = {
 };
 
 export default function TreatmentPage({ treatment }) {
+  const pageServiceConfig =
+    treatment.slug === "fisioterapia-domicilio"
+      ? {
+          ...serviceConfig,
+          primaryCtaLabel: "Solicitar sesión a domicilio",
+          approachTitle: "Cómo trabajamos la fisioterapia a domicilio en Madrid",
+          modalityEyebrow: "Atención principal en Madrid",
+          modalityTitle: "Un servicio centrado en tratarte en casa con comodidad y criterio clínico",
+          primaryModalityTitle: "Sesión a domicilio en Madrid",
+          secondaryModalityTitle: "Seguimiento online si hace falta",
+          modalityNote:
+            "El foco principal es la atención a domicilio en Madrid. Si necesitas resolver dudas antes de reservar, puedes escribirnos y orientamos contigo el siguiente paso.",
+          professionalTitlePrefix: "Fisioterapia a domicilio con",
+          professionalPerspectiveTitle: "Atención profesional, personalizada y adaptada a tu caso",
+          contactTitle: "Reserva o consulta tu sesión de fisioterapia a domicilio en Madrid",
+          contactDescription:
+            "Cuéntanos tu dolor, tu lesión o tu situación actual y te orientamos sobre si la atención a domicilio es el mejor siguiente paso para ti.",
+          sideTitlePrefix: "Empieza tu",
+          sideTitleSuffix: "con atención fisioterapéutica a domicilio",
+          sideDescription:
+            "Este formulario está pensado para que puedas explicar tu caso con claridad y valorar una primera sesión cómoda, profesional y adaptada a tu situación en Madrid.",
+        }
+      : serviceConfig;
+
   return (
     <SharedTreatmentPage
       treatment={treatment}
       professional={borjaProfile}
-      serviceConfig={serviceConfig}
+      serviceConfig={pageServiceConfig}
     />
   );
 }

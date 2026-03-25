@@ -38,67 +38,93 @@ export const tratamientosSeo = {
     navLabel: "Ansiedad",
     cardTitle: "Ansiedad y regulación emocional",
     cardDescription:
-      "Acompañamiento para entender la ansiedad, regular las emociones y recuperar sensación de calma y control.",
-    metaTitle: "Terapia para la ansiedad en Madrid | Psicología Bivalente",
+      "Terapia para ansiedad en Madrid con enfoque cercano y profesional para comprender lo que te pasa, reducir el desborde y recuperar herramientas útiles.",
+    metaTitle:
+      "Psicóloga para ansiedad en Madrid | Terapia presencial y online | Bivalente Salud",
     metaDescription:
-      "Psicología para ansiedad en Madrid con Daniela López Meléndez. Sesiones presenciales y online para preocupación constante, bloqueo y regulación emocional.",
-    heroTitle: "Terapia para la ansiedad en Madrid",
+      "Psicóloga para ansiedad en Madrid. Terapia presencial y online con Daniela para preocupación constante, desborde, insomnio, bloqueo y síntomas físicos de ansiedad.",
+    heroTitle: "Psicóloga para ansiedad en Madrid",
     heroSubtitle:
-      "Un espacio terapéutico para comprender la ansiedad, bajar la sensación de alarma y construir herramientas emocionales más estables en tu día a día.",
-    heroBadges: ["Presencial en Madrid", "Online", "Adultos y adolescentes"],
-    introTitle: "Qué es la ansiedad y cuándo puede ayudarte la terapia",
+      "Acompañamiento profesional para entender qué te está pasando, bajar la sensación de alarma y empezar a trabajar la ansiedad con terapia presencial en Madrid y online.",
+    heroBadges: ["Psicóloga en Madrid", "Terapia online", "Adultos y adolescentes"],
+    introTitle: "Terapia para ansiedad en Madrid y online",
     introBody:
-      "La ansiedad puede aparecer como preocupación constante, sensación de alerta, bloqueo, agotamiento o miedo a perder el control. La terapia ayuda a entender qué la sostiene y cómo empezar a regularla sin exigirte ir más rápido de lo que puedes.",
+      "Esta ayuda psicológica está pensada para personas que viven con preocupación constante, sensación de desborde, bloqueo mental, insomnio, ataques de ansiedad o síntomas físicos que no terminan de entender. Daniela ofrece terapia para ansiedad en Madrid y también online, adaptando el proceso al momento y a las necesidades de cada persona.",
     introPoints: [
-      "Cuando sientes preocupación constante o anticipación excesiva.",
-      "Cuando tu cuerpo vive en tensión, bloqueo o sobresalto.",
-      "Cuando la ansiedad afecta al descanso, al trabajo o a tus relaciones.",
+      "Si sientes preocupación constante, anticipación excesiva o te cuesta desconectar incluso cuando no hay un motivo claro.",
+      "Si notas ataques de ansiedad, sensación de desborde, bloqueo mental, irritabilidad o síntomas físicos sin causa médica clara.",
+      "Si la ansiedad está afectando al descanso, al trabajo, a tus relaciones o a tu capacidad para disfrutar del día a día.",
     ],
     symptoms: [
-      "Preocupación constante o dificultad para desconectar.",
-      "Sensación de nudo en el pecho, tensión o agitación física.",
-      "Pensamientos repetitivos o miedo a que ocurra algo malo.",
-      "Dificultad para descansar o conciliar el sueño.",
-      "Irritabilidad, saturación o sensación de estar desbordada.",
-      "Evitar situaciones por miedo, inseguridad o bloqueo.",
+      "Preocupación constante, anticipación o sensación de no poder desconectar.",
+      "Nudo en el pecho, palpitaciones, tensión corporal o síntomas físicos sin causa clara.",
+      "Ataques de ansiedad, agitación o miedo a perder el control.",
+      "Insomnio, dificultad para descansar o mente acelerada al final del día.",
+      "Bloqueo mental, saturación, irritabilidad o dificultad para concentrarte.",
+      "Evitar situaciones, conversaciones o decisiones por miedo, inseguridad o desborde.",
     ],
     approach: [
       {
-        title: "Comprender lo que activa la ansiedad",
+        title: "Comprender qué está sosteniendo la ansiedad",
         description:
-          "Exploramos el contexto, los disparadores y la forma en la que la ansiedad se mantiene en tu vida diaria.",
+          "Daniela te ayuda a identificar el contexto, los disparadores y los patrones con los que la ansiedad se activa y se mantiene en tu día a día.",
       },
       {
-        title: "Regular cuerpo y emociones",
+        title: "Trabajar regulación y herramientas útiles",
         description:
-          "Trabajamos herramientas para bajar activación, sostener mejor lo que sientes y recuperar sensación de seguridad interna.",
+          "La terapia no se centra solo en hablar de lo que pasa: también busca bajar activación, ordenar lo que sientes y construir recursos que puedas usar fuera de sesión.",
       },
       {
-        title: "Construir respuestas más sostenibles",
+        title: "Avanzar con un proceso adaptado a ti",
         description:
-          "El objetivo no es solo aliviar el malestar, sino ayudarte a relacionarte de otra forma con lo que te pasa.",
+          "El objetivo no es solo reducir síntomas, sino entender mejor qué te pasa y desarrollar una forma más estable de relacionarte contigo, con tus emociones y con lo que te rodea.",
       },
     ],
     modality: {
       presencial:
-        "Sesiones en Madrid en un espacio tranquilo y sanitario, pensado para poder trabajar con calma y sin interrupciones.",
+        "Sesiones presenciales en Madrid en un espacio sanitario, tranquilo y cuidado para trabajar la ansiedad con calma, continuidad y acompañamiento profesional.",
       online:
-        "Sesiones por videollamada si necesitas mayor flexibilidad o prefieres empezar desde casa manteniendo continuidad terapéutica.",
+        "La terapia online es una opción complementaria si necesitas más flexibilidad o prefieres empezar desde casa, manteniendo el mismo trabajo terapéutico con continuidad.",
     },
     professionalBlurb:
-      "Daniela acompaña procesos de ansiedad y desregulación emocional desde un enfoque integrador, cercano y adaptado al ritmo de cada persona.",
+      "Daniela es psicóloga en Madrid y acompaña procesos de ansiedad desde un enfoque cercano, profesional y adaptado a cada caso, tanto en terapia presencial como online.",
+    professionalHighlights: [
+      "Trabaja ansiedad, desregulación emocional y momentos de desborde ayudando a comprender el problema sin reducirlo solo al síntoma.",
+      "El proceso terapéutico se adapta al ritmo, la historia y las necesidades de cada persona para construir herramientas útiles y sostenibles.",
+    ],
     faqs: [
       {
-        question: "¿La ansiedad se puede trabajar aunque lleve mucho tiempo conmigo?",
+        question: "¿Cómo saber si lo que me pasa puede ser ansiedad?",
         answer:
-          "Sí. Aunque la ansiedad lleve tiempo instalada, la terapia puede ayudarte a entender sus patrones y a introducir cambios progresivos que tengan sentido para ti.",
+          "Si vives con preocupación constante, sensación de desborde, insomnio, irritabilidad, bloqueo mental, ataques de ansiedad o síntomas físicos repetidos, puede ser útil valorarlo en terapia. No hace falta tenerlo claro del todo para pedir ayuda.",
       },
       {
-        question: "¿Es útil la terapia si ya he probado otras herramientas por mi cuenta?",
+        question: "¿Cuándo conviene acudir a terapia por ansiedad?",
         answer:
-          "Sí. Muchas personas llegan después de haber intentado manejar la ansiedad solas. El trabajo terapéutico permite ordenar mejor lo que ocurre y sostener cambios con acompañamiento.",
+          "Conviene pedir ayuda cuando la ansiedad empieza a afectar al descanso, al trabajo, a las relaciones, a tu capacidad para concentrarte o a tu bienestar diario. También cuando sientes que ya no puedes sostenerla sola o solo.",
+      },
+      {
+        question: "¿La terapia online para ansiedad funciona?",
+        answer:
+          "Sí. La terapia online puede funcionar muy bien cuando necesitas flexibilidad o te resulta más fácil empezar desde casa. Lo importante es que el proceso mantenga continuidad y se adapte bien a tu situación.",
+      },
+      {
+        question: "¿Cuánto dura un proceso de terapia para ansiedad?",
+        answer:
+          "Depende de cada caso, del tiempo que lleves con el problema y de los objetivos del proceso. En las primeras sesiones se valora tu situación y se orienta contigo un ritmo de trabajo realista.",
+      },
+      {
+        question: "¿Cómo puedo reservar una primera sesión?",
+        answer:
+          "Puedes escribir a través del formulario de esta página y explicar brevemente lo que te está pasando. A partir de ahí se te orienta sobre el siguiente paso y la modalidad que mejor encaje contigo.",
       },
       ...commonFaqs,
+    ],
+    relatedTreatments: [
+      { label: "Autoestima", href: "/psicologia/autoestima" },
+      { label: "Crisis emocional", href: "/psicologia/crisis-emocional" },
+      { label: "Depresión", href: "/psicologia/depresion" },
+      { label: "Terapia de pareja", href: "/psicologia/terapia-pareja" },
     ],
   },
   autoestima: {
