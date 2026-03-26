@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A4D68] py-12">
+    <footer className="bg-[#0A4D68] py-14">
       <div className="container mx-auto max-w-6xl px-4">
-        <div className="mb-8 grid gap-8 md:grid-cols-4">
-          <div className="space-y-4">
+        <div className="mb-10 grid gap-8 lg:grid-cols-[1.3fr_1fr_1fr_1.1fr]">
+          <div className="space-y-5">
             <div className="flex items-center gap-3">
               <Image
                 src="/logo-bivalente-salud.webp"
@@ -23,9 +23,16 @@ export default function Footer() {
                 Bivalente Salud
               </span>
             </div>
-            <p className="text-sm text-white">
-              Fisioterapia y psicología para tu bienestar integral
+
+            <p className="max-w-sm text-sm leading-relaxed text-white/82">
+              {"Psicolog\u00EDa presencial y online, y fisioterapia a domicilio en Madrid. "}
+              {"Un proyecto sanitario pensado para orientar con claridad y facilitar "}
+              {"un primer paso profesional y cercano."}
             </p>
+
+            <Link href="/sobre-nosotros#contacto" className="bv-btn bv-btn-primary bv-btn-lg">
+              Contactar
+            </Link>
           </div>
 
           <div className="space-y-4">
@@ -33,7 +40,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <Link href="/psicologia" className="transition hover:text-white">
-                  Psicología
+                  {"Psicolog\u00EDa"}
                 </Link>
               </li>
               <li>
@@ -41,29 +48,40 @@ export default function Footer() {
                   Fisioterapia
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-semibold text-white!">Empresa</h4>
-            <ul className="space-y-2 text-sm text-white/70">
-              <li>
-                <Link href="/sobre-nosotros" className="transition hover:text-white">
-                  Sobre nosotros
-                </Link>
-              </li>
               <li>
                 <Link href="/blog" className="transition hover:text-white">
                   Blog
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-semibold text-white!">Contacto</h4>
+            <ul className="space-y-2 text-sm text-white/70">
+              <li>Madrid</li>
+              <li>{"Psicolog\u00EDa presencial y online en Madrid"}</li>
+              <li>Fisioterapia a domicilio en Madrid</li>
+              <li>{"Atenci\u00F3n presencial, online y a domicilio"}</li>
               <li>
-                <Link
-                  href="/sobre-nosotros#contacto"
-                  className="transition hover:text-white"
-                >
-                  Contacto
-                </Link>
+                <a href="tel:+34674547577" className="transition hover:text-white">
+                  +34 674 547 577
+                </a>
+              </li>
+              <li>
+                <a href="tel:+34618417971" className="transition hover:text-white">
+                  +34 618 417 971
+                </a>
+              </li>
+              <li>
+                <a href="mailto:danilopezme1004@gmail.com" className="transition hover:text-white">
+                  danilopezme1004@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:estarellas11088@gmail.com" className="transition hover:text-white">
+                  estarellas11088@gmail.com
+                </a>
               </li>
             </ul>
           </div>
@@ -72,18 +90,17 @@ export default function Footer() {
             <h4 className="font-semibold text-white!">Legal</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
-                <Link
-                  href="/legal/politica-privacidad"
-                  className="transition hover:text-white"
-                >
+                <Link href="/sobre-nosotros" className="transition hover:text-white">
+                  Sobre nosotros
+                </Link>
+              </li>
+              <li>
+                <Link href="/legal/politica-privacidad" className="transition hover:text-white">
                   Privacidad
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/legal/politica-cookies"
-                  className="transition hover:text-white"
-                >
+                <Link href="/legal/politica-cookies" className="transition hover:text-white">
                   Cookies
                 </Link>
               </li>
@@ -93,7 +110,7 @@ export default function Footer() {
 
         <div className="border-t border-white/20 pt-8">
           <p className="text-center text-sm text-white/70">
-            2025 Bivalente. Todos los derechos reservados. | Madrid, España
+            {"2025 Bivalente Salud. Todos los derechos reservados. Madrid, Espa\u00F1a."}
           </p>
         </div>
       </div>

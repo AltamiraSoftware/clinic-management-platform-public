@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 import HeaderClient from "@/components/layout/HeaderClient";
 import Footer from "@/components/layout/footer";
 import ServiceContactForm from "@/components/forms/ServiceContactForm";
-import { HeartHandshake, Sparkles, CheckCircle2 } from "lucide-react";
+import { HeartHandshake, Sparkles, CheckCircle2, MapPin, PhoneCall, Clock3 } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Sobre nosotros | Bivalente Salud",
   description:
-    "Conoce la historia, el enfoque y a los profesionales de Bivalente Salud: psicología y fisioterapia con una mirada cercana e integral.",
+    "Conoce el enfoque, a los profesionales y la forma de trabajo de Bivalente Salud: psicología y fisioterapia con una atención cercana y clara en Madrid.",
   path: "/sobre-nosotros",
 });
 
@@ -22,14 +23,32 @@ const values = [
   {
     title: "Mirada integral",
     description:
-      "Unimos psicología y fisioterapia para entender mejor a la persona y no solo al síntoma.",
+      "Psicología y fisioterapia conectadas para acompañar con más contexto y mejores decisiones.",
     Icon: Sparkles,
   },
   {
     title: "Rigor profesional",
     description:
-      "Trabajamos con criterio clínico, atención personalizada y seguimiento adaptado a cada caso.",
+      "Trabajamos con criterio clínico, objetivos claros y seguimiento adaptado a cada caso.",
     Icon: CheckCircle2,
+  },
+];
+
+const trustItems = [
+  {
+    title: "Atención en Madrid",
+    description: "Psicología presencial y online, fisioterapia a domicilio en Madrid.",
+    Icon: MapPin,
+  },
+  {
+    title: "Contacto directo",
+    description: "Puedes reservar o escribirnos antes si necesitas orientación inicial.",
+    Icon: PhoneCall,
+  },
+  {
+    title: "Primer paso claro",
+    description: "Respondemos con una orientación práctica para saber qué servicio encaja mejor contigo.",
+    Icon: Clock3,
   },
 ];
 
@@ -41,7 +60,9 @@ const professionals = [
     accent: "from-[#A4BE7B]/28 to-white/10",
     chips: ["Infanto-juvenil", "Adultos", "Pareja"],
     description:
-      "Daniela acompaña procesos terapéuticos desde una mirada cercana, respetuosa e integradora. Su trabajo está orientado a crear un espacio seguro donde poder comprender lo que pasa, sostener momentos difíciles y avanzar con más claridad.",
+      "Daniela trabaja procesos terapéuticos con una mirada cercana, integradora y respetuosa. El foco está en comprender lo que pasa, ordenar el malestar y construir herramientas útiles desde el inicio.",
+    href: "/psicologia",
+    cta: "Ver psicología",
   },
   {
     name: "Borja Estarellas Botín",
@@ -50,7 +71,9 @@ const professionals = [
     accent: "from-[#088395]/24 to-white/10",
     chips: ["Domicilio", "Deportiva", "Ecografía"],
     description:
-      "Borja trabaja el dolor, la recuperación funcional y las lesiones desde una combinación de valoración clínica, tratamiento manual y ejercicio terapéutico. El objetivo no es solo aliviar, sino ayudarte a recuperar movimiento y confianza.",
+      "Borja aborda dolor, lesión y recuperación funcional combinando valoración clínica, tratamiento manual y ejercicio terapéutico. La idea es aliviar, recuperar movimiento y prevenir recaídas con un plan claro.",
+    href: "/fisioterapia",
+    cta: "Ver fisioterapia",
   },
 ];
 
@@ -59,7 +82,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-[linear-gradient(180deg,_#f6faf8_0%,_#edf5f3_100%)]">
       <HeaderClient />
 
-      <section className="relative overflow-hidden bv-hero pt-28 pb-18 sm:pt-32 sm:pb-22">
+      <section className="relative overflow-hidden bv-hero pb-16 pt-28 sm:pb-18 sm:pt-32">
         <div className="pointer-events-none absolute -left-20 top-8 h-72 w-72 rounded-full bg-[#A4BE7B]/22 blur-3xl" />
         <div className="pointer-events-none absolute right-0 top-16 h-80 w-80 rounded-full bg-[#088395]/18 blur-3xl" />
 
@@ -70,20 +93,30 @@ export default function AboutPage() {
                 Sobre Bivalente Salud
               </span>
               <h1 className="max-w-3xl text-4xl font-bold leading-tight text-white! md:text-5xl xl:text-6xl">
-                Un proyecto creado para cuidar con más <span className="!text-[#A4BE7B]">cercanía</span>, <span className="!text-[#A4BE7B]">claridad</span>  y <span className="!text-[#A4BE7B]">sentido</span>.
+                Psicología y fisioterapia con más{" "}
+                <span className="!text-[#A4BE7B]">claridad</span>,{" "}
+                <span className="!text-[#A4BE7B]">cercanía</span> y{" "}
+                <span className="!text-[#A4BE7B]">criterio</span>.
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-white/82">
-                Bivalente Salud nace de una idea sencilla pero importante: que el
-                cuidado de la salud física y emocional pueda vivirse desde un lugar
-                más humano, profesional y accesible. Queríamos construir un espacio
-                donde pedir ayuda no se sintiera distante, sino cercano y bien
-                acompañado.
+                Bivalente Salud nace para hacer más fácil el primer paso: entender qué
+                necesitas, encontrar al profesional adecuado y empezar un proceso bien
+                orientado desde el inicio.
               </p>
-              <p className="max-w-3xl text-lg leading-8 text-white/74">
-                Por eso unimos psicología y fisioterapia en un mismo proyecto: dos
-                áreas distintas, pero profundamente conectadas cuando se trata de
-                bienestar, recuperación y calidad de vida.
+              <p className="max-w-3xl text-base leading-8 text-white/74">
+                Trabajamos desde Madrid con psicología sanitaria y fisioterapia a
+                domicilio, manteniendo una atención profesional, humana y fácil de
+                entender también en la propia web.
               </p>
+
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Link href="/sobre-nosotros#contacto" className="bv-btn bv-btn-primary bv-btn-lg">
+                  Contactar
+                </Link>
+                <Link href="/psicologia" className="bv-btn bv-btn-ghost bv-btn-lg">
+                  Ver servicios
+                </Link>
+              </div>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
@@ -104,27 +137,39 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8faf5] to-[#A4BE7B] py-18 sm:py-22">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#f8faf5] to-[#A4BE7B] py-16 sm:py-18">
         <div className="container mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex rounded-full border border-white/55 bg-white/35 px-4 py-2 text-sm font-semibold text-[#0A4D68] shadow-[0_10px_24px_rgba(10,77,104,0.08)] backdrop-blur-sm">
-              El proyecto
+              Por qué confiar
             </span>
             <h2 className="mt-5 text-3xl font-bold text-[#0A4D68]! md:text-4xl">
-              Bivalente Salud busca acompañar, no solo atender.
+              Una web pensada para orientarte y una atención pensada para acompañarte.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#245953]">
-              Hay momentos en los que necesitamos comprender mejor lo que sentimos,
-              recuperar movimiento, salir de una crisis o simplemente sentir que alguien
-              nos orienta con criterio. Esta web y este proyecto están pensados para eso:
-              para facilitar el acceso a una atención profesional bien cuidada, desde la
-              primera visita hasta el seguimiento.
+              Menos ruido, más claridad: quién te atiende, qué hacemos, cómo se reserva
+              y qué siguiente paso tiene sentido para ti.
             </p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {trustItems.map(({ title, description, Icon }) => (
+              <article
+                key={title}
+                className="rounded-[28px] border border-[#d8e7df] bg-white/88 p-6 shadow-[0_18px_44px_rgba(10,77,104,0.08)]"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#0A4D68_0%,#088395_100%)] text-white">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-5 text-xl font-bold text-[#0A4D68]!">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-[#245953]">{description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bv-hero py-20 sm:py-24">
+      <section className="relative overflow-hidden bv-hero py-16 sm:py-18">
         <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-[#A4BE7B]/18 blur-3xl" />
         <div className="pointer-events-none absolute right-0 top-12 h-72 w-72 rounded-full bg-[#088395]/16 blur-3xl" />
 
@@ -134,8 +179,12 @@ export default function AboutPage() {
               Profesionales
             </span>
             <h2 className="mt-5 text-3xl font-bold text-white! md:text-4xl">
-              Un equipo pequeño, cercano y muy implicado.
+              Un equipo pequeño, accesible y muy implicado.
             </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-white/78">
+              Dos áreas distintas, una misma forma de trabajar: orientación clara,
+              contacto directo y atención cuidada.
+            </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-2">
@@ -172,6 +221,11 @@ export default function AboutPage() {
                     <p className="mt-5 text-sm leading-7 text-white/76 sm:text-base">
                       {professional.description}
                     </p>
+                    <div className="mt-6">
+                      <Link href={professional.href} className="bv-btn bv-btn-primary bv-btn-lg">
+                        {professional.cta}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </article>
@@ -182,7 +236,7 @@ export default function AboutPage() {
 
       <section
         id="contacto"
-        className="relative overflow-hidden bg-gradient-to-br from-[#edf5ea] via-[#dfeedd] to-[#A4BE7B] py-20 md:py-24"
+        className="relative overflow-hidden bg-gradient-to-br from-[#edf5ea] via-[#dfeedd] to-[#A4BE7B] py-18 md:py-20"
       >
         <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-white/18 blur-3xl" />
         <div className="pointer-events-none absolute right-0 bottom-0 h-72 w-72 rounded-full bg-[#088395]/14 blur-3xl" />
@@ -195,9 +249,8 @@ export default function AboutPage() {
               Escríbenos y te orientamos.
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#245953]">
-              Si no sabes qué servicio encaja mejor contigo, o simplemente quieres
-              contarnos tu caso antes de reservar, puedes escribirnos desde aquí. El
-              mensaje llegará tanto a Daniela como a Borja.
+              Si no sabes qué servicio encaja mejor contigo, puedes escribirnos desde
+              aquí y revisar contigo el siguiente paso más útil.
             </p>
           </div>
 
@@ -217,22 +270,21 @@ export default function AboutPage() {
 
             <div className="rounded-[32px] border border-[#dce8e2] bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(246,250,248,0.92)_100%)] p-8 shadow-[0_20px_50px_rgba(10,77,104,0.08)]">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#61764B]">
-                Primer paso
+                Antes de reservar
               </p>
               <h3 className="mt-4 text-3xl font-bold text-[#0A4D68]!">
-                A veces lo más importante es saber por dónde empezar.
+                Lo importante es saber por dónde empezar.
               </h3>
               <p className="mt-5 text-base leading-8 text-[#245953]">
-                Puedes escribirnos si buscas terapia, fisioterapia a domicilio, una
-                primera orientación o simplemente necesitas entender qué opción encaja
-                mejor contigo ahora mismo.
+                Puedes escribirnos si buscas terapia, fisioterapia a domicilio o una
+                primera orientación para entender qué opción encaja mejor contigo.
               </p>
 
               <div className="mt-8 space-y-4">
                 {[
-                  "Respuesta orientativa y cercana, sin formularios impersonales.",
-                  "Valoramos contigo si encaja mejor psicología, fisioterapia o una primera conversación.",
-                  "Atención enfocada a acompañar con claridad, no solo a resolver trámites.",
+                  "Respuesta cercana y orientativa, sin formularios impersonales.",
+                  "Valoramos contigo si encaja mejor psicología, fisioterapia o un primer contacto informativo.",
+                  "Enfoque pensado para aclarar y acompañar, no solo para tramitar.",
                 ].map((item) => (
                   <div
                     key={item}
@@ -246,15 +298,6 @@ export default function AboutPage() {
                     </div>
                   </div>
                 ))}
-              </div>
-
-              <div className="mt-8 rounded-[28px] bg-[linear-gradient(90deg,#0A4D68_0%,#088395_55%,#61764B_100%)] p-6 text-white shadow-[0_20px_44px_rgba(10,77,104,0.16)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#dce9c8]">
-                  Bivalente Salud
-                </p>
-                <p className="mt-3 text-2xl font-bold text-white!">
-                  Un proyecto para cuidar mejor, con más humanidad.
-                </p>
               </div>
             </div>
           </div>

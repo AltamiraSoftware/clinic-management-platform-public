@@ -5,7 +5,7 @@ import HeaderClient from "@/components/layout/HeaderClient";
 
 const defaultServiceConfig = {
   heroIcon: Brain,
-  heroLabel: "Psicología Bivalente",
+  heroLabel: "Psicología Bivalente Salud",
   backLinkHref: "/psicologia",
   backLinkLabel: "Volver a psicología",
   primaryCtaLabel: "Reservar cita",
@@ -16,7 +16,11 @@ export default function TreatmentHero({
   professional,
   serviceConfig = defaultServiceConfig,
 }) {
-  const HeroIcon = serviceConfig.heroIcon || Brain;
+  const mergedServiceConfig = {
+    ...defaultServiceConfig,
+    ...(serviceConfig || {}),
+  };
+  const HeroIcon = mergedServiceConfig.heroIcon || Brain;
 
   return (
     <section className="relative min-h-[92vh] overflow-hidden bv-hero pt-5">
@@ -76,7 +80,7 @@ export default function TreatmentHero({
           <div className="order-2 space-y-6 text-center lg:order-1 lg:text-left">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white">
               <HeroIcon className="h-4 w-4 text-[#A4BE7B]" />
-              {serviceConfig.heroLabel}
+              {mergedServiceConfig.heroLabel}
             </div>
 
             <h1 className="text-balance text-4xl font-bold leading-tight text-white! md:text-5xl xl:text-6xl">
@@ -89,10 +93,10 @@ export default function TreatmentHero({
 
             <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
               <a href="#formulario" className="bv-btn bv-btn-primary bv-btn-lg">
-                {serviceConfig.primaryCtaLabel}
+                {mergedServiceConfig.primaryCtaLabel}
               </a>
-              <Link href={serviceConfig.backLinkHref} className="bv-btn bv-btn-ghost bv-btn-lg">
-                {serviceConfig.backLinkLabel}
+              <Link href={mergedServiceConfig.backLinkHref} className="bv-btn bv-btn-ghost bv-btn-lg">
+                {mergedServiceConfig.backLinkLabel}
               </Link>
             </div>
           </div>

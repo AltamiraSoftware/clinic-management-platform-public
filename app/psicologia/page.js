@@ -19,6 +19,7 @@ import Link from "next/link";
 import HeaderClient from "@/components/layout/HeaderClient";
 import ServiceContactForm from "@/components/forms/ServiceContactForm";
 import { buildMetadata } from "@/lib/seo";
+import { getBreadcrumbSchema, getFaqSchema, getServiceSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Psicóloga en Madrid | Terapia presencial y online | Bivalente Salud",
@@ -184,8 +185,36 @@ const faqs = [
 ];
 
 export default function PsicologiaPage() {
+  const pageSchemas = [
+    getServiceSchema({
+      name: "Psicología en Madrid",
+      description:
+        "Servicio de psicología presencial y online en Madrid para ansiedad, autoestima, duelo, trauma, crisis emocional y terapia de pareja.",
+      path: "/psicologia",
+      providerPhone: "+34674547577",
+      providerEmail: "danilopezme1004@gmail.com",
+    }),
+    getFaqSchema(
+      faqs.map((item) => ({
+        question: item.pregunta,
+        answer: item.respuesta,
+      }))
+    ),
+    getBreadcrumbSchema([
+      { name: "Inicio", path: "/" },
+      { name: "Psicología", path: "/psicologia" },
+    ]),
+  ];
+
   return (
     <main className="min-h-screen">
+      {pageSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <section className="relative bv-hero pt-5 min-h-[92vh] overflow-hidden">
   <HeaderClient />
 
@@ -248,7 +277,7 @@ export default function PsicologiaPage() {
       <div className="order-2 lg:order-1 space-y-6 text-center lg:text-left">
         <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white">
           <Brain className="h-4 w-4 text-[#A4BE7B]" />
-          Psicología Bivalente
+          Psicología Bivalente Salud
         </div>
 
         <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white! text-balance">
@@ -263,7 +292,7 @@ export default function PsicologiaPage() {
 
         <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
           <a href="#formulario" className="bv-btn bv-btn-primary bv-btn-lg">
-            Reservar cita
+            Reservar primera sesión
           </a>
           <a href="#tratamientos" className="bv-btn bv-btn-ghost bv-btn-lg">
             Conocer más
@@ -478,7 +507,7 @@ export default function PsicologiaPage() {
         <div className="container mx-auto max-w-6xl px-6">
           <div className="mb-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white! mb-4">
-              Solicita información o reserva tu primera sesión
+              Reserva o consulta tu primera sesión
             </h2>
             <p className="mx-auto max-w-2xl text-white/80">
               Cuéntanos tu situación y te orientamos antes de empezar el proceso terapéutico.
@@ -486,7 +515,7 @@ export default function PsicologiaPage() {
           </div>
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <ServiceContactForm
-              service="Psicologia"
+              service="Psicología"
               professionalName="Daniela López Meléndez"
               recipientEmail="danilopezme1004@gmail.com"
             />
@@ -521,7 +550,7 @@ export default function PsicologiaPage() {
                   Ver contacto directo
                 </a>
                 <Link href="/" className="bv-btn bv-btn-primary bv-btn-lg">
-                  Volver a inicio
+                  Volver a psicología
                 </Link>
               </div>
             </div>
@@ -571,7 +600,7 @@ export default function PsicologiaPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="#formulario" className="bv-btn bv-btn-primary-dark bv-btn-lg">
-              Reservar cita
+              Reservar primera sesión
             </a>
             <Link href="/" className="bv-btn bv-btn-ghost bv-btn-lg">
               Volver a inicio

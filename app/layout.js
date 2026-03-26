@@ -6,6 +6,7 @@ import AuthModal from "@/components/Modal/AuthModal";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 import { siteUrl } from "@/lib/siteUrl";
 import { buildMetadata, SITE_NAME } from "@/lib/seo";
+import { getLocalBusinessSchema } from "@/lib/schema";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ export const metadata = {
   ...buildMetadata({
     title: "Psicología y Fisioterapia en Madrid | Bivalente Salud",
     description:
-      "Clínica Bivalente Salud en Madrid: psicología y fisioterapia con un enfoque cercano, profesional y adaptado a cada persona.",
+      "Bivalente Salud en Madrid: psicología presencial y online, y fisioterapia a domicilio con un enfoque cercano, profesional y adaptado a cada persona.",
     path: "/",
   }),
   applicationName: SITE_NAME,
@@ -27,7 +28,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Psicología y Fisioterapia en Madrid | Bivalente Salud",
     description:
-      "Clínica Bivalente Salud en Madrid: psicología y fisioterapia con un enfoque cercano, profesional y adaptado a cada persona.",
+      "Bivalente Salud en Madrid: psicología presencial y online, y fisioterapia a domicilio con un enfoque cercano, profesional y adaptado a cada persona.",
   },
   robots: {
     index: true,
@@ -49,11 +50,17 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  const localBusinessSchema = getLocalBusinessSchema();
+
   return (
     <html lang="es" suppressHydrationWarning>
       <body
         className={`${poppins.variable} ${poppins.className} min-h-screen bg-white text-slate-900 antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
         <AuthModalProvider>
           {children}
           <FloatingWhatsAppButton />

@@ -20,7 +20,7 @@ const TRUST_POINTS = [
     Icon: CalendarIcon,
   },
   {
-    title: "Enfoque integral",
+    title: "Enfoque integral en Madrid",
     description:
       "Psicología y fisioterapia conectadas para abordar tu bienestar con más contexto.",
     Icon: SparklesIcon,
@@ -45,7 +45,7 @@ export default function TrustSignals() {
           </h2>
           <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg">
             Cuidamos tanto la experiencia clínica como la facilidad para pedir ayuda
-            cuando la necesitas.
+            cuando la necesitas en Madrid.
           </p>
         </div>
 

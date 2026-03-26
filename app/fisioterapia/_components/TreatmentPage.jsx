@@ -4,7 +4,7 @@ import { borjaProfile } from "../_data/tratamientos";
 
 const serviceConfig = {
   heroIcon: Home,
-  heroLabel: "Fisioterapia Bivalente",
+  heroLabel: "Fisioterapia Bivalente Salud",
   backLinkHref: "/fisioterapia",
   backLinkLabel: "Volver a fisioterapia",
   primaryCtaLabel: "Reservar cita",
@@ -25,7 +25,7 @@ const serviceConfig = {
     "El objetivo es que mejores síntomas y movimiento, pero también que entiendas mejor tu lesión y tengas herramientas para mantener resultados.",
   ],
   contactEyebrow: "Contacto",
-  contactTitle: "Solicita información o reserva tu sesión de fisioterapia",
+  contactTitle: "Reserva o consulta tu sesión de fisioterapia",
   contactDescription:
     "Cuéntanos tu caso y te orientamos sobre el tratamiento, la atención a domicilio y el primer paso más adecuado para ti.",
   formServiceLabel: "Fisioterapia",

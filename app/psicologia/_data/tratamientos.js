@@ -40,20 +40,20 @@ export const tratamientosSeo = {
     cardDescription:
       "Terapia para ansiedad en Madrid con enfoque cercano y profesional para comprender lo que te pasa, reducir el desborde y recuperar herramientas útiles.",
     metaTitle:
-      "Psicóloga para ansiedad en Madrid | Terapia presencial y online | Bivalente Salud",
+      "Psicóloga para ansiedad en Madrid | Terapia presencial y online",
     metaDescription:
-      "Psicóloga para ansiedad en Madrid. Terapia presencial y online con Daniela para preocupación constante, desborde, insomnio, bloqueo y síntomas físicos de ansiedad.",
+      "Terapia para ansiedad en Madrid con Daniela López. Psicología presencial y online para preocupación constante, bloqueo, insomnio y síntomas físicos de ansiedad.",
     heroTitle: "Psicóloga para ansiedad en Madrid",
     heroSubtitle:
-      "Acompañamiento profesional para entender qué te está pasando, bajar la sensación de alarma y empezar a trabajar la ansiedad con terapia presencial en Madrid y online.",
+      "Terapia para ansiedad en Madrid con Daniela López, psicóloga sanitaria. Atención presencial en Madrid y online para preocupación constante, insomnio, bloqueo y síntomas físicos de ansiedad.",
     heroBadges: ["Psicóloga en Madrid", "Terapia online", "Adultos y adolescentes"],
-    introTitle: "Terapia para ansiedad en Madrid y online",
+    introTitle: "Cuándo pedir ayuda psicológica por ansiedad en Madrid",
     introBody:
-      "Esta ayuda psicológica está pensada para personas que viven con preocupación constante, sensación de desborde, bloqueo mental, insomnio, ataques de ansiedad o síntomas físicos que no terminan de entender. Daniela ofrece terapia para ansiedad en Madrid y también online, adaptando el proceso al momento y a las necesidades de cada persona.",
+      "Esta terapia para ansiedad en Madrid está pensada para personas que viven con preocupación constante, sensación de desborde, bloqueo mental, insomnio, ataques de ansiedad o síntomas físicos que no terminan de entender. El objetivo de la primera sesión es valorar qué te está pasando, ordenar el problema y proponerte un inicio de tratamiento realista, presencial en Madrid u online.",
     introPoints: [
       "Si sientes preocupación constante, anticipación excesiva o te cuesta desconectar incluso cuando no hay un motivo claro.",
-      "Si notas ataques de ansiedad, sensación de desborde, bloqueo mental, irritabilidad o síntomas físicos sin causa médica clara.",
-      "Si la ansiedad está afectando al descanso, al trabajo, a tus relaciones o a tu capacidad para disfrutar del día a día.",
+      "Si notas ataques de ansiedad, bloqueo, irritabilidad, insomnio o síntomas físicos que te preocupan y no sabes bien cómo manejar.",
+      "Si la ansiedad está afectando al descanso, al trabajo, a tus relaciones o a tu capacidad para sostener el día a día con normalidad.",
     ],
     symptoms: [
       "Preocupación constante, anticipación o sensación de no poder desconectar.",
@@ -94,19 +94,24 @@ export const tratamientosSeo = {
     ],
     faqs: [
       {
-        question: "¿Cómo saber si lo que me pasa puede ser ansiedad?",
+        question: "¿Cómo saber si necesito terapia por ansiedad?",
         answer:
           "Si vives con preocupación constante, sensación de desborde, insomnio, irritabilidad, bloqueo mental, ataques de ansiedad o síntomas físicos repetidos, puede ser útil valorarlo en terapia. No hace falta tenerlo claro del todo para pedir ayuda.",
       },
       {
-        question: "¿Cuándo conviene acudir a terapia por ansiedad?",
+        question: "¿Cuándo conviene pedir una primera sesión por ansiedad?",
         answer:
           "Conviene pedir ayuda cuando la ansiedad empieza a afectar al descanso, al trabajo, a las relaciones, a tu capacidad para concentrarte o a tu bienestar diario. También cuando sientes que ya no puedes sostenerla sola o solo.",
       },
       {
-        question: "¿La terapia online para ansiedad funciona?",
+        question: "¿La terapia para ansiedad puede ser presencial en Madrid u online?",
         answer:
-          "Sí. La terapia online puede funcionar muy bien cuando necesitas flexibilidad o te resulta más fácil empezar desde casa. Lo importante es que el proceso mantenga continuidad y se adapte bien a tu situación.",
+          "Sí. Daniela ofrece terapia presencial en Madrid y también online. La modalidad se valora según tu situación, tu disponibilidad y la forma en la que te resulte más fácil empezar y mantener continuidad.",
+      },
+      {
+        question: "¿Qué se hace en la primera sesión de terapia para ansiedad?",
+        answer:
+          "La primera sesión sirve para entender qué te está pasando, revisar cómo te afecta la ansiedad y valorar si este proceso terapéutico encaja contigo. A partir de ahí se orienta el siguiente paso con un planteamiento claro y realista.",
       },
       {
         question: "¿Cuánto dura un proceso de terapia para ansiedad?",
@@ -114,7 +119,7 @@ export const tratamientosSeo = {
           "Depende de cada caso, del tiempo que lleves con el problema y de los objetivos del proceso. En las primeras sesiones se valora tu situación y se orienta contigo un ritmo de trabajo realista.",
       },
       {
-        question: "¿Cómo puedo reservar una primera sesión?",
+        question: "¿Cómo puedo reservar una primera sesión de ansiedad en Madrid?",
         answer:
           "Puedes escribir a través del formulario de esta página y explicar brevemente lo que te está pasando. A partir de ahí se te orienta sobre el siguiente paso y la modalidad que mejor encaje contigo.",
       },
@@ -134,7 +139,7 @@ export const tratamientosSeo = {
     cardTitle: "Autoestima y autoconcepto",
     cardDescription:
       "Trabajo terapéutico para fortalecer la imagen personal, la seguridad interna y la relación contigo misma o contigo mismo.",
-    metaTitle: "Terapia para autoestima en Madrid | Psicología Bivalente",
+    metaTitle: "Terapia para autoestima en Madrid | Bivalente Salud",
     metaDescription:
       "Psicología para autoestima y autoconcepto en Madrid. Sesiones con Daniela López Meléndez para inseguridad, autoexigencia y vínculo contigo misma.",
     heroTitle: "Terapia para la autoestima en Madrid",
@@ -203,7 +208,7 @@ export const tratamientosSeo = {
     cardTitle: "Trastornos del estado de ánimo",
     cardDescription:
       "Intervención en depresión, desmotivación, apatía y vacío emocional desde un enfoque cercano y estructurado.",
-    metaTitle: "Psicología para depresión en Madrid | Psicología Bivalente",
+    metaTitle: "Psicología para depresión en Madrid | Bivalente Salud",
     metaDescription:
       "Acompañamiento psicológico para depresión y bajo estado de ánimo en Madrid. Sesiones presenciales y online con Daniela López Meléndez.",
     heroTitle: "Psicología para depresión y bajo estado de ánimo en Madrid",
@@ -272,7 +277,7 @@ export const tratamientosSeo = {
     cardTitle: "Trauma psicológico",
     cardDescription:
       "Espacio seguro para trabajar experiencias dolorosas, comprender su impacto y avanzar con mayor estabilidad emocional.",
-    metaTitle: "Terapia para trauma psicológico en Madrid | Psicología Bivalente",
+    metaTitle: "Terapia para trauma psicológico en Madrid | Bivalente Salud",
     metaDescription:
       "Psicología para trauma en Madrid con Daniela López Meléndez. Un espacio seguro para procesar experiencias difíciles y recuperar estabilidad emocional.",
     heroTitle: "Terapia para trauma psicológico en Madrid",
@@ -341,7 +346,7 @@ export const tratamientosSeo = {
     cardTitle: "Procesos de duelo",
     cardDescription:
       "Acompañamiento psicológico para transitar pérdidas, despedidas y cambios vitales con sostén emocional.",
-    metaTitle: "Terapia para duelo en Madrid | Psicología Bivalente",
+    metaTitle: "Terapia para duelo en Madrid | Bivalente Salud",
     metaDescription:
       "Psicología para duelo en Madrid con Daniela López Meléndez. Acompañamiento emocional en pérdidas, despedidas y cambios vitales significativos.",
     heroTitle: "Terapia para duelo y pérdida en Madrid",
@@ -410,7 +415,7 @@ export const tratamientosSeo = {
     cardTitle: "Terapia de pareja",
     cardDescription:
       "Espacio terapéutico para trabajar la comunicación, los conflictos recurrentes y la seguridad relacional.",
-    metaTitle: "Terapia de pareja en Madrid | Psicología Bivalente",
+    metaTitle: "Terapia de pareja en Madrid | Bivalente Salud",
     metaDescription:
       "Terapia de pareja en Madrid con Daniela López Meléndez. Sesiones presenciales y online para comunicación, conflictos y vínculo de pareja.",
     heroTitle: "Terapia de pareja en Madrid",
@@ -479,7 +484,7 @@ export const tratamientosSeo = {
     cardTitle: "Intervención en crisis",
     cardDescription:
       "Atención en momentos de desbordamiento emocional, urgencia psicológica o situaciones vitales especialmente difíciles.",
-    metaTitle: "Intervención en crisis emocional en Madrid | Psicología Bivalente",
+    metaTitle: "Intervención en crisis emocional en Madrid | Bivalente Salud",
     metaDescription:
       "Atención psicológica para crisis emocional en Madrid con Daniela López Meléndez. Acompañamiento en momentos de desbordamiento, bloqueo o urgencia emocional.",
     heroTitle: "Intervención en crisis emocional en Madrid",
@@ -548,7 +553,7 @@ export const tratamientosSeo = {
     cardTitle: "Atención infanto-juvenil",
     cardDescription:
       "Trabajo con niños, adolescentes y familias, ofreciendo orientación y pautas adaptadas a cada etapa evolutiva.",
-    metaTitle: "Psicología infanto-juvenil en Madrid | Psicología Bivalente",
+    metaTitle: "Psicología infanto-juvenil en Madrid | Bivalente Salud",
     metaDescription:
       "Psicología infanto-juvenil en Madrid con Daniela López Meléndez. Atención psicológica para niños, adolescentes y orientación familiar.",
     heroTitle: "Psicología infanto-juvenil en Madrid",
@@ -621,8 +626,8 @@ export function getTreatmentMetadata(slug) {
 
   if (!treatment) {
     return {
-      title: "Psicología | Bivalente",
-      description: "Psicología sanitaria en Madrid con Bivalente.",
+      title: "Psicología en Madrid | Bivalente Salud",
+      description: "Psicología sanitaria presencial y online en Madrid con Bivalente Salud.",
     };
   }
 

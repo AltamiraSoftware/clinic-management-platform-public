@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { buildMetadata } from "@/lib/seo";
+import { getBreadcrumbSchema, getFaqSchema, getServiceSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Fisioterapia a domicilio en Madrid | Bivalente Salud",
@@ -164,8 +165,36 @@ const faqs = [
 ];
 
 export default function FisioterapiaPage() {
+  const pageSchemas = [
+    getServiceSchema({
+      name: "Fisioterapia a domicilio en Madrid",
+      description:
+        "Servicio de fisioterapia a domicilio en Madrid para dolor cervical, lumbar, lesiones deportivas, tendinopatías y recuperación funcional.",
+      path: "/fisioterapia",
+      providerPhone: "+34618417971",
+      providerEmail: "estarellas11088@gmail.com",
+    }),
+    getFaqSchema(
+      faqs.map((item) => ({
+        question: item.pregunta,
+        answer: item.respuesta,
+      }))
+    ),
+    getBreadcrumbSchema([
+      { name: "Inicio", path: "/" },
+      { name: "Fisioterapia", path: "/fisioterapia" },
+    ]),
+  ];
+
   return (
     <main>
+      {pageSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <section className="relative bv-hero pt-5 min-h-[92vh] overflow-hidden">
         <HeaderClient />
 
@@ -223,7 +252,7 @@ export default function FisioterapiaPage() {
             <div className="order-2 lg:order-1 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm text-white">
                 <Home className="w-4 h-4 text-[#A4BE7B]" />
-                Fisioterapia a domicilio - Madrid
+                Fisioterapia Bivalente Salud
               </div>
 
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white! leading-tight text-balance">
@@ -237,7 +266,7 @@ export default function FisioterapiaPage() {
 
               <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
                 <a href="#formulario" className="bv-btn bv-btn-primary bv-btn-lg">
-                  Reservar cita
+                  Reserva o consulta
                 </a>
                 <a href="#servicios" className="bv-btn bv-btn-ghost bv-btn-lg">
                   Ver servicios
@@ -455,7 +484,7 @@ Experiencia en el tratamiento de dolor cervical y lumbar, lesiones deportivas, t
         <div className="container mx-auto max-w-6xl px-6">
           <div className="mb-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white! mb-4">
-              Solicita información o reserva tu sesión
+              Reserva o consulta tu sesión
             </h2>
             <p className="mx-auto max-w-2xl text-white/80">
               Explícanos tu caso y te orientamos antes de organizar la atención a domicilio.
@@ -498,7 +527,7 @@ Experiencia en el tratamiento de dolor cervical y lumbar, lesiones deportivas, t
                   Ver contacto directo
                 </a>
                 <Link href="/" className="bv-btn bv-btn-primary bv-btn-lg">
-                  Volver a inicio
+                  Volver a fisioterapia
                 </Link>
               </div>
             </div>
@@ -549,7 +578,7 @@ Experiencia en el tratamiento de dolor cervical y lumbar, lesiones deportivas, t
 
           <div className="flex flex-wrap justify-center gap-4">
             <a href="#formulario" className="bv-btn bv-btn-primary bv-btn-lg">
-              Reservar cita
+              Reserva o consulta
             </a>
             <Link href="/" className="bv-btn bv-btn-ghost bv-btn-lg">
               Volver a inicio

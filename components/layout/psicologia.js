@@ -35,7 +35,10 @@ export default function Psicologia() {
             </div>
 
             <p className="text-lg leading-relaxed text-[#0A4D68]">
-              En Bivalente Salud te acompañamos con psicología sanitaria en Madrid para ayudarte a comprender lo que te pasa, regular tus emociones y construir herramientas útiles para tu día a día. Ofrecemos terapia presencial y online, adaptándonos a tu ritmo y a tus necesidades.
+              En Bivalente Salud te acompañamos con psicología sanitaria en Madrid
+              para ayudarte a comprender lo que te pasa, regular tus emociones y
+              construir herramientas útiles para tu día a día. Ofrecemos terapia
+              presencial y online, adaptándonos a tu ritmo y a tus necesidades.
             </p>
 
             <div className="space-y-4">
@@ -52,7 +55,10 @@ export default function Psicologia() {
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/psicologia" className="mx-auto bv-btn bv-btn-ghost bv-btn-lg text-center">
-                Ver más sobre Psicología
+                Ver servicio de psicología
+              </Link>
+              <Link href="/blog" className="mx-auto bv-btn bv-btn-primary-dark bv-btn-lg text-center">
+                Ver artículos de psicología
               </Link>
             </div>
           </div>
@@ -81,7 +87,10 @@ export default function Psicologia() {
               </div>
 
               <p className="leading-relaxed text-white/82">
-                Soy psicóloga general sanitaria comprometida con el acompañamiento a personas que buscan comprenderse mejor, sanar sus heridas emocionales y construir relaciones más seguras consigo mismas y con los demás.
+                Soy psicóloga general sanitaria comprometida con el acompañamiento
+                a personas que buscan comprenderse mejor, sanar sus heridas
+                emocionales y construir relaciones más seguras consigo mismas y con
+                los demás.
               </p>
 
               <div className="flex flex-wrap justify-center gap-2">
@@ -96,7 +105,7 @@ export default function Psicologia() {
                 href="/psicologia#formulario"
                 className="bv-btn bv-btn-primary-dark bv-btn-lg w-full justify-center"
               >
-                Reservar cita con Daniela
+                Reservar primera sesión
               </Link>
             </div>
           </div>

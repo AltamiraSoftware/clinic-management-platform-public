@@ -1,5 +1,6 @@
-﻿"use client";
+"use client";
 
+import Link from "next/link";
 import { Mail, MessageSquareText, Phone, UserRound } from "lucide-react";
 import { useState } from "react";
 
@@ -8,6 +9,7 @@ const initialForm = {
   email: "",
   telefono: "",
   mensaje: "",
+  acceptedPrivacy: false,
 };
 
 function FieldShell({
@@ -29,7 +31,7 @@ function FieldShell({
           ? "border border-[#dce8e2] bg-[linear-gradient(180deg,#fbfdfc_0%,#f3f8f6_100%)] shadow-[0_10px_24px_rgba(10,77,104,0.05)]"
           : isBrand
             ? "border border-white/14 bg-white/10 backdrop-blur-sm"
-          : "border border-white/12 bg-white/6",
+            : "border border-white/12 bg-white/6",
         fullWidth ? "sm:col-span-2" : "",
       ].join(" ")}
     >
@@ -41,7 +43,7 @@ function FieldShell({
               ? "bg-[linear-gradient(135deg,#0A4D68_0%,#088395_100%)] text-white shadow-[0_10px_22px_rgba(10,77,104,0.14)]"
               : isBrand
                 ? "bg-white/14 text-[#dce9c8]"
-              : "bg-white/10 text-[#A4BE7B]",
+                : "bg-white/10 text-[#A4BE7B]",
           ].join(" ")}
         >
           <Icon className="h-4 w-4" />
@@ -74,6 +76,20 @@ export default function ServiceContactForm({
   const [status, setStatus] = useState("idle");
   const [feedback, setFeedback] = useState("");
 
+  function updateField(field, value) {
+    setForm((current) => ({
+      ...current,
+      [field]: value,
+    }));
+  }
+
+  const recipients = Array.isArray(recipientEmail) ? recipientEmail : [recipientEmail];
+  const recipientLabel = recipients.length > 1 ? recipients.join(" y ") : recipients[0];
+  const isLight = theme === "light";
+  const isBrand = theme === "brand";
+  const inputClassName =
+    "w-full rounded-xl !border-white/10 !bg-white px-4 py-3.5 !text-[#0A4D68] shadow-none placeholder:!text-slate-400 focus:!border-[#A4BE7B]";
+
   async function handleSubmit(event) {
     event.preventDefault();
     setStatus("loading");
@@ -103,7 +119,7 @@ export default function ServiceContactForm({
       }
 
       setStatus("success");
-      setFeedback("Hemos recibido tu solicitud. Te contactaremos lo antes posible.");
+      setFeedback("Hemos recibido tu solicitud. Te responderemos lo antes posible.");
       setForm(initialForm);
     } catch (error) {
       setStatus("error");
@@ -111,30 +127,15 @@ export default function ServiceContactForm({
     }
   }
 
-  function updateField(field, value) {
-    setForm((current) => ({
-      ...current,
-      [field]: value,
-    }));
-  }
-
-  const inputClassName =
-    "w-full rounded-xl !border-white/10 !bg-white px-4 py-3.5 !text-[#0A4D68] shadow-none placeholder:!text-slate-400 focus:!border-[#A4BE7B]";
-  const recipients = Array.isArray(recipientEmail) ? recipientEmail : [recipientEmail];
-  const recipientLabel =
-    recipients.length > 1 ? recipients.join(" y ") : recipients[0];
-  const isLight = theme === "light";
-  const isBrand = theme === "brand";
-
   return (
     <div
       className={[
-        "rounded-3xl p-6 sm:p-8 shadow-2xl",
+        "rounded-3xl p-6 shadow-2xl sm:p-8",
         isLight
           ? "border border-[#dce8e2] bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(244,249,246,0.94)_100%)] text-[#245953] shadow-[0_22px_52px_rgba(10,77,104,0.10)]"
           : isBrand
             ? "border border-[#d8e7df] bg-[linear-gradient(160deg,#A4BE7B_0%,#88ab63_22%,#4d8b73_62%,#0A4D68_100%)] text-white shadow-[0_26px_56px_rgba(10,77,104,0.20)]"
-          : "bv-glass text-white",
+            : "bv-glass text-white",
       ].join(" ")}
     >
       <div className="max-w-2xl">
@@ -148,11 +149,11 @@ export default function ServiceContactForm({
         </p>
         <h3
           className={[
-            "mt-3 text-2xl sm:text-3xl font-bold",
+            "mt-3 text-2xl font-bold sm:text-3xl",
             isLight ? "text-[#0A4D68]!" : "text-white!",
           ].join(" ")}
         >
-          {heading || `Solicita información sobre ${service.toLowerCase()}`}
+          {heading || `Reserva o consulta sobre ${service.toLowerCase()}`}
         </h3>
         <p
           className={[
@@ -171,7 +172,7 @@ export default function ServiceContactForm({
             ? "bg-gradient-to-r from-transparent via-[#0A4D68]/16 to-transparent"
             : isBrand
               ? "bg-gradient-to-r from-transparent via-white/28 to-transparent"
-            : "bv-divider",
+              : "bv-divider",
         ].join(" ")}
       />
 
@@ -247,13 +248,34 @@ export default function ServiceContactForm({
           />
         </FieldShell>
 
+        <label className="sm:col-span-2 flex items-start gap-3 rounded-2xl border border-white/12 bg-white/6 p-4 text-sm text-white/78">
+          <input
+            type="checkbox"
+            name="acceptedPrivacy"
+            checked={form.acceptedPrivacy}
+            onChange={(event) => updateField("acceptedPrivacy", event.target.checked)}
+            required
+            className="mt-1 h-4 w-4 rounded border-white/20 text-[#0A4D68] focus:ring-[#A4BE7B]"
+          />
+          <span>
+            He leído y acepto la{" "}
+            <Link
+              href="/legal/politica-privacidad"
+              className="font-semibold text-white underline underline-offset-2"
+            >
+              política de privacidad
+            </Link>{" "}
+            para el tratamiento de mis datos y la gestión de esta solicitud.
+          </span>
+        </label>
+
         <div className="sm:col-span-2 flex flex-wrap items-center gap-3 pt-2">
           <button
             type="submit"
             className="bv-btn bv-btn-primary bv-btn-lg"
             disabled={status === "loading"}
           >
-            {status === "loading" ? "Enviando..." : "Enviar solicitud"}
+            {status === "loading" ? "Enviando..." : "Reserva o consulta"}
           </button>
 
           {showContactShortcut ? (
@@ -275,12 +297,12 @@ export default function ServiceContactForm({
                   ? "border border-[#A4BE7B]/30 bg-[#A4BE7B]/12 text-[#0A4D68]"
                   : isBrand
                     ? "border border-white/16 bg-white/10 text-white"
-                  : "border border-[#A4BE7B]/30 bg-[#A4BE7B]/12 text-white"
+                    : "border border-[#A4BE7B]/30 bg-[#A4BE7B]/12 text-white"
                 : isLight
                   ? "border border-red-300/40 bg-red-500/10 text-[#7f1d1d]"
                   : isBrand
                     ? "border border-red-200/24 bg-red-500/12 text-white"
-                  : "border border-red-300/40 bg-red-500/12 text-white",
+                    : "border border-red-300/40 bg-red-500/12 text-white",
             ].join(" ")}
           >
             {feedback}
@@ -293,10 +315,10 @@ export default function ServiceContactForm({
             isLight ? "text-[#61764B]" : "text-white/58",
           ].join(" ")}
         >
-          Tu mensaje se enviará directamente a {recipientLabel}.
+          Tu mensaje se enviará directamente a {recipientLabel}. Respuesta habitual en menos de
+          24 horas laborables.
         </p>
       </form>
     </div>
   );
 }
-

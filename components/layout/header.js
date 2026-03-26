@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +14,7 @@ const psychologyTreatments = [
   { label: "Crisis emocional", href: "/psicologia/crisis-emocional" },
   { label: "Psicología infanto-juvenil", href: "/psicologia/psicologia-infanto-juvenil" },
 ];
+
 const physiotherapyTreatments = [
   { label: "Fisioterapia a domicilio", href: "/fisioterapia/fisioterapia-domicilio" },
   { label: "Dolor cervical", href: "/fisioterapia/dolor-cervical" },
@@ -25,17 +26,15 @@ const physiotherapyTreatments = [
   { label: "Fascitis plantar", href: "/fisioterapia/fascitis-plantar" },
 ];
 
-export default function Header({ openLogin, openRegister }) {
+export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobilePsychOpen, setMobilePsychOpen] = useState(false);
   const [mobilePhysioOpen, setMobilePhysioOpen] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(0);
 
-  const authPrimaryClassName =
+  const contactClassName =
     "rounded-xl border border-[#eef4d8] bg-[#d6e6ab] px-4 py-2.5 font-semibold text-[#052b37] shadow-[0_14px_30px_rgba(10,77,104,0.22)] transition hover:bg-[#e0ecbc]";
-  const authSecondaryClassName =
-    "rounded-xl border border-white/24 bg-white/14 px-4 py-2.5 font-semibold text-white shadow-sm transition hover:bg-white/20";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -50,6 +49,7 @@ export default function Header({ openLogin, openRegister }) {
       if (window.innerWidth >= 768) {
         setOpen(false);
         setMobilePsychOpen(false);
+        setMobilePhysioOpen(false);
       }
     };
     onResize();
@@ -118,7 +118,7 @@ export default function Header({ openLogin, openRegister }) {
             </Link>
 
             <div className="pointer-events-none absolute left-0 top-full h-4 w-56" />
-            <div className="invisible absolute left-0 top-[calc(100%+12px)] w-72 translate-y-2 rounded-2xl border border-white/15 bg-[#0A4D68]/94 p-3 opacity-0 shadow-[0_24px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-all duration-200 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="invisible absolute left-0 top-[calc(100%+12px)] w-72 translate-y-2 rounded-2xl border border-white/15 bg-[#0A4D68]/94 p-3 opacity-0 shadow-[0_24px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
               <div className="mb-2 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
                 Tratamientos
               </div>
@@ -157,7 +157,7 @@ export default function Header({ openLogin, openRegister }) {
             </Link>
 
             <div className="pointer-events-none absolute left-0 top-full h-4 w-56" />
-            <div className="invisible absolute left-0 top-[calc(100%+12px)] w-72 translate-y-2 rounded-2xl border border-white/15 bg-[#0A4D68]/94 p-3 opacity-0 shadow-[0_24px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-all duration-200 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="invisible absolute left-0 top-[calc(100%+12px)] w-72 translate-y-2 rounded-2xl border border-white/15 bg-[#0A4D68]/94 p-3 opacity-0 shadow-[0_24px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-all duration-200 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
               <div className="mb-2 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/55">
                 Tratamientos
               </div>
@@ -183,13 +183,9 @@ export default function Header({ openLogin, openRegister }) {
             Blog
           </Link>
 
-          <button onClick={openLogin} className={authSecondaryClassName}>
-            Iniciar sesión
-          </button>
-
-          <button onClick={openRegister} className={authPrimaryClassName}>
-            Reservar / Registrarse
-          </button>
+          <Link href="/sobre-nosotros#contacto" className={contactClassName}>
+            Contactar
+          </Link>
         </nav>
 
         <button
@@ -331,31 +327,17 @@ export default function Header({ openLogin, openRegister }) {
             Blog
           </Link>
 
-          <div className="flex flex-col gap-3 pt-4">
-            <button
-              onClick={() => {
-                openLogin();
-                setOpen(false);
-              }}
-              className={`min-h-[48px] w-full px-4 py-3.5 text-base ${authSecondaryClassName}`}
+          <div className="pt-4">
+            <Link
+              href="/sobre-nosotros#contacto"
+              onClick={() => setOpen(false)}
+              className={`flex min-h-[48px] w-full items-center justify-center px-4 py-3.5 text-base ${contactClassName}`}
             >
-              Iniciar sesión
-            </button>
-
-            <button
-              onClick={() => {
-                openRegister();
-                setOpen(false);
-              }}
-              className={`min-h-[48px] w-full px-4 py-3.5 text-base ${authPrimaryClassName}`}
-            >
-              Reservar / Registrarse
-            </button>
+              Contactar
+            </Link>
           </div>
         </div>
       )}
     </header>
   );
 }
-
-

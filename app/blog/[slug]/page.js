@@ -43,11 +43,18 @@ export async function generateMetadata({ params }) {
     });
   }
 
-  const title = post.meta_title || post.titulo;
-  const description =
+  const baseTitle = post.meta_title || post.titulo;
+  const title = baseTitle.includes("Bivalente Salud")
+    ? baseTitle
+    : `${baseTitle} | Bivalente Salud`;
+  const rawDescription =
     post.meta_description ||
     post.extracto ||
     extractPlainText(post.contenido).slice(0, 160);
+  const description =
+    rawDescription.length > 160
+      ? `${rawDescription.slice(0, 157).trim()}...`
+      : rawDescription;
   const image = post.imagen_destacada_url || DEFAULT_OG_IMAGE;
 
   return buildMetadata({
@@ -140,8 +147,8 @@ export default async function BlogPostPage({ params }) {
             <div className="px-6 py-8 md:px-12 md:py-10">
               <div className="mx-auto max-w-3xl space-y-10">
                 <BlogPostContent content={post.contenido} />
-              <BlogProfessionalCard categoryKind={categoryKind} />
-              <BlogCTA />
+                <BlogProfessionalCard categoryKind={categoryKind} />
+                <BlogCTA />
               </div>
             </div>
           </article>

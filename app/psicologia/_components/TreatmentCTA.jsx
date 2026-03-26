@@ -25,7 +25,7 @@ const defaultProcess = [
 
 const defaultServiceConfig = {
   contactEyebrow: "Contacto",
-  contactTitle: "Solicita información o reserva tu primera sesión",
+  contactTitle: "Reserva o consulta tu primera sesión",
   contactDescription:
     "Cuéntanos tu situación y te orientamos sobre si este proceso puede encajar contigo.",
   formServiceLabel: "Psicología",
@@ -126,7 +126,7 @@ export default function TreatmentCTA({
 
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#contacto" className="bv-btn bv-btn-ghost bv-btn-lg">
-                Ver contacto directo
+                Contacto directo
               </a>
               <Link href={mergedServiceConfig.backLinkHref} className="bv-btn bv-btn-primary bv-btn-lg">
                 {mergedServiceConfig.backLinkLabel}

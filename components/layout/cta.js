@@ -1,6 +1,8 @@
 "use client";
 
-export default function CTA({ openLogin }) {
+import Link from "next/link";
+
+export default function CTA() {
   return (
     <section className="relative min-h-[92vh] overflow-hidden bg-gradient-to-br from-[#f8faf5] to-[#A4BE7B] py-20 md:py-28">
       <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-[#088395]/20 blur-3xl" />
@@ -9,43 +11,60 @@ export default function CTA({ openLogin }) {
       <div className="relative z-10 container mx-auto max-w-4xl px-4 sm:px-6">
         <div className="space-y-5 text-center sm:space-y-8">
           <h2 className="px-2 text-2xl font-extrabold !text-[#0A4D68] sm:text-3xl md:text-4xl lg:text-5xl">
-            Empieza a cuidarte hoy
+            Da el primer paso con Bivalente Salud
           </h2>
 
           <p className="mx-auto max-w-2xl px-2 text-base text-[#0A4D68] sm:text-lg">
-            Utiliza nuestra aplicación web para reservar tu cita de psicología. Solicita también nuestro servicio de fisioterapia a domicilio.
+            {"Reserva tu primera sesi\u00F3n de psicolog\u00EDa o consulta si la fisioterapia a "}
+            {"domicilio en Madrid encaja contigo. Un proceso claro, profesional y sin "}
+            {"fricci\u00F3n desde el primer contacto."}
           </p>
 
           <div className="flex flex-col justify-center gap-3 pt-4 sm:flex-row sm:gap-5 sm:pt-8">
-            <a href="/psicologia">
-            <button  className="bv-btn bv-btn-primary-dark bv-btn-lg w-full sm:w-auto">
-              Psicología
-            </button>
-            </a>
-            <a href="/fisioterapia">
-            <button onClick={openLogin} className="bv-btn bv-btn-primary-dark bv-btn-lg w-full sm:w-auto">
-              Fisioterapia
-            </button>
-            </a>
+            <Link
+              href="/psicologia#formulario"
+              className="bv-btn bv-btn-primary-dark bv-btn-lg w-full sm:w-auto"
+            >
+              {"Reservar cita de psicolog\u00EDa"}
+            </Link>
+            <Link
+              href="/fisioterapia#formulario"
+              className="bv-btn bv-btn-primary-dark bv-btn-lg w-full sm:w-auto"
+            >
+              Reservar cita de fisioterapia
+            </Link>
+            <Link href="/blog" className="bv-btn bv-btn-ghost bv-btn-lg w-full sm:w-auto">
+              Ver blog
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 gap-6 border-t border-gray-300/60 pt-8 sm:grid-cols-3 sm:gap-8 sm:pt-12">
             <div className="space-y-2 py-4 sm:py-0">
               <TelephoneIcon className="mx-auto mb-2 h-7 w-7 text-[#0A4D68] sm:h-8 sm:w-8" />
-              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">Teléfono</p>
-              <p className="text-center text-sm text-gray-600 sm:text-base">+34</p>
+              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">
+                Servicios
+              </p>
+              <p className="text-center text-sm text-gray-600 sm:text-base">
+                {"Psicolog\u00EDa y fisioterapia"}
+              </p>
             </div>
             <div className="space-y-2 border-t border-gray-200/80 py-4 sm:border-t-0 sm:py-0">
               <MailIcon className="mx-auto mb-2 h-7 w-7 text-[#0A4D68] sm:h-8 sm:w-8" />
-              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">Email</p>
+              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">
+                Email
+              </p>
               <p className="break-all text-center text-sm text-gray-600 sm:text-base">
-                clinicabivalente@gmail.com
+                danilopezme1004@gmail.com
               </p>
             </div>
             <div className="space-y-2 border-t border-gray-200/80 py-4 sm:border-t-0 sm:py-0">
               <LocationIcon className="mx-auto mb-2 h-7 w-7 text-[#0A4D68] sm:h-8 sm:w-8" />
-              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">Ubicación</p>
-              <p className="text-center text-sm text-gray-600 sm:text-base">Madrid, España</p>
+              <p className="text-center text-base font-semibold text-gray-900 sm:text-lg">
+                {"Ubicaci\u00F3n"}
+              </p>
+              <p className="text-center text-sm text-gray-600 sm:text-base">
+                {"Madrid, Espa\u00F1a"}
+              </p>
             </div>
           </div>
         </div>

@@ -41,20 +41,20 @@ export const tratamientosSeo = {
     cardTitle: "Fisioterapia a domicilio",
     cardDescription:
       "Servicio de fisioterapia a domicilio en Madrid con valoración, tratamiento manual y ejercicio terapéutico adaptado a tu dolor, tu lesión y tu ritmo de recuperación.",
-    metaTitle: "Fisioterapia a domicilio en Madrid | Bivalente Salud",
+    metaTitle: "Fisioterapia a domicilio en Madrid | Borja Estarellas",
     metaDescription:
-      "Fisioterapia a domicilio en Madrid con atención profesional, personalizada y cómoda. Tratamiento de dolor, lesiones y recuperación funcional en Bivalente Salud.",
+      "Fisioterapia a domicilio en Madrid para dolor, lesiones y recuperación funcional. Tratamiento profesional con Borja Estarellas desde 50 euros.",
     heroTitle: "Fisioterapia a domicilio en Madrid",
     heroSubtitle:
-      "Un fisioterapeuta a domicilio en Madrid para valorar tu caso, tratar el dolor y ayudarte a recuperar movimiento con la comodidad de recibir la sesión en casa.",
+      "Fisioterapia a domicilio en Madrid con Borja Estarellas desde 50 euros. Valoración, tratamiento y ejercicio terapéutico en casa para dolor, lesiones y recuperación funcional.",
     heroBadges: ["Madrid", "Atención a domicilio", "Dolor y recuperación"],
-    introTitle: "Un servicio de fisioterapia a domicilio pensado para Madrid",
+    introTitle: "Cuándo merece la pena pedir fisioterapia a domicilio en Madrid",
     introBody:
-      "Este servicio está pensado para personas que necesitan fisioterapia a domicilio en Madrid por dolor, lesión, limitación de movimiento o dificultad para desplazarse. La sesión se adapta a tu situación real, permite empezar a tratar desde el primer día y facilita una atención profesional, cómoda y personalizada en casa.",
+      "Este servicio de fisioterapia a domicilio en Madrid está pensado para personas con dolor, lesión, limitación de movimiento o dificultad para desplazarse. La sesión permite valorar tu caso, empezar el tratamiento desde la primera visita y hacerlo con comodidad en casa, sin perder rigor clínico ni personalización.",
     introPoints: [
       "Si buscas un fisio a domicilio en Madrid porque el dolor, la movilidad o la logística hacen difícil acudir a consulta.",
       "Si necesitas un tratamiento claro para dolor cervical, dolor lumbar, contracturas, tendinopatías o molestias musculares y articulares.",
-      "Si quieres empezar una rehabilitación a domicilio en Madrid con un plan adaptado a tu rutina y a tu evolución.",
+      "Si quieres empezar una rehabilitación a domicilio en Madrid con una primera sesión desde 50 euros y un plan adaptado a tu rutina.",
     ],
     symptoms: [
       "Dolor cervical, dolor lumbar o rigidez que te limita en casa, en el trabajo o al caminar.",
@@ -110,6 +110,11 @@ export const tratamientosSeo = {
           "Se recomienda cuando tienes dolor, una lesión, limitación de movimiento o simplemente necesitas una opción más cómoda para empezar tratamiento en casa. Puede ser útil en dolor cervical, dolor lumbar, contracturas, tendinopatías, fascitis plantar o recuperación tras esguince.",
       },
       {
+        question: "¿En qué zonas de Madrid haces fisioterapia a domicilio?",
+        answer:
+          "Borja realiza atención en distintas zonas de Madrid. Si quieres confirmar tu dirección antes de reservar, puedes escribir por el formulario y se revisa contigo si la atención a domicilio encaja en tu zona.",
+      },
+      {
         question: "¿Hace falta tener material en casa para la sesión?",
         answer:
           "No. Normalmente no necesitas material específico. Si para tu caso hiciera falta algo sencillo para continuar con ejercicios o pautas, Borja te lo indicará de forma clara.",
@@ -120,7 +125,7 @@ export const tratamientosSeo = {
           "Puedes escribir a través del formulario de esta página y explicar tu dolor o lesión. Se revisa tu caso contigo para orientarte y valorar el siguiente paso más adecuado.",
       },
       {
-        question: "¿Cuánto cuesta la sesión de fisioterapia a domicilio?",
+        question: "¿Cuánto cuesta la sesión de fisioterapia a domicilio en Madrid?",
         answer:
           "La primera sesión de fisioterapia a domicilio tiene un precio de 50 euros. Si necesitas confirmar detalles antes de reservar, puedes consultarlo sin compromiso.",
       },
@@ -141,7 +146,7 @@ export const tratamientosSeo = {
     cardTitle: "Dolor cervical y cervicalgia",
     cardDescription:
       "Fisioterapia para cervicalgia, rigidez y dolor de cuello con abordaje manual y ejercicio terapéutico adaptado a tu actividad diaria.",
-    metaTitle: "Fisioterapia para dolor cervical en Madrid | Bivalente",
+    metaTitle: "Fisioterapia para dolor cervical en Madrid | Bivalente Salud",
     metaDescription:
       "Tratamiento de fisioterapia para dolor cervical en Madrid con Borja Estarellas. Abordaje de cervicalgia, rigidez, sobrecarga y dolor mecánico de cuello.",
     heroTitle: "Fisioterapia para dolor cervical en Madrid",
@@ -215,7 +220,7 @@ export const tratamientosSeo = {
     cardTitle: "Dolor lumbar y ciática mecánica",
     cardDescription:
       "Fisioterapia para lumbalgia, rigidez lumbar y dolor mecánico con tratamiento orientado a reducir dolor y recuperar confianza al moverte.",
-    metaTitle: "Fisioterapia para dolor lumbar en Madrid | Bivalente",
+    metaTitle: "Fisioterapia para dolor lumbar en Madrid | Bivalente Salud",
     metaDescription:
       "Tratamiento de fisioterapia para dolor lumbar y lumbalgia en Madrid con Borja Estarellas. Atención a domicilio para dolor mecánico y ciática.",
     heroTitle: "Fisioterapia para dolor lumbar en Madrid",
@@ -289,7 +294,7 @@ export const tratamientosSeo = {
     cardTitle: "Tendinopatías",
     cardDescription:
       "Tratamiento de tendinopatías en hombro, codo, rodilla o Aquiles con enfoque progresivo y adaptado a carga y actividad.",
-    metaTitle: "Fisioterapia para tendinopatías en Madrid | Bivalente",
+    metaTitle: "Fisioterapia para tendinopatías en Madrid | Bivalente Salud",
     metaDescription:
       "Fisioterapia para tendinopatías en Madrid con Borja Estarellas. Tratamiento de hombro, codo, rodilla o Aquiles con ejercicio terapéutico y seguimiento.",
     heroTitle: "Fisioterapia para tendinopatías en Madrid",
@@ -363,7 +368,7 @@ export const tratamientosSeo = {
     cardTitle: "Contracturas y sobrecargas",
     cardDescription:
       "Fisioterapia para contracturas, sobrecargas y síndrome miofascial con tratamiento orientado a descargar y recuperar movimiento.",
-    metaTitle: "Fisioterapia para contracturas en Madrid | Bivalente",
+    metaTitle: "Fisioterapia para contracturas en Madrid | Bivalente Salud",
     metaDescription:
       "Tratamiento de contracturas y sobrecargas musculares en Madrid con Borja Estarellas. Fisioterapia a domicilio para dolor muscular y puntos gatillo.",
     heroTitle: "Fisioterapia para contracturas y sobrecargas en Madrid",
@@ -437,7 +442,7 @@ export const tratamientosSeo = {
     cardTitle: "Esguinces y recuperación post-lesión",
     cardDescription:
       "Fisioterapia para esguinces y recuperación funcional tras lesión, con progresión de carga y vuelta gradual a la actividad.",
-    metaTitle: "Fisioterapia para esguinces en Madrid | Bivalente",
+    metaTitle: "Fisioterapia para esguinces en Madrid | Bivalente Salud",
     metaDescription:
       "Tratamiento de fisioterapia para esguinces en Madrid con Borja Estarellas. Recuperación post-lesión con trabajo manual, ejercicio y seguimiento.",
     heroTitle: "Fisioterapia para esguinces en Madrid",
@@ -511,7 +516,7 @@ export const tratamientosSeo = {
     cardTitle: "Lesiones deportivas",
     cardDescription:
       "Fisioterapia deportiva para tratar dolor, recuperar función y volver a entrenar con una progresión coherente y segura.",
-    metaTitle: "Fisioterapia deportiva en Madrid | Bivalente",
+    metaTitle: "Fisioterapia deportiva en Madrid | Bivalente Salud",
     metaDescription:
       "Fisioterapia deportiva en Madrid con Borja Estarellas. Tratamiento de lesiones, readaptación y vuelta progresiva al entrenamiento.",
     heroTitle: "Fisioterapia deportiva en Madrid",
@@ -585,7 +590,7 @@ export const tratamientosSeo = {
     cardTitle: "Fascitis plantar",
     cardDescription:
       "Tratamiento de fascitis plantar y dolor de pie con abordaje progresivo para mejorar apoyo, carga y vuelta a la actividad.",
-    metaTitle: "Fisioterapia para fascitis plantar en Madrid | Bivalente",
+    metaTitle: "Fisioterapia para fascitis plantar en Madrid | Bivalente Salud",
     metaDescription:
       "Fisioterapia para fascitis plantar en Madrid con Borja Estarellas. Tratamiento del dolor de pie y apoyo con ejercicio terapéutico y seguimiento.",
     heroTitle: "Fisioterapia para fascitis plantar en Madrid",
@@ -663,8 +668,8 @@ export function getTreatmentMetadata(slug) {
 
   if (!treatment) {
     return {
-      title: "Fisioterapia | Bivalente",
-      description: "Fisioterapia en Madrid con Bivalente.",
+      title: "Fisioterapia en Madrid | Bivalente Salud",
+      description: "Fisioterapia a domicilio en Madrid con Bivalente Salud.",
     };
   }
 

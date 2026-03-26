@@ -51,7 +51,9 @@ export default function Fisioterapia() {
               </div>
 
               <p className="leading-relaxed text-white/82">
-                Especialista en terapia manual y ejercicio terapéutico. Amplia experiencia en lesiones deportivas y rehabilitación. Atención a domicilio disponible en Madrid.
+                Especialista en terapia manual y ejercicio terapéutico. Amplia
+                experiencia en lesiones deportivas y rehabilitación. Atención a
+                domicilio disponible en Madrid.
               </p>
 
               <div className="flex flex-wrap justify-center gap-2">
@@ -66,7 +68,7 @@ export default function Fisioterapia() {
                 href="/fisioterapia#formulario"
                 className="bv-btn bv-btn-primary bv-btn-lg w-full justify-center"
               >
-                Reservar cita con Borja
+                Reserva o consulta
               </Link>
             </div>
           </div>
@@ -82,7 +84,10 @@ export default function Fisioterapia() {
             </div>
 
             <p className="text-lg leading-relaxed text-white">
-              En Bivalente Salud ofrecemos fisioterapia a domicilio especializada en Madrid para el tratamiento del dolor lumbar, cervical y lesiones deportivas. Trabajamos con terapia manual avanzada y ejercicio terapéutico basado en la evidencia científica.
+              En Bivalente Salud ofrecemos fisioterapia a domicilio especializada
+              en Madrid para el tratamiento del dolor lumbar, cervical y lesiones
+              deportivas. Trabajamos con terapia manual avanzada y ejercicio
+              terapéutico basado en la evidencia científica.
             </p>
 
             <div className="space-y-4">
@@ -98,9 +103,14 @@ export default function Fisioterapia() {
             </div>
 
             <div className="flex justify-center">
-              <Link href="/fisioterapia" className="bv-btn bv-btn-ghost bv-btn-lg">
-                Ver más sobre Fisioterapia
-              </Link>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Link href="/fisioterapia" className="bv-btn bv-btn-ghost bv-btn-lg">
+                  Ver servicio de fisioterapia
+                </Link>
+                <Link href="/blog" className="bv-btn bv-btn-primary-dark bv-btn-lg">
+                  Ver artículos de fisioterapia
+                </Link>
+              </div>
             </div>
           </div>
         </div>

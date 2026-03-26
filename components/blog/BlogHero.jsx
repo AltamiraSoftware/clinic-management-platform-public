@@ -7,13 +7,14 @@ export default function BlogHero({ categories = [] }) {
       <div className="container relative mx-auto max-w-6xl px-6">
         <div className="max-w-4xl">
           <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm">
-            Blog Bivalente
+            Blog Bivalente Salud
           </span>
           <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight text-white! md:text-5xl xl:text-6xl">
             Blog de Psicología y Fisioterapia en Madrid
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/80">
-            Artículos claros y útiles para entender tu salud física y emocional. Contenido profesional de Bivalente pensado para orientarte y acompañarte.
+            Artículos claros y útiles para entender tu salud física y emocional.
+            Contenido profesional de Bivalente Salud pensado para orientarte y acompañarte.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

@@ -7,6 +7,7 @@ import TreatmentHero from "./TreatmentHero";
 import TreatmentIntro from "./TreatmentIntro";
 import TreatmentProfessionalCard from "./TreatmentProfessionalCard";
 import TestimonialsSection from "@/components/layout/TestimonialsSection";
+import { getBreadcrumbSchema, getFaqSchema, getServiceSchema } from "@/lib/schema";
 
 const defaultServiceConfig = {
   backLinkHref: "/psicologia",
@@ -91,8 +92,34 @@ export default function TreatmentPage({
           },
         ];
 
+  const pageSchemas = [
+    getServiceSchema({
+      name: treatment.heroTitle,
+      description: treatment.metaDescription,
+      path: treatment.path,
+      providerPhone: professional.phone?.replace(/\s+/g, ""),
+      providerEmail: professional.recipientEmail,
+    }),
+    getFaqSchema(treatment.faqs),
+    getBreadcrumbSchema([
+      { name: "Inicio", path: "/" },
+      {
+        name: pageServiceConfig.backLinkHref === "/fisioterapia" ? "Fisioterapia" : "Psicología",
+        path: pageServiceConfig.backLinkHref,
+      },
+      { name: treatment.navLabel, path: treatment.path },
+    ]),
+  ];
+
   return (
     <main className="min-h-screen">
+      {pageSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <TreatmentHero
         treatment={treatment}
         professional={professional}
