@@ -26,7 +26,7 @@ const physiotherapyTreatments = [
   { label: "Fascitis plantar", href: "/fisioterapia/fascitis-plantar" },
 ];
 
-export default function Header() {
+export default function Header({ openLogin, openRegister }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobilePsychOpen, setMobilePsychOpen] = useState(false);
@@ -35,6 +35,10 @@ export default function Header() {
 
   const contactClassName =
     "rounded-xl border border-[#eef4d8] bg-[#d6e6ab] px-4 py-2.5 font-semibold text-[#052b37] shadow-[0_14px_30px_rgba(10,77,104,0.22)] transition hover:bg-[#e0ecbc]";
+  const authSecondaryClassName =
+    "rounded-xl border border-white/16 bg-white/8 px-4 py-2.5 font-semibold text-white/92 transition hover:bg-white/12";
+  const authPrimaryClassName =
+    "rounded-xl border border-white/12 bg-white px-4 py-2.5 font-semibold text-[#0A4D68] transition hover:bg-[#f4f8f6]";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -183,6 +187,18 @@ export default function Header() {
             Blog
           </Link>
 
+          {openLogin ? (
+            <button type="button" onClick={openLogin} className={authSecondaryClassName}>
+              Iniciar sesión
+            </button>
+          ) : (
+            <Link href="/auth/login" className={authSecondaryClassName}>
+              Iniciar sesión
+            </Link>
+          )}
+
+          
+
           <Link href="/sobre-nosotros#contacto" className={contactClassName}>
             Contactar
           </Link>
@@ -326,6 +342,50 @@ export default function Header() {
           >
             Blog
           </Link>
+
+          <div className="grid gap-3 border-b border-white/10 py-4">
+            {openLogin ? (
+              <button
+                type="button"
+                onClick={() => {
+                  setOpen(false);
+                  openLogin();
+                }}
+                className={`flex min-h-[48px] w-full items-center justify-center px-4 py-3.5 text-base ${authSecondaryClassName}`}
+              >
+                Iniciar sesión
+              </button>
+            ) : (
+              <Link
+                href="/auth/login"
+                onClick={() => setOpen(false)}
+                className={`flex min-h-[48px] w-full items-center justify-center px-4 py-3.5 text-base ${authSecondaryClassName}`}
+              >
+                Iniciar sesión
+              </Link>
+            )}
+
+            {openRegister ? (
+              <button
+                type="button"
+                onClick={() => {
+                  setOpen(false);
+                  openRegister();
+                }}
+                className={`flex min-h-[48px] w-full items-center justify-center px-4 py-3.5 text-base ${authPrimaryClassName}`}
+              >
+                Crear cuenta
+              </button>
+            ) : (
+              <Link
+                href="/auth/register"
+                onClick={() => setOpen(false)}
+                className={`flex min-h-[48px] w-full items-center justify-center px-4 py-3.5 text-base ${authPrimaryClassName}`}
+              >
+                Crear cuenta
+              </Link>
+            )}
+          </div>
 
           <div className="pt-4">
             <Link
