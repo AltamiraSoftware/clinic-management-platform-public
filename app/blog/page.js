@@ -1,7 +1,6 @@
 import HeaderClient from "@/components/layout/HeaderClient";
 import Footer from "@/components/layout/footer";
 import BlogHero from "@/components/blog/BlogHero";
-import BlogCategories from "@/components/blog/BlogCategories";
 import BlogSearch from "@/components/blog/BlogSearch";
 import { filterCoreBlogCategories } from "@/lib/blogUtils";
 import { createSupabasePublicClient } from "@/lib/supabaseServer";
@@ -12,9 +11,9 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 export const dynamic = "force-dynamic";
 
 export const metadata = buildMetadata({
-  title: "Blog de Psicología y Fisioterapia en Madrid | Bivalente Salud",
+  title: "Blog de Psicolog\u00EDa y Fisioterapia en Madrid | Bivalente Salud",
   description:
-    "Artículos de psicología y fisioterapia en Madrid para resolver dudas, entender síntomas y mejorar tu salud con criterio profesional.",
+    "Art\u00EDculos de psicolog\u00EDa y fisioterapia en Madrid para resolver dudas, entender s\u00EDntomas y mejorar tu salud con criterio profesional.",
   path: "/blog",
 });
 
@@ -38,7 +37,6 @@ export default async function BlogPage() {
       />
       <HeaderClient />
       <BlogHero categories={categories} />
-      <BlogCategories categories={categories} />
       <BlogSearch posts={posts} categories={categories} />
       <Footer />
     </main>

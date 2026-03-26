@@ -33,9 +33,7 @@ export default function CTA() {
             >
               Reservar cita de fisioterapia
             </Link>
-            <Link href="/blog" className="bv-btn bv-btn-ghost bv-btn-lg w-full sm:w-auto">
-              Ver blog
-            </Link>
+            
           </div>
 
           <div className="grid grid-cols-1 gap-6 border-t border-gray-300/60 pt-8 sm:grid-cols-3 sm:gap-8 sm:pt-12">
