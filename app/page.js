@@ -1,11 +1,16 @@
 import HomePageClient from "@/app/_components/HomePageClient";
+import {
+  PHYSIOTHERAPY_PROFILE,
+  PORTFOLIO_SITE,
+  PSYCHOLOGY_PROFILE,
+} from "@/lib/portfolioConfig";
 import { buildMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getServiceSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Psicología y Fisioterapia en Madrid | Bivalente Salud",
+  title: `Psicología y Fisioterapia en Madrid | ${PORTFOLIO_SITE.name}`,
   description:
-    "Bivalente Salud en Madrid: psicología presencial y online, y fisioterapia a domicilio con un enfoque cercano, profesional y adaptado a cada persona.",
+    "Versión pública de portfolio de una plataforma clínica con servicios, reservas, pagos y dashboards.",
   path: "/",
 });
 
@@ -14,18 +19,18 @@ export default function Home() {
     getServiceSchema({
       name: "Psicología en Madrid",
       description:
-        "Servicio de psicología presencial y online en Madrid con acompañamiento profesional para ansiedad, autoestima, duelo, trauma y terapia de pareja.",
+        "Servicio demo de psicología presencial y online en Madrid con acompañamiento profesional para distintos motivos de consulta.",
       path: "/psicologia",
-      providerPhone: "+34674547577",
-      providerEmail: "danilopezme1004@gmail.com",
+      providerPhone: PSYCHOLOGY_PROFILE.phone,
+      providerEmail: PSYCHOLOGY_PROFILE.email,
     }),
     getServiceSchema({
       name: "Fisioterapia a domicilio en Madrid",
       description:
-        "Servicio de fisioterapia a domicilio en Madrid para dolor, lesiones y recuperación funcional con tratamiento adaptado a cada caso.",
+        "Servicio demo de fisioterapia a domicilio en Madrid para dolor, lesiones y recuperación funcional.",
       path: "/fisioterapia",
-      providerPhone: "+34618417971",
-      providerEmail: "estarellas11088@gmail.com",
+      providerPhone: PHYSIOTHERAPY_PROFILE.phone,
+      providerEmail: PHYSIOTHERAPY_PROFILE.email,
     }),
     getBreadcrumbSchema([{ name: "Inicio", path: "/" }]),
   ];

@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { CalendarIcon } from "@heroicons/react/24/outline";
 
 /* ============================================================
-   UTIL — FECHA LOCAL SIN DESAJUSTES DE ZONA HORARIA (KEY)
+   UTIL â€” FECHA LOCAL SIN DESAJUSTES DE ZONA HORARIA (KEY)
    ============================================================ */
 function getLocalDateKey(date) {
   return (
@@ -17,7 +17,7 @@ function getLocalDateKey(date) {
 }
 
 /* ============================================================
-   UTIL — NORMALIZAR FECHA A yyyy-mm-dd (sin horas)
+   UTIL â€” NORMALIZAR FECHA A yyyy-mm-dd (sin horas)
    ============================================================ */
 function normalizeDate(date) {
   const d = new Date(date);
@@ -45,9 +45,9 @@ export default function CalendarSection({
   const today = normalizeDate(new Date());
 
   /* ============================================================
-      Semana lunes → domingo
+      Semana lunes â†’ domingo
      ============================================================ */
-  const weekDays = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
+  const weekDays = ["Lun", "Mar", "MiÃ©", "Jue", "Vie", "SÃ¡b", "Dom"];
 
   const getDaysInMonth = (date) =>
     new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
@@ -62,7 +62,7 @@ export default function CalendarSection({
   const firstDay = getFirstDayOfMonth(visualMonth);
 
   /* ============================================================
-     Eventos → mapa YYYY-MM-DD
+     Eventos â†’ mapa YYYY-MM-DD
      SIN toISOString (NO UTC)
      ============================================================ */
   const eventosPorFecha = useMemo(() => {
@@ -83,14 +83,14 @@ export default function CalendarSection({
   }, [eventos]);
 
   /* ============================================================
-      Construcción del grid
+      ConstrucciÃ³n del grid
      ============================================================ */
   const days = [];
 
-  // Huecos antes del primer día
+  // Huecos antes del primer dÃ­a
   for (let i = 0; i < firstDay; i++) days.push(null);
 
-  // Días del mes
+  // DÃ­as del mes
   for (let i = 1; i <= monthDays; i++) days.push(i);
 
   // Claves importantes
@@ -147,7 +147,7 @@ export default function CalendarSection({
           </span>
           <div>
             <h2 className="text-lg font-bold text-white">Calendario</h2>
-            <p className="text-white text-xs">Gestiona tus citas día a día</p>
+            <p className="text-white text-xs">Gestiona tus citas dÃ­a a dÃ­a</p>
           </div>
         </div>
 
@@ -161,13 +161,13 @@ export default function CalendarSection({
 
       {/* CALENDARIO */}
       <div className="bg-white p-6 flex flex-col items-center rounded-b-2xl w-full">
-        {/* Navegación de mes */}
+        {/* NavegaciÃ³n de mes */}
         <div className="flex items-center justify-between w-full mb-4">
           <button
             onClick={goToPrevMonth}
             className="px-3 py-1 rounded-lg hover:bg-[#eef6f4] text-[#245953] text-sm font-medium"
           >
-            ← Mes anterior
+            â† Mes anterior
           </button>
 
           <div className="text-center">
@@ -183,7 +183,7 @@ export default function CalendarSection({
             onClick={goToNextMonth}
             className="px-3 py-1 rounded-lg hover:bg-[#eef6f4] text-[#245953] text-sm font-medium"
           >
-            Mes siguiente →
+            Mes siguiente â†’
           </button>
         </div>
 
@@ -199,7 +199,7 @@ export default function CalendarSection({
           ))}
         </div>
 
-        {/* Grid de días */}
+        {/* Grid de dÃ­as */}
         <div className="grid grid-cols-7 gap-2 w-full">
           {days.map((day, idx) => {
             if (!day) return <div key={idx} className="aspect-square" />;
@@ -252,7 +252,7 @@ export default function CalendarSection({
         <div className="flex flex-wrap gap-4 mt-4 text-xs text-[#245953] justify-center">
           <div className="flex items-center gap-1">
             <span className="w-3 h-3 rounded bg-[#eef8f6] border border-[#88b8a6]" />
-            <span>Día con citas</span>
+            <span>DÃ­a con citas</span>
           </div>
           <div className="flex items-center gap-1">
             <span className="w-3 h-3 rounded bg-[linear-gradient(90deg,#0A4D68_0%,#088395_60%,#61764B_100%)]" />

@@ -70,7 +70,7 @@ function ClienteDashboardContent() {
 
   const [bookingStep, setBookingStep] = useState("calendar");
   
-  // 🔥 CORREGIDO: inicializar con fecha válida
+  // ðŸ”¥ CORREGIDO: inicializar con fecha vÃ¡lida
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [selectedService, setSelectedService] = useState("");
@@ -219,14 +219,14 @@ function ClienteDashboardContent() {
   };
 
   async function handleConfirmBooking() {
-    // Validación completa antes de procesar
+    // ValidaciÃ³n completa antes de procesar
     if (!selectedDate || !selectedTime || !selectedService) {
-      alert("❌ Por favor, selecciona fecha, hora y servicio.");
+      alert("âŒ Por favor, selecciona fecha, hora y servicio.");
       return;
     }
 
     if (!user?.id) {
-      alert("❌ Error: usuario no identificado.");
+      alert("âŒ Error: usuario no identificado.");
       return;
     }
 
@@ -237,8 +237,8 @@ function ClienteDashboardContent() {
 
     // Validar que la franja existe
     if (!franjaObj || !franjaObj.id) {
-      alert("❌ Error: la franja horaria ya no está disponible. Por favor, selecciona otra hora.");
-      handleReset(); // Reiniciar selección
+      alert("âŒ Error: la franja horaria ya no estÃ¡ disponible. Por favor, selecciona otra hora.");
+      handleReset(); // Reiniciar selecciÃ³n
       return;
     }
 
@@ -255,24 +255,24 @@ function ClienteDashboardContent() {
 
       if (!res.ok) {
         const errorData = await res.json();
-        alert(`❌ Error: ${errorData.error || "No se pudo crear la sesión de pago"}`);
+        alert(`âŒ Error: ${errorData.error || "No se pudo crear la sesiÃ³n de pago"}`);
         return;
       }
 
       const data = await res.json();
 
       if (data.error) {
-        alert("❌ Error: " + data.error);
+        alert("âŒ Error: " + data.error);
         return;
       }
 
       if (data.url) {
         window.location.href = data.url;
       } else {
-        alert("❌ Error: no se recibió URL de pago");
+        alert("âŒ Error: no se recibiÃ³ URL de pago");
       }
     } catch {
-      alert("❌ Error de conexión. Por favor, inténtalo de nuevo.");
+      alert("âŒ Error de conexiÃ³n. Por favor, intÃ©ntalo de nuevo.");
     }
   }
 
@@ -292,7 +292,7 @@ function ClienteDashboardContent() {
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(164,190,123,0.20),_transparent_24%),radial-gradient(circle_at_85%_18%,_rgba(8,131,149,0.18),_transparent_24%),linear-gradient(135deg,_#edf5f1_0%,_#f7faf9_55%,_#e2eee7_100%)]">
-      {/* 🔥 DETECTOR DE SUCCESS EN SUSPENSE */}
+      {/* ðŸ”¥ DETECTOR DE SUCCESS EN SUSPENSE */}
       <Suspense fallback={null}>
         <SuccessDetector onSuccess={() => setShowSuccessModal(true)} />
       </Suspense>
@@ -358,11 +358,11 @@ function ClienteDashboardContent() {
               <div className="p-6">
                 <p className="text-sm text-[#245953]">Fecha</p>
                 <p className="font-semibold mb-4">
-                  {selectedDate ? new Date(selectedDate).toLocaleDateString("es-ES") : "—"}
+                  {selectedDate ? new Date(selectedDate).toLocaleDateString("es-ES") : "â€”"}
                 </p>
 
                 <p className="text-sm text-[#245953]">Hora</p>
-                <p className="font-semibold mb-6">{selectedTime || "—"}</p>
+                <p className="font-semibold mb-6">{selectedTime || "â€”"}</p>
 
                 <p className="text-sm text-[#245953]">Servicio</p>
                 <p className="font-semibold">
@@ -375,16 +375,16 @@ function ClienteDashboardContent() {
                   onClick={handleReset}
                   className="mt-4 text-sm text-[#0A4D68] hover:underline"
                 >
-                  Reiniciar selección
+                  Reiniciar selecciÃ³n
                 </button>
               </div>
             </div>
 
-            {/* PRÓXIMAS CITAS */}
+            {/* PRÃ“XIMAS CITAS */}
             <div className="top-24 overflow-hidden rounded-2xl border border-[#e6efe8] bg-white shadow-[0_20px_50px_rgba(10,77,104,0.10)]">
               <div className="bg-[linear-gradient(90deg,#0A4D68_0%,#088395_52%,#61764B_100%)] p-6 text-white flex items-center gap-3">
                 <IconUser />
-                <h3 className="text-xl font-bold">Próximas citas</h3>
+                <h3 className="text-xl font-bold">PrÃ³ximas citas</h3>
               </div>
 
               <ClienteNextAppointments userId={user.id} />
@@ -396,7 +396,7 @@ function ClienteDashboardContent() {
                 onClick={() => setChatOpen(true)}
                 className="w-full bv-btn bv-btn-primary bv-btn-lg"
               >
-                💬 Chat
+                ðŸ’¬ Chat
               </button>
 
               <div className="h-4" />
@@ -405,7 +405,7 @@ function ClienteDashboardContent() {
                 onClick={() => setShowAccountModal(true)}
                 className="w-full bv-btn bv-btn-primary bv-btn-lg"
               >
-                Parámetros de la cuenta
+                ParÃ¡metros de la cuenta
               </button>
             </div>
           </div>
@@ -423,7 +423,7 @@ function ClienteDashboardContent() {
         />
       )}
 
-      {/* MODAL DE ÉXITO */}
+      {/* MODAL DE Ã‰XITO */}
       {showSuccessModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div
@@ -433,11 +433,11 @@ function ClienteDashboardContent() {
 
           <div className="relative w-[90%] max-w-md rounded-2xl border border-[#e6efe8] bg-white p-10 shadow-[0_24px_60px_rgba(10,77,104,0.16)] animate-scaleIn">
             <div className="mx-auto mb-6 w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center shadow-inner">
-              <span className="text-5xl">✓</span>
+              <span className="text-5xl">âœ“</span>
             </div>
 
             <h2 className="mb-4 text-center text-3xl font-extrabold text-[#0A4D68]">
-              ¡Pago completado!
+              Â¡Pago completado!
             </h2>
 
             <p className="mb-8 text-center text-[#245953]">

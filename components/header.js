@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import LogoutButtom from "@/components/LogoutButtom";
 import Image from "next/image";
+import { PORTFOLIO_SITE } from "@/lib/portfolioConfig";
 
 export default function Header({ onOpenServicios = () => {} }) {
   const [open, setOpen] = useState(false);
@@ -16,8 +17,8 @@ export default function Header({ onOpenServicios = () => {} }) {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-3 py-4 lg:px-4">
         <Link href="/dashboard" className="flex items-center gap-3">
         <Image
-            src="/logo-bivalente-salud.webp"
-            alt="Logo Bivalente Salud"
+            src={PORTFOLIO_SITE.logo}
+            alt={`Logo ${PORTFOLIO_SITE.name}`}
             width={850}
             height={77}
             priority

@@ -1,4 +1,4 @@
-﻿import Footer from "@/components/layout/footer";
+import Footer from "@/components/layout/footer";
 import { danielaProfile } from "../_data/tratamientos";
 import TreatmentApproach from "./TreatmentApproach";
 import TreatmentCTA from "./TreatmentCTA";
@@ -26,7 +26,7 @@ export default function TreatmentPage({
           ...defaultServiceConfig,
           ...serviceConfig,
           primaryCtaLabel: "Solicitar primera sesión",
-          approachTitle: "Cómo trabaja Daniela la ansiedad en terapia",
+          approachTitle: "Cómo trabaja la profesional de psicología demo la ansiedad en terapia",
           modalityEyebrow: "Presencial en Madrid y online",
           modalityTitle: "Una terapia adaptada a tu momento, con foco principal en Madrid",
           modalityNote:
@@ -150,4 +150,5 @@ export default function TreatmentPage({
     </main>
   );
 }
+
 

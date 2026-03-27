@@ -14,7 +14,7 @@ export default function BlogCard({ post }) {
           />
         ) : (
           <div className="flex h-full items-center justify-center px-8 text-center text-sm font-semibold text-[#0A4D68]">
-            Clínica Bivalente
+            Clínica Clinic Demo
           </div>
         )}
       </div>
@@ -43,3 +43,4 @@ export default function BlogCard({ post }) {
     </article>
   );
 }
+

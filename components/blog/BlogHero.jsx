@@ -33,14 +33,14 @@ export default function BlogHero({ categories = [] }) {
       <div className="container relative mx-auto max-w-6xl px-6">
         <div className="max-w-4xl">
           <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 backdrop-blur-sm">
-            Blog Bivalente Salud
+            Blog Clinic Demo
           </span>
           <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight text-white! md:text-5xl xl:text-6xl">
             {"Blog de Psicolog\u00EDa y Fisioterapia en Madrid"}
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/80">
             {"Art\u00EDculos claros y \u00FAtiles para entender tu salud f\u00EDsica y emocional. "}
-            {"Contenido profesional de Bivalente Salud pensado para orientarte y acompa\u00F1arte."}
+            {"Contenido profesional de Clinic Demo pensado para orientarte y acompa\u00F1arte."}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -59,3 +59,4 @@ export default function BlogHero({ categories = [] }) {
     </section>
   );
 }
+

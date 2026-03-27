@@ -180,7 +180,7 @@ export default function ServiceContactForm({
         <FieldShell
           icon={UserRound}
           label="Nombre"
-          helper="Cómo prefieres que nos dirijamos a ti"
+          helper="CÃ³mo prefieres que nos dirijamos a ti"
           theme={theme}
         >
           <input
@@ -198,7 +198,7 @@ export default function ServiceContactForm({
         <FieldShell
           icon={Mail}
           label="Email"
-          helper="Dónde recibirás la respuesta"
+          helper="DÃ³nde recibirÃ¡s la respuesta"
           theme={theme}
         >
           <input
@@ -215,8 +215,8 @@ export default function ServiceContactForm({
 
         <FieldShell
           icon={Phone}
-          label="Teléfono"
-          helper="Opcional, por si prefieres contacto rápido"
+          label="TelÃ©fono"
+          helper="Opcional, por si prefieres contacto rÃ¡pido"
           theme={theme}
         >
           <input
@@ -224,7 +224,7 @@ export default function ServiceContactForm({
             name="telefono"
             value={form.telefono}
             onChange={(event) => updateField("telefono", event.target.value)}
-            placeholder="Tu teléfono"
+            placeholder="Tu telÃ©fono"
             autoComplete="tel"
             className={inputClassName}
           />
@@ -241,7 +241,7 @@ export default function ServiceContactForm({
             name="mensaje"
             value={form.mensaje}
             onChange={(event) => updateField("mensaje", event.target.value)}
-            placeholder={`Cuéntanos qué necesitas para ${service.toLowerCase()}`}
+            placeholder={`CuÃ©ntanos quÃ© necesitas para ${service.toLowerCase()}`}
             rows={6}
             required
             className={`${inputClassName} min-h-[170px] resize-y`}
@@ -258,14 +258,14 @@ export default function ServiceContactForm({
             className="mt-1 h-4 w-4 rounded border-white/20 text-[#0A4D68] focus:ring-[#A4BE7B]"
           />
           <span>
-            He leído y acepto la{" "}
+            He leÃ­do y acepto la{" "}
             <Link
               href="/legal/politica-privacidad"
               className="font-semibold text-white underline underline-offset-2"
             >
-              política de privacidad
+              polÃ­tica de privacidad
             </Link>{" "}
-            para el tratamiento de mis datos y la gestión de esta solicitud.
+            para el tratamiento de mis datos y la gestiÃ³n de esta solicitud.
           </span>
         </label>
 
@@ -315,7 +315,7 @@ export default function ServiceContactForm({
             isLight ? "text-[#61764B]" : "text-white/58",
           ].join(" ")}
         >
-          Tu mensaje se enviará directamente a {recipientLabel}. Respuesta habitual en menos de
+          Tu mensaje se enviarÃ¡ directamente a {recipientLabel}. Respuesta habitual en menos de
           24 horas laborables.
         </p>
       </form>

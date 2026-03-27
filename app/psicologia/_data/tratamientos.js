@@ -1,9 +1,9 @@
-﻿export const danielaProfile = {
-  name: "Daniela López Meléndez",
+export const danielaProfile = {
+  name: "Profesional de Psicología Demo",
   role: "Psicóloga General Sanitaria",
-  image: "/Daniela.webp",
-  recipientEmail: "danilopezme1004@gmail.com",
-  phone: "+34 674547577",
+  image: "/professional-psychology-demo.svg",
+  recipientEmail: "hello@clinic-demo.com",
+  phone: "+34 600 000 000",
   location: "Madrid",
   credentials: [
     "Grado en Psicología - Universidad Nebrija",
@@ -22,7 +22,7 @@ const commonFaqs = [
   {
     question: "¿Las sesiones pueden ser online?",
     answer:
-      "Sí. Daniela ofrece sesiones online y presenciales en Madrid, adaptando la modalidad a cada caso.",
+      "Sí. la profesional de psicología demo ofrece sesiones online y presenciales en Madrid, adaptando la modalidad a cada caso.",
   },
   {
     question: "¿También trabajas con adolescentes o familias?",
@@ -42,10 +42,10 @@ export const tratamientosSeo = {
     metaTitle:
       "Psicóloga para ansiedad en Madrid | Terapia presencial y online",
     metaDescription:
-      "Terapia para ansiedad en Madrid con Daniela López. Psicología presencial y online para preocupación constante, bloqueo, insomnio y síntomas físicos de ansiedad.",
+      "Terapia para ansiedad en Madrid con Psicología Demo. Psicología presencial y online para preocupación constante, bloqueo, insomnio y síntomas físicos de ansiedad.",
     heroTitle: "Psicóloga para ansiedad en Madrid",
     heroSubtitle:
-      "Terapia para ansiedad en Madrid con Daniela López, psicóloga sanitaria. Atención presencial en Madrid y online para preocupación constante, insomnio, bloqueo y síntomas físicos de ansiedad.",
+      "Terapia para ansiedad en Madrid con Psicología Demo, psicóloga sanitaria. Atención presencial en Madrid y online para preocupación constante, insomnio, bloqueo y síntomas físicos de ansiedad.",
     heroBadges: ["Psicóloga en Madrid", "Terapia online", "Adultos y adolescentes"],
     introTitle: "Cuándo pedir ayuda psicológica por ansiedad en Madrid",
     introBody:
@@ -67,7 +67,7 @@ export const tratamientosSeo = {
       {
         title: "Comprender qué está sosteniendo la ansiedad",
         description:
-          "Daniela te ayuda a identificar el contexto, los disparadores y los patrones con los que la ansiedad se activa y se mantiene en tu día a día.",
+          "la profesional de psicología demo te ayuda a identificar el contexto, los disparadores y los patrones con los que la ansiedad se activa y se mantiene en tu día a día.",
       },
       {
         title: "Trabajar regulación y herramientas útiles",
@@ -87,7 +87,7 @@ export const tratamientosSeo = {
         "La terapia online es una opción complementaria si necesitas más flexibilidad o prefieres empezar desde casa, manteniendo el mismo trabajo terapéutico con continuidad.",
     },
     professionalBlurb:
-      "Daniela es psicóloga en Madrid y acompaña procesos de ansiedad desde un enfoque cercano, profesional y adaptado a cada caso, tanto en terapia presencial como online.",
+      "la profesional de psicología demo es psicóloga en Madrid y acompaña procesos de ansiedad desde un enfoque cercano, profesional y adaptado a cada caso, tanto en terapia presencial como online.",
     professionalHighlights: [
       "Trabaja ansiedad, desregulación emocional y momentos de desborde ayudando a comprender el problema sin reducirlo solo al síntoma.",
       "El proceso terapéutico se adapta al ritmo, la historia y las necesidades de cada persona para construir herramientas útiles y sostenibles.",
@@ -106,7 +106,7 @@ export const tratamientosSeo = {
       {
         question: "¿La terapia para ansiedad puede ser presencial en Madrid u online?",
         answer:
-          "Sí. Daniela ofrece terapia presencial en Madrid y también online. La modalidad se valora según tu situación, tu disponibilidad y la forma en la que te resulte más fácil empezar y mantener continuidad.",
+          "Sí. la profesional de psicología demo ofrece terapia presencial en Madrid y también online. La modalidad se valora según tu situación, tu disponibilidad y la forma en la que te resulte más fácil empezar y mantener continuidad.",
       },
       {
         question: "¿Qué se hace en la primera sesión de terapia para ansiedad?",
@@ -139,9 +139,9 @@ export const tratamientosSeo = {
     cardTitle: "Autoestima y autoconcepto",
     cardDescription:
       "Trabajo terapéutico para fortalecer la imagen personal, la seguridad interna y la relación contigo misma o contigo mismo.",
-    metaTitle: "Terapia para autoestima en Madrid | Bivalente Salud",
+    metaTitle: "Terapia para autoestima en Madrid | Clinic Demo",
     metaDescription:
-      "Psicología para autoestima y autoconcepto en Madrid. Sesiones con Daniela López Meléndez para inseguridad, autoexigencia y vínculo contigo misma.",
+      "Psicología para autoestima y autoconcepto en Madrid. Sesiones con Profesional de Psicología Demo para inseguridad, autoexigencia y vínculo contigo misma.",
     heroTitle: "Terapia para la autoestima en Madrid",
     heroSubtitle:
       "Un proceso terapéutico para revisar la forma en la que te hablas, te valoras y te relacionas contigo misma o contigo mismo.",
@@ -186,7 +186,7 @@ export const tratamientosSeo = {
         "Modalidad online si necesitas flexibilidad o quieres empezar desde un entorno conocido sin perder profundidad terapéutica.",
     },
     professionalBlurb:
-      "Daniela acompaña procesos de autoestima desde un enfoque respetuoso, sin fórmulas vacías y adaptado a la historia de cada persona.",
+      "la profesional de psicología demo acompaña procesos de autoestima desde un enfoque respetuoso, sin fórmulas vacías y adaptado a la historia de cada persona.",
     faqs: [
       {
         question: "¿La autoestima se puede trabajar aunque nunca haya hecho terapia?",
@@ -208,9 +208,9 @@ export const tratamientosSeo = {
     cardTitle: "Trastornos del estado de ánimo",
     cardDescription:
       "Intervención en depresión, desmotivación, apatía y vacío emocional desde un enfoque cercano y estructurado.",
-    metaTitle: "Psicología para depresión en Madrid | Bivalente Salud",
+    metaTitle: "Psicología para depresión en Madrid | Clinic Demo",
     metaDescription:
-      "Acompañamiento psicológico para depresión y bajo estado de ánimo en Madrid. Sesiones presenciales y online con Daniela López Meléndez.",
+      "Acompañamiento psicológico para depresión y bajo estado de ánimo en Madrid. Sesiones presenciales y online con Profesional de Psicología Demo.",
     heroTitle: "Psicología para depresión y bajo estado de ánimo en Madrid",
     heroSubtitle:
       "Un espacio terapéutico para entender el apagamiento emocional, la desmotivación y el vacío, sin forzarte a sostenerlo sola o solo.",
@@ -255,7 +255,7 @@ export const tratamientosSeo = {
         "Sesiones online para facilitar continuidad cuando cuesta desplazarse o necesitas una opción más flexible.",
     },
     professionalBlurb:
-      "Daniela acompaña procesos de bajo estado de ánimo y vacío emocional con una mirada integradora y respetuosa con cada ritmo vital.",
+      "la profesional de psicología demo acompaña procesos de bajo estado de ánimo y vacío emocional con una mirada integradora y respetuosa con cada ritmo vital.",
     faqs: [
       {
         question: "¿Puedo pedir ayuda aunque no sepa si es depresión?",
@@ -277,9 +277,9 @@ export const tratamientosSeo = {
     cardTitle: "Trauma psicológico",
     cardDescription:
       "Espacio seguro para trabajar experiencias dolorosas, comprender su impacto y avanzar con mayor estabilidad emocional.",
-    metaTitle: "Terapia para trauma psicológico en Madrid | Bivalente Salud",
+    metaTitle: "Terapia para trauma psicológico en Madrid | Clinic Demo",
     metaDescription:
-      "Psicología para trauma en Madrid con Daniela López Meléndez. Un espacio seguro para procesar experiencias difíciles y recuperar estabilidad emocional.",
+      "Psicología para trauma en Madrid con Profesional de Psicología Demo. Un espacio seguro para procesar experiencias difíciles y recuperar estabilidad emocional.",
     heroTitle: "Terapia para trauma psicológico en Madrid",
     heroSubtitle:
       "Un espacio seguro para comprender el impacto de experiencias dolorosas y trabajar sus efectos emocionales y relacionales de forma gradual.",
@@ -324,7 +324,7 @@ export const tratamientosSeo = {
         "Sesiones online si necesitas flexibilidad, manteniendo la misma mirada gradual y adaptada a tu capacidad de sostén.",
     },
     professionalBlurb:
-      "Daniela trabaja trauma psicológico desde una mirada integradora, respetando tiempos, límites y necesidades de seguridad emocional.",
+      "la profesional de psicología demo trabaja trauma psicológico desde una mirada integradora, respetando tiempos, límites y necesidades de seguridad emocional.",
     faqs: [
       {
         question: "¿Tengo que contar todo lo vivido desde la primera sesión?",
@@ -346,9 +346,9 @@ export const tratamientosSeo = {
     cardTitle: "Procesos de duelo",
     cardDescription:
       "Acompañamiento psicológico para transitar pérdidas, despedidas y cambios vitales con sostén emocional.",
-    metaTitle: "Terapia para duelo en Madrid | Bivalente Salud",
+    metaTitle: "Terapia para duelo en Madrid | Clinic Demo",
     metaDescription:
-      "Psicología para duelo en Madrid con Daniela López Meléndez. Acompañamiento emocional en pérdidas, despedidas y cambios vitales significativos.",
+      "Psicología para duelo en Madrid con Profesional de Psicología Demo. Acompañamiento emocional en pérdidas, despedidas y cambios vitales significativos.",
     heroTitle: "Terapia para duelo y pérdida en Madrid",
     heroSubtitle:
       "Un acompañamiento psicológico para transitar pérdidas, despedidas y cambios importantes con más sostén, comprensión y espacio emocional.",
@@ -393,7 +393,7 @@ export const tratamientosSeo = {
         "Sesiones online si necesitas continuidad, flexibilidad o prefieres empezar desde un entorno conocido.",
     },
     professionalBlurb:
-      "Daniela acompaña procesos de duelo con sensibilidad clínica, respeto por el tiempo emocional y atención a cada historia personal.",
+      "la profesional de psicología demo acompaña procesos de duelo con sensibilidad clínica, respeto por el tiempo emocional y atención a cada historia personal.",
     faqs: [
       {
         question: "¿Es normal sentir emociones muy cambiantes en un duelo?",
@@ -415,9 +415,9 @@ export const tratamientosSeo = {
     cardTitle: "Terapia de pareja",
     cardDescription:
       "Espacio terapéutico para trabajar la comunicación, los conflictos recurrentes y la seguridad relacional.",
-    metaTitle: "Terapia de pareja en Madrid | Bivalente Salud",
+    metaTitle: "Terapia de pareja en Madrid | Clinic Demo",
     metaDescription:
-      "Terapia de pareja en Madrid con Daniela López Meléndez. Sesiones presenciales y online para comunicación, conflictos y vínculo de pareja.",
+      "Terapia de pareja en Madrid con Profesional de Psicología Demo. Sesiones presenciales y online para comunicación, conflictos y vínculo de pareja.",
     heroTitle: "Terapia de pareja en Madrid",
     heroSubtitle:
       "Un espacio para revisar la comunicación, los conflictos y la forma de vincularos, con una mirada clínica clara y respetuosa.",
@@ -462,7 +462,7 @@ export const tratamientosSeo = {
         "Sesiones online si necesitáis mayor flexibilidad o vivís en lugares distintos, manteniendo un encuadre claro.",
     },
     professionalBlurb:
-      "Daniela acompaña procesos de pareja con una mirada integradora, ayudando a ordenar el conflicto sin simplificar la complejidad del vínculo.",
+      "la profesional de psicología demo acompaña procesos de pareja con una mirada integradora, ayudando a ordenar el conflicto sin simplificar la complejidad del vínculo.",
     faqs: [
       {
         question: "¿Tiene sentido ir aunque no haya una crisis muy grave?",
@@ -484,9 +484,9 @@ export const tratamientosSeo = {
     cardTitle: "Intervención en crisis",
     cardDescription:
       "Atención en momentos de desbordamiento emocional, urgencia psicológica o situaciones vitales especialmente difíciles.",
-    metaTitle: "Intervención en crisis emocional en Madrid | Bivalente Salud",
+    metaTitle: "Intervención en crisis emocional en Madrid | Clinic Demo",
     metaDescription:
-      "Atención psicológica para crisis emocional en Madrid con Daniela López Meléndez. Acompañamiento en momentos de desbordamiento, bloqueo o urgencia emocional.",
+      "Atención psicológica para crisis emocional en Madrid con Profesional de Psicología Demo. Acompañamiento en momentos de desbordamiento, bloqueo o urgencia emocional.",
     heroTitle: "Intervención en crisis emocional en Madrid",
     heroSubtitle:
       "Un espacio de acompañamiento cuando todo se ha desbordado y necesitas una referencia clínica para empezar a ordenar lo que estás viviendo.",
@@ -531,7 +531,7 @@ export const tratamientosSeo = {
         "Sesiones online si necesitas apoyo rápido o te resulta más accesible empezar desde tu casa.",
     },
     professionalBlurb:
-      "Daniela tiene experiencia en intervención en crisis y acompaña estos momentos con estructura, calma clínica y sensibilidad hacia el ritmo de cada persona.",
+      "la profesional de psicología demo tiene experiencia en intervención en crisis y acompaña estos momentos con estructura, calma clínica y sensibilidad hacia el ritmo de cada persona.",
     faqs: [
       {
         question: "¿Puedo escribir aunque no sepa explicar bien lo que me pasa?",
@@ -553,9 +553,9 @@ export const tratamientosSeo = {
     cardTitle: "Atención infanto-juvenil",
     cardDescription:
       "Trabajo con niños, adolescentes y familias, ofreciendo orientación y pautas adaptadas a cada etapa evolutiva.",
-    metaTitle: "Psicología infanto-juvenil en Madrid | Bivalente Salud",
+    metaTitle: "Psicología infanto-juvenil en Madrid | Clinic Demo",
     metaDescription:
-      "Psicología infanto-juvenil en Madrid con Daniela López Meléndez. Atención psicológica para niños, adolescentes y orientación familiar.",
+      "Psicología infanto-juvenil en Madrid con Profesional de Psicología Demo. Atención psicológica para niños, adolescentes y orientación familiar.",
     heroTitle: "Psicología infanto-juvenil en Madrid",
     heroSubtitle:
       "Acompañamiento psicológico para niños, adolescentes y familias, con una mirada sensible a cada etapa evolutiva y al contexto familiar.",
@@ -600,7 +600,7 @@ export const tratamientosSeo = {
         "La modalidad online puede valorarse en función de la edad, del motivo de consulta y de la situación concreta.",
     },
     professionalBlurb:
-      "Daniela trabaja con población infanto-juvenil y familias adaptando la intervención a cada etapa evolutiva y a cada contexto relacional.",
+      "la profesional de psicología demo trabaja con población infanto-juvenil y familias adaptando la intervención a cada etapa evolutiva y a cada contexto relacional.",
     faqs: [
       {
         question: "¿La intervención incluye a la familia?",
@@ -626,8 +626,8 @@ export function getTreatmentMetadata(slug) {
 
   if (!treatment) {
     return {
-      title: "Psicología en Madrid | Bivalente Salud",
-      description: "Psicología sanitaria presencial y online en Madrid con Bivalente Salud.",
+      title: "Psicología en Madrid | Clinic Demo",
+      description: "Psicología sanitaria presencial y online en Madrid con Clinic Demo.",
     };
   }
 
@@ -636,5 +636,7 @@ export function getTreatmentMetadata(slug) {
     description: treatment.metaDescription,
   };
 }
+
+
 
 

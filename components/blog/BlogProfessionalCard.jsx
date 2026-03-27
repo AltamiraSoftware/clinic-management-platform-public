@@ -1,18 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { PHYSIOTHERAPY_PROFILE, PSYCHOLOGY_PROFILE } from "@/lib/portfolioConfig";
 
 const PROFESSIONAL_CARD_CONTENT = {
   psicologia: {
-    image: "/Daniela.webp",
-    imageAlt: "Daniela, psicóloga en Bivalente",
-    name: "Daniela López",
-    role: "Psicóloga General Sanitaria",
-    license: "Col. M-41829",
+    image: PSYCHOLOGY_PROFILE.image,
+    imageAlt: PSYCHOLOGY_PROFILE.imageAlt,
+    name: PSYCHOLOGY_PROFILE.shortName,
+    role: PSYCHOLOGY_PROFILE.role,
+    license: PSYCHOLOGY_PROFILE.license,
     description:
-      "Acompañamiento psicológico cercano y estructurado para ansiedad, autoestima, crisis, duelo y procesos relacionales.",
+      "Acompañamiento psicológico cercano y estructurado para ansiedad, autoestima, crisis, duelo y procesos relacionales en una versión demo de portfolio.",
     tags: ["Ansiedad", "Autoestima", "Crisis", "Parejas"],
     href: "/psicologia#formulario",
-    cta: "Reservar cita con Daniela",
+    cta: "Reservar cita demo",
     shellClassName:
       "rounded-[30px] border border-[#d8e7d9] bg-gradient-to-br from-[#f8faf5] to-[#dce9c5] p-8 shadow-[0_24px_60px_rgba(10,77,104,0.10)]",
     nameClassName: "text-[#0A4D68]",
@@ -23,16 +24,16 @@ const PROFESSIONAL_CARD_CONTENT = {
     imageBorderClassName: "border-[#0A4D68]/60",
   },
   fisioterapia: {
-    image: "/borja.png",
-    imageAlt: "Borja Estarellas, fisioterapeuta en Bivalente",
-    name: "Borja Estarellas",
-    role: "Fisioterapeuta",
-    license: "Col. 15388",
+    image: PHYSIOTHERAPY_PROFILE.image,
+    imageAlt: PHYSIOTHERAPY_PROFILE.imageAlt,
+    name: PHYSIOTHERAPY_PROFILE.shortName,
+    role: PHYSIOTHERAPY_PROFILE.role,
+    license: PHYSIOTHERAPY_PROFILE.license,
     description:
-      "Fisioterapia basada en terapia manual y ejercicio terapéutico para dolor, lesión y recuperación funcional en Madrid.",
+      "Fisioterapia basada en terapia manual y ejercicio terapéutico para dolor, lesión y recuperación funcional en una versión demo de portfolio.",
     tags: ["Terapia manual", "Deportivo", "Domicilio", "Rehabilitación"],
     href: "/fisioterapia#formulario",
-    cta: "Reservar cita con Borja",
+    cta: "Reservar cita demo",
     shellClassName:
       "rounded-[30px] border border-white/12 bg-gradient-to-br from-[#0A4D68] via-[#1B6B73] to-[#245953] p-8 shadow-[0_24px_60px_rgba(10,77,104,0.18)]",
     nameClassName: "text-[#A4BE7B]",
@@ -60,7 +61,7 @@ export default function BlogProfessionalCard({ categoryKind }) {
             alt={content.imageAlt}
             fill
             sizes="144px"
-            className="object-cover object-[50%_20%]"
+            className="object-cover object-center"
           />
         </div>
 

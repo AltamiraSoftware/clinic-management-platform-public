@@ -12,15 +12,16 @@ export async function POST(req) {
       );
     }
 
-    const { data, error } = await supabaseAdmin.auth.admin.updateUserById(
-      user_id,
-      { email: new_email }
-    );
+    const { data, error } = await supabaseAdmin.auth.admin.updateUserById(user_id, {
+      email: new_email,
+    });
 
     if (error) {
-      console.error("Error actualizando email:", error);
+      if (process.env.NODE_ENV === "development") {
+        console.error("Error actualizando email:", error.message);
+      }
       return NextResponse.json(
-        { success: false, error: error.message },
+        { success: false, error: "No se pudo actualizar el email" },
         { status: 500 }
       );
     }
@@ -31,9 +32,11 @@ export async function POST(req) {
       data,
     });
   } catch (err) {
-    console.error(err);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Update email error:", err.message);
+    }
     return NextResponse.json(
-      { success: false, error: err.message },
+      { success: false, error: "Error interno del servidor" },
       { status: 500 }
     );
   }

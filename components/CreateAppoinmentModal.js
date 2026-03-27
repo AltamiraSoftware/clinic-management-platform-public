@@ -41,7 +41,7 @@ export default function CreateAppointmentModal({
             <div>
               <h2 className="text-2xl font-bold">Nueva cita</h2>
               <p className="text-sm text-white/82">
-                Registra la reserva con el mismo sistema visual de Bivalente.
+                Registra la reserva con el mismo sistema visual de Clinic Demo.
               </p>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function CreateAppointmentModal({
                       Crear nuevo paciente
                     </h3>
                     <p className="text-sm text-[#4c6d73]">
-                      Añade los datos básicos antes de registrar la cita.
+                      AÃ±ade los datos bÃ¡sicos antes de registrar la cita.
                     </p>
                   </div>
 
@@ -136,7 +136,7 @@ export default function CreateAppointmentModal({
 
                     <div>
                       <label className="mb-2 block text-sm font-medium text-[#245953]">
-                        Teléfono opcional
+                        TelÃ©fono opcional
                       </label>
                       <input
                         type="tel"
@@ -244,3 +244,4 @@ export default function CreateAppointmentModal({
     </div>
   );
 }
+

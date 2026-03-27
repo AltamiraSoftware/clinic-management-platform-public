@@ -1,14 +1,14 @@
-﻿import { Home } from "lucide-react";
+import { Home } from "lucide-react";
 import SharedTreatmentPage from "@/app/psicologia/_components/TreatmentPage";
 import { borjaProfile } from "../_data/tratamientos";
 
 const serviceConfig = {
   heroIcon: Home,
-  heroLabel: "Fisioterapia Bivalente Salud",
+  heroLabel: "Fisioterapia Clinic Demo",
   backLinkHref: "/fisioterapia",
   backLinkLabel: "Volver a fisioterapia",
   primaryCtaLabel: "Reservar cita",
-  approachEyebrow: "Tratamiento en Bivalente",
+  approachEyebrow: "Tratamiento en Clinic Demo",
   approachTitle: "Cómo trabajamos esta lesión o este dolor",
   modalityEyebrow: "Domicilio y seguimiento",
   modalityTitle: "Tratamiento adaptado a tu dolor, tu rutina y tu recuperación",
@@ -21,7 +21,7 @@ const serviceConfig = {
   professionalPerspectiveEyebrow: "Enfoque fisioterapéutico",
   professionalPerspectiveTitle: "Fisioterapia basada en evidencia y movimiento",
   professionalHighlights: [
-    "Borja combina terapia manual, ejercicio terapéutico y educación del paciente para adaptar el tratamiento al dolor, a la función y al contexto real de cada persona.",
+    "el profesional de fisioterapia demo combina terapia manual, ejercicio terapéutico y educación del paciente para adaptar el tratamiento al dolor, a la función y al contexto real de cada persona.",
     "El objetivo es que mejores síntomas y movimiento, pero también que entiendas mejor tu lesión y tengas herramientas para mantener resultados.",
   ],
   contactEyebrow: "Contacto",
@@ -70,3 +70,6 @@ export default function TreatmentPage({ treatment }) {
     />
   );
 }
+
+
+

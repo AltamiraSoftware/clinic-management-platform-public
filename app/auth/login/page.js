@@ -40,11 +40,11 @@ export default function LoginPage() {
         <div className="w-full max-w-md overflow-hidden rounded-[28px] border border-white/70 bg-white/90 shadow-[0_24px_70px_rgba(10,77,104,0.12)] backdrop-blur-sm">
           <div className="bg-[linear-gradient(90deg,#0A4D68_0%,#088395_52%,#61764B_100%)] px-8 py-7 text-white">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/78">
-              Clinica Bivalente
+              Clinic Demo
             </p>
             <h1 className="mt-2 text-3xl font-bold text-white">Iniciar sesion</h1>
             <p className="mt-2 text-sm text-white/80">
-              Accede a tu espacio con el sistema visual Bivalente.
+              Accede a tu espacio con el sistema visual Clinic Demo.
             </p>
           </div>
 
@@ -80,3 +80,5 @@ export default function LoginPage() {
     </main>
   );
 }
+
+

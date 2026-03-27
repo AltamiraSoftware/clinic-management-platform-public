@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Clock, ChevronLeft } from "lucide-react";
 

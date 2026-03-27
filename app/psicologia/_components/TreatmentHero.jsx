@@ -5,9 +5,9 @@ import HeaderClient from "@/components/layout/HeaderClient";
 
 const defaultServiceConfig = {
   heroIcon: Brain,
-  heroLabel: "Psicología Bivalente Salud",
+  heroLabel: "PsicologÃ­a Clinic Demo",
   backLinkHref: "/psicologia",
-  backLinkLabel: "Volver a psicología",
+  backLinkLabel: "Volver a psicologÃ­a",
   primaryCtaLabel: "Reservar cita",
 };
 
@@ -44,7 +44,7 @@ export default function TreatmentHero({
                 <div className="relative overflow-hidden rounded-[24px] bg-[linear-gradient(180deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.05)_100%)]">
                   <Image
                     src={professional.image}
-                    alt={professional.heroImageAlt || `${professional.name}, profesional de Bivalente en Madrid`}
+                    alt={professional.heroImageAlt || `${professional.name}, profesional de Clinic Demo en Madrid`}
                     width={900}
                     height={1200}
                     priority
@@ -129,3 +129,5 @@ function renderHeroTitle(title) {
 
   return title;
 }
+
+

@@ -83,8 +83,8 @@ export default function ServiceManagerModal({ open, onClose }) {
               </svg>
             </div>
             <div>
-              <h2 className="text-xl font-bold">Gestión de servicios</h2>
-              <p className="text-sm text-white/82">Control de catálogo y estado activo.</p>
+              <h2 className="text-xl font-bold">GestiÃ³n de servicios</h2>
+              <p className="text-sm text-white/82">Control de catÃ¡logo y estado activo.</p>
             </div>
           </div>
 
@@ -133,7 +133,7 @@ export default function ServiceManagerModal({ open, onClose }) {
           </section>
 
           <section className="rounded-[24px] border border-[#d4e5e2] bg-white/92 p-5 shadow-[0_18px_40px_rgba(10,77,104,0.08)]">
-            <h3 className="text-lg font-semibold text-[#0A4D68]">Añadir nuevo servicio</h3>
+            <h3 className="text-lg font-semibold text-[#0A4D68]">AÃ±adir nuevo servicio</h3>
 
             <form onSubmit={handleSave} className="mt-4 grid gap-4">
               <input

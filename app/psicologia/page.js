@@ -1,4 +1,4 @@
-﻿import Footer from "@/components/layout/footer";
+import Footer from "@/components/layout/footer";
 import Image from "next/image";
 import {
   Brain,
@@ -22,9 +22,9 @@ import { buildMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getFaqSchema, getServiceSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Psicóloga en Madrid | Terapia presencial y online | Bivalente Salud",
+  title: "Psicóloga en Madrid | Terapia presencial y online | Clinic Demo",
   description:
-    "Psicóloga en Madrid especializada en ansiedad, pareja y bienestar emocional. Terapia presencial y online en Bivalente Salud.",
+    "Psicóloga en Madrid especializada en ansiedad, pareja y bienestar emocional. Terapia presencial y online en Clinic Demo.",
   path: "/psicologia",
 });
 
@@ -192,8 +192,8 @@ export default function PsicologiaPage() {
       description:
         "Servicio de psicología presencial y online en Madrid para ansiedad, autoestima, duelo, trauma, crisis emocional y terapia de pareja.",
       path: "/psicologia",
-      providerPhone: "+34674547577",
-      providerEmail: "danilopezme1004@gmail.com",
+      providerPhone: "+34600000000",
+      providerEmail: "hello@clinic-demo.com",
     }),
     getFaqSchema(
       faqs.map((item) => ({
@@ -238,8 +238,8 @@ export default function PsicologiaPage() {
 
             <div className="relative overflow-hidden rounded-[24px] bg-[linear-gradient(180deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.05)_100%)]">
               <Image
-                src="/Daniela.webp"
-                alt="Daniela López Meléndez, psicóloga general sanitaria en Madrid"
+                src="/professional-psychology-demo.svg"
+                alt="Profesional de Psicología Demo, psicóloga general sanitaria en Madrid"
                 width={900}
                 height={1200}
                 priority
@@ -249,7 +249,7 @@ export default function PsicologiaPage() {
 
               <div className="absolute inset-x-3 bottom-3 rounded-2xl border border-white/18 bg-[linear-gradient(180deg,rgba(7,48,68,0.68)_0%,rgba(7,48,68,0.52)_100%)] p-3 shadow-[0_18px_34px_rgba(2,6,23,0.26)] backdrop-blur-xl sm:inset-x-4 sm:bottom-4 sm:p-4">
                 <p className="text-sm font-semibold text-white sm:text-base">
-                  Daniela López Meléndez
+                  Profesional de Psicología Demo
                 </p>
                 <p className="mt-1 text-xs text-white/72 sm:text-sm">
                   Psicóloga General Sanitaria
@@ -278,7 +278,7 @@ export default function PsicologiaPage() {
       <div className="order-2 lg:order-1 space-y-6 text-center lg:text-left">
         <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white">
           <Brain className="h-4 w-4 text-[#A4BE7B]" />
-          Psicología Bivalente Salud
+          Psicología Clinic Demo
         </div>
 
         <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight text-white! text-balance">
@@ -362,7 +362,7 @@ export default function PsicologiaPage() {
               Formación y perfil profesional
             </h2>
             <p className="mx-auto max-w-2xl text-white/80">
-              Un resumen claro de la trayectoria, la formación académica y el enfoque clínico de Daniela.
+              Un resumen claro de la trayectoria, la formación académica y el enfoque clínico de la profesional de psicología demo.
             </p>
           </div>
           <div className="grid gap-8 lg:grid-cols-2">
@@ -373,8 +373,8 @@ export default function PsicologiaPage() {
                 <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#A4BE7B] to-[#61764B] flex items-center justify-center text-4xl font-bold text-white">
                 <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-[#0A4D68]/60 shadow-lg">
               <Image
-  src="/Daniela.webp"
-  alt="Daniela, psicóloga en Bivalente"
+  src="/professional-psychology-demo.svg"
+  alt="la profesional de psicología demo, psicóloga en Clinic Demo"
   width={600}
   height={800}
   className="object-cover rounded-xl"
@@ -382,7 +382,7 @@ export default function PsicologiaPage() {
               </div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white!">Daniela López Meléndez</h3>
+                  <h3 className="text-2xl font-bold text-white!">Profesional de Psicología Demo</h3>
                   <p className="text-[#A4BE7B] font-medium">Psicóloga General Sanitaria</p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 pt-2">
@@ -411,11 +411,11 @@ export default function PsicologiaPage() {
                 <div id="contacto" className="w-full space-y-2 text-white/85 text-sm">
                   <div className="flex items-center justify-center gap-2">
                     <Phone className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>+34 674547577</span>
+                    <span>+34 600 000 000</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Mail className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>danilopezme1004@gmail.com</span>
+                    <span>hello@clinic-demo.com</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <MapPin className="w-4 h-4 text-[#A4BE7B]" />
@@ -517,8 +517,8 @@ export default function PsicologiaPage() {
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <ServiceContactForm
               service="Psicología"
-              professionalName="Daniela López Meléndez"
-              recipientEmail="danilopezme1004@gmail.com"
+              professionalName="Profesional de Psicología Demo"
+              recipientEmail="hello@clinic-demo.com"
             />
 
             <div className="bv-glass rounded-3xl p-8 text-white">
@@ -597,7 +597,7 @@ export default function PsicologiaPage() {
             Comienza tu camino hacia el bienestar
           </h2>
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Da el primer paso. Reserva tu primera consulta con Daniela y empieza a cuidar tu salud mental.
+            Da el primer paso. Reserva tu primera consulta con la profesional de psicología demo y empieza a cuidar tu salud mental.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="#formulario" className="bv-btn bv-btn-primary-dark bv-btn-lg">
@@ -614,5 +614,8 @@ export default function PsicologiaPage() {
     </main>
   );
 }
+
+
+
 
 

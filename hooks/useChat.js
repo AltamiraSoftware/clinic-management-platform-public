@@ -10,10 +10,10 @@ export function useChat(idCliente, idProfesional, userId) {
   const parametrosValidos = !!idCliente && !!idProfesional && !!userId;
 
   /* ============================================================
-        CARGA INICIAL — Sin setState síncrono
+        CARGA INICIAL â€” Sin setState sÃ­ncrono
   ============================================================ */
   useEffect(() => {
-    // Si no tenemos parámetros aún, simplemente no hacemos nada.
+    // Si no tenemos parÃ¡metros aÃºn, simplemente no hacemos nada.
     if (!parametrosValidos) return;
 
     let cancelado = false;
@@ -42,7 +42,7 @@ export function useChat(idCliente, idProfesional, userId) {
   }, [parametrosValidos, idCliente, idProfesional]);
 
   /* ============================================================
-        REALTIME — FILTRO CORREGIDO
+        REALTIME â€” FILTRO CORREGIDO
         (solo filtramos por id_cliente)
   ============================================================ */
   useEffect(() => {
@@ -70,7 +70,7 @@ export function useChat(idCliente, idProfesional, userId) {
   }, [parametrosValidos, idCliente, idProfesional]);
 
   /* ============================================================
-        ENVIAR MENSAJE — limpio y sin console.logs
+        ENVIAR MENSAJE â€” limpio y sin console.logs
   ============================================================ */
   const enviarMensaje = useCallback(
     async (texto) => {

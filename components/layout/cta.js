@@ -11,7 +11,7 @@ export default function CTA() {
       <div className="relative z-10 container mx-auto max-w-4xl px-4 sm:px-6">
         <div className="space-y-5 text-center sm:space-y-8">
           <h2 className="px-2 text-2xl font-extrabold !text-[#0A4D68] sm:text-3xl md:text-4xl lg:text-5xl">
-            Da el primer paso con Bivalente Salud
+            Da el primer paso con Clinic Demo
           </h2>
 
           <p className="mx-auto max-w-2xl px-2 text-base text-[#0A4D68] sm:text-lg">
@@ -52,7 +52,7 @@ export default function CTA() {
                 Email
               </p>
               <p className="break-all text-center text-sm text-gray-600 sm:text-base">
-                danilopezme1004@gmail.com
+                hello@clinic-demo.com
               </p>
             </div>
             <div className="space-y-2 border-t border-gray-200/80 py-4 sm:border-t-0 sm:py-0">
@@ -124,3 +124,4 @@ function LocationIcon({ className }) {
     </svg>
   );
 }
+

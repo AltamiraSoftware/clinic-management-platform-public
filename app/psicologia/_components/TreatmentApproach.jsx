@@ -1,14 +1,14 @@
 import { CheckCircle, CalendarDays, MapPin } from "lucide-react";
 
 const defaultServiceConfig = {
-  approachEyebrow: "Tratamiento en Bivalente",
-  approachTitle: "Cómo trabajamos este proceso",
+  approachEyebrow: "Tratamiento en Clinic Demo",
+  approachTitle: "CÃ³mo trabajamos este proceso",
   modalityEyebrow: "Modalidad presencial y online",
   modalityTitle: "Un formato flexible sin romper el proceso",
   primaryModalityTitle: "Sesiones presenciales",
   secondaryModalityTitle: "Sesiones online",
   modalityNote:
-    "Si no tienes claro qué modalidad encaja mejor contigo, puedes usar el formulario al final de la página y orientamos contigo el primer paso.",
+    "Si no tienes claro quÃ© modalidad encaja mejor contigo, puedes usar el formulario al final de la pÃ¡gina y orientamos contigo el primer paso.",
 };
 
 export default function TreatmentApproach({
@@ -103,3 +103,4 @@ export default function TreatmentApproach({
     </section>
   );
 }
+

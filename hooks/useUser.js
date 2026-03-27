@@ -31,12 +31,12 @@ export function useUser() {
       }
     }
 
-    // 1️⃣ Cargar usuario al montar
+    // 1ï¸âƒ£ Cargar usuario al montar
     supabase.auth.getUser().then(({ data: { user } }) => {
       loadUser(user);
     });
 
-    // 2️⃣ Detectar login / logout en tiempo real
+    // 2ï¸âƒ£ Detectar login / logout en tiempo real
     const { data: authListener } = supabase.auth.onAuthStateChange(
       (event, session) => {
         if (session?.user) {

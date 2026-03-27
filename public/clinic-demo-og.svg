@@ -1,0 +1,18 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="196" cy="112" r="132" fill="rgba(164,190,123,0.18)"/>
+  <circle cx="1078" cy="526" r="180" fill="rgba(255,255,255,0.1)"/>
+  <rect x="112" y="116" width="132" height="132" rx="36" fill="rgba(255,255,255,0.12)"/>
+  <path d="M178 145C146.52 145 121 170.52 121 202V209C121 241.232 147.213 267.445 179.445 267.445H198.208C214.354 267.445 227.445 280.536 227.445 296.682V301.178C227.445 317.74 214.018 331.168 197.455 331.168H159.99C143.427 331.168 130 317.74 130 301.178V290.684H95.5254V301.178C95.5254 336.799 124.369 365.643 159.99 365.643H197.455C233.076 365.643 261.92 336.799 261.92 301.178V296.682C261.92 261.061 233.076 232.217 197.455 232.217H179.445C166.185 232.217 155.435 221.467 155.435 208.207V202C155.435 188.74 166.185 177.99 179.445 177.99H195.954C209.214 177.99 219.965 188.74 219.965 202V211.745H254.439V202C254.439 170.52 228.919 145 197.439 145H178Z" fill="white"/>
+  <text x="336" y="236" fill="white" font-size="74" font-family="Poppins, Arial, sans-serif" font-weight="700">Clinic Demo</text>
+  <text x="336" y="312" fill="#D8E9C8" font-size="34" font-family="Poppins, Arial, sans-serif">Versión pública de portfolio</text>
+  <text x="336" y="392" fill="rgba(255,255,255,0.84)" font-size="28" font-family="Poppins, Arial, sans-serif">Reservas, pagos, dashboard, chat, videollamada y blog</text>
+  <text x="336" y="438" fill="rgba(255,255,255,0.72)" font-size="24" font-family="Poppins, Arial, sans-serif">Datos, credenciales y marca real anonimizados para publicación segura</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A4D68"/>
+      <stop offset="0.52" stop-color="#1B6B73"/>
+      <stop offset="1" stop-color="#245953"/>
+    </linearGradient>
+  </defs>
+</svg>

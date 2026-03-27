@@ -7,19 +7,19 @@ export default function VideoCall({ roomUrl, onClose }) {
   const containerRef = useRef(null);
   const callFrameRef = useRef(null);
 
-  // Ref para evitar crear múltiples frames sin usar setState
+  // Ref para evitar crear mÃºltiples frames sin usar setState
   const hasCreatedFrameRef = useRef(false);
 
   useEffect(() => {
     if (!roomUrl || !containerRef.current) return;
 
-    // 🟦 Ya existe un frame → NO crear otro
+    // ðŸŸ¦ Ya existe un frame â†’ NO crear otro
     if (callFrameRef.current) return;
 
-    // 🟦 Ya se creó antes → NO volver a crear
+    // ðŸŸ¦ Ya se creÃ³ antes â†’ NO volver a crear
     if (hasCreatedFrameRef.current) return;
 
-    // Marcamos como “creado” usando ref (NO dispara render)
+    // Marcamos como â€œcreadoâ€ usando ref (NO dispara render)
     hasCreatedFrameRef.current = true;
 
     // Crear frame de Daily
@@ -73,7 +73,7 @@ export default function VideoCall({ roomUrl, onClose }) {
         <h2 className="text-lg font-semibold">Videollamada</h2>
 
         <button onClick={cerrar} className="text-white text-xl font-bold hover:text-red-300">
-          ✕
+          âœ•
         </button>
       </div>
 

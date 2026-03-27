@@ -30,12 +30,12 @@ export default function Psicologia() {
                 <Brain className="h-6 w-6 text-emerald-600" />
               </div>
               <h2 className="text-3xl font-bold !text-[#0A4D68] md:text-4xl">
-                Psicología sanitaria en Madrid - Bivalente Salud
+                Psicología sanitaria en Madrid - Clinic Demo
               </h2>
             </div>
 
             <p className="text-lg leading-relaxed text-[#0A4D68]">
-              En Bivalente Salud te acompañamos con psicología sanitaria en Madrid
+              En Clinic Demo te acompañamos con psicología sanitaria en Madrid
               para ayudarte a comprender lo que te pasa, regular tus emociones y
               construir herramientas útiles para tu día a día. Ofrecemos terapia
               presencial y online, adaptándonos a tu ritmo y a tus necesidades.
@@ -53,13 +53,15 @@ export default function Psicologia() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Link href="/psicologia" className="mx-auto bv-btn bv-btn-ghost bv-btn-lg text-center">
+            <div className="flex justify-center">
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Link href="/psicologia" className="bv-btn bv-btn-ghost bv-btn-lg text-center">
                 Ver servicio de psicología
               </Link>
-              <Link href="/blog" className="mx-auto bv-btn bv-btn-primary-dark bv-btn-lg text-center">
+                <Link href="/blog" className="bv-btn bv-btn-primary-dark bv-btn-lg text-center">
                 Ver artículos de psicología
-              </Link>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -72,8 +74,8 @@ export default function Psicologia() {
             <div className="relative flex flex-col items-center space-y-6 text-center">
               <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-white/45 shadow-[0_18px_34px_rgba(10,77,104,0.22)]">
                 <Image
-                  src="/Daniela.webp"
-                  alt="Daniela, psicóloga en Bivalente"
+                  src="/professional-psychology-demo.svg"
+                  alt="Psicología Demo, psicóloga en Clinic Demo"
                   width={600}
                   height={800}
                   className="rounded-xl object-cover"
@@ -81,7 +83,7 @@ export default function Psicologia() {
               </div>
 
               <div className="space-y-2">
-                <p className="text-2xl font-bold !text-white">Daniela López</p>
+                <p className="text-2xl font-bold !text-white">Psicología Demo López</p>
                 <p className="font-medium text-white/86">Psicóloga General Sanitaria</p>
                 <p className="text-sm text-white/68">Col. M-41829</p>
               </div>
@@ -114,3 +116,6 @@ export default function Psicologia() {
     </section>
   );
 }
+
+
+

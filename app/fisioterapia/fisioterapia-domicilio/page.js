@@ -5,7 +5,7 @@ import { getTreatment } from "../_data/tratamientos";
 const treatment = getTreatment("fisioterapia-domicilio");
 
 export const metadata = buildMetadata({
-  title: `${treatment.metaTitle} | Bivalente Salud`,
+  title: `${treatment.metaTitle} | Clinic Demo`,
   description: treatment.metaDescription,
   path: treatment.path,
 });
@@ -13,3 +13,4 @@ export const metadata = buildMetadata({
 export default function FisioterapiaDomicilioPage() {
   return <TreatmentPage treatment={treatment} />;
 }
+

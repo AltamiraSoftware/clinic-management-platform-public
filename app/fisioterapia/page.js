@@ -1,4 +1,4 @@
-﻿import HeaderClient from "@/components/layout/HeaderClient";
+import HeaderClient from "@/components/layout/HeaderClient";
 import Footer from "@/components/layout/footer";
 import ServiceContactForm from "@/components/forms/ServiceContactForm";
 import Image from "next/image";
@@ -21,7 +21,7 @@ import { buildMetadata } from "@/lib/seo";
 import { getBreadcrumbSchema, getFaqSchema, getServiceSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Fisioterapia a domicilio en Madrid | Bivalente Salud",
+  title: "Fisioterapia a domicilio en Madrid | Clinic Demo",
   description:
     "Fisioterapia a domicilio en Madrid para dolor, lesiones y recuperación. Tratamiento profesional adaptado a cada caso.",
   path: "/fisioterapia",
@@ -135,7 +135,7 @@ const faqs = [
   {
     pregunta: "¿Vas al domicilio?",
     respuesta:
-      "Sí. Borja atiende a domicilio en muchas zonas de Madrid. Si quieres confirmar disponibilidad en tu zona, puedes consultarlo sin compromiso antes de reservar.",
+      "Sí. el profesional de fisioterapia demo atiende a domicilio en muchas zonas de Madrid. Si quieres confirmar disponibilidad en tu zona, puedes consultarlo sin compromiso antes de reservar.",
   },
   {
     pregunta: "¿Qué se necesita para la sesión en el domicilio?",
@@ -155,7 +155,7 @@ const faqs = [
   {
     pregunta: "¿Cómo se abona la sesión?",
     respuesta:
-      "El modo de pago puede confirmarse directamente con Borja en el momento de la reserva o del primer contacto, para adaptarlo a la logística de la atención a domicilio.",
+      "El modo de pago puede confirmarse directamente con el profesional de fisioterapia demo en el momento de la reserva o del primer contacto, para adaptarlo a la logística de la atención a domicilio.",
   },
   {
     pregunta: "¿Los fines de semana se puede pedir sesión?",
@@ -171,8 +171,8 @@ export default function FisioterapiaPage() {
       description:
         "Servicio de fisioterapia a domicilio en Madrid para dolor cervical, lumbar, lesiones deportivas, tendinopatías y recuperación funcional.",
       path: "/fisioterapia",
-      providerPhone: "+34618417971",
-      providerEmail: "estarellas11088@gmail.com",
+      providerPhone: "+34600000000",
+      providerEmail: "contact@clinic-demo.com",
     }),
     getFaqSchema(
       faqs.map((item) => ({
@@ -215,8 +215,8 @@ export default function FisioterapiaPage() {
 
                   <div className="relative overflow-hidden rounded-[24px] bg-[linear-gradient(180deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.05)_100%)]">
                     <Image
-                      src="/borja.png"
-                      alt="Borja Estarellas Botín, fisioterapeuta en Madrid"
+                      src="/professional-physiotherapy-demo.svg"
+                      alt="Profesional de Fisioterapia Demo, fisioterapeuta en Madrid"
                       width={900}
                       height={1200}
                       priority
@@ -226,7 +226,7 @@ export default function FisioterapiaPage() {
 
                     <div className="absolute inset-x-3 bottom-3 rounded-2xl border border-white/18 bg-[linear-gradient(180deg,rgba(7,48,68,0.68)_0%,rgba(7,48,68,0.52)_100%)] p-3 shadow-[0_18px_34px_rgba(2,6,23,0.26)] backdrop-blur-xl sm:inset-x-4 sm:bottom-4 sm:p-4">
                       <p className="text-sm font-semibold text-white sm:text-base">
-                        Borja Estarellas Botín
+                        Profesional de Fisioterapia Demo
                       </p>
                       <p className="mt-1 text-xs text-white/72 sm:text-sm">
                         Fisioterapeuta
@@ -252,7 +252,7 @@ export default function FisioterapiaPage() {
             <div className="order-2 lg:order-1 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 text-sm text-white">
                 <Home className="w-4 h-4 text-[#A4BE7B]" />
-                Fisioterapia Bivalente Salud
+                Fisioterapia Clinic Demo
               </div>
 
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white! leading-tight text-balance">
@@ -335,7 +335,7 @@ export default function FisioterapiaPage() {
               Formación y perfil profesional
             </h2>
             <p className="mx-auto max-w-2xl text-white/80">
-              Un resumen directo de la trayectoria, la formación y el enfoque de trabajo de Borja.
+              Un resumen directo de la trayectoria, la formación y el enfoque de trabajo de el profesional de fisioterapia demo.
             </p>
           </div>
           <div className="grid gap-8 lg:grid-cols-2">
@@ -343,8 +343,8 @@ export default function FisioterapiaPage() {
               <div className="flex flex-col items-center text-center space-y-4">
                 <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-[#0A4D68]/60 shadow-lg">
                   <Image
-                    src="/borja.png"
-                    alt="Borja Estarellas Botín, fisioterapeuta en Bivalente"
+                    src="/professional-physiotherapy-demo.svg"
+                    alt="Profesional de Fisioterapia Demo, fisioterapeuta en Clinic Demo"
                     width={600}
                     height={800}
                     className="h-full w-full object-cover object-top"
@@ -352,7 +352,7 @@ export default function FisioterapiaPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-white!">Borja Estarellas Botín</h3>
+                  <h3 className="text-2xl font-bold text-white!">Profesional de Fisioterapia Demo</h3>
                   <p className="text-[#A4BE7B] font-medium">Fisioterapeuta</p>
                 </div>
 
@@ -375,11 +375,11 @@ Experiencia en el tratamiento de dolor cervical y lumbar, lesiones deportivas, t
                 <div className="w-full space-y-2 text-white/85 text-sm">
                   <div className="flex items-center justify-center gap-2">
                     <Phone className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>618 417 971</span>
+                    <span>600 000 000</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Mail className="w-4 h-4 text-[#A4BE7B]" />
-                    <span>estarellas11088@gmail.com</span>
+                    <span>contact@clinic-demo.com</span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <MapPin className="w-4 h-4 text-[#A4BE7B]" />
@@ -493,8 +493,8 @@ Experiencia en el tratamiento de dolor cervical y lumbar, lesiones deportivas, t
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <ServiceContactForm
               service="Fisioterapia"
-              professionalName="Borja Estarellas Botín"
-              recipientEmail="estarellas11088@gmail.com"
+              professionalName="Profesional de Fisioterapia Demo"
+              recipientEmail="contact@clinic-demo.com"
             />
 
             <div className="bv-glass rounded-3xl p-8 text-white">
@@ -591,6 +591,9 @@ Experiencia en el tratamiento de dolor cervical y lumbar, lesiones deportivas, t
     </main>
   );
 }
+
+
+
 
 
 

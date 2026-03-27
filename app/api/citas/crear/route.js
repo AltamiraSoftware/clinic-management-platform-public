@@ -5,9 +5,9 @@ import { getResendClient } from "@/lib/resendClient";
 export async function POST(req) {
   try {
     const body = await req.json().catch(() => null);
-    if (!body) throw new Error("Body inválido");
+    if (!body) throw new Error("Body invÃ¡lido");
 
-    // ⚠️ NO convertir a número — IDs pueden ser UUID o texto
+    // âš ï¸ NO convertir a nÃºmero â€” IDs pueden ser UUID o texto
     const id_cliente = body.id_cliente;
     const id_profesional = body.id_profesional;
     const id_franja = body.id_franja;
@@ -33,7 +33,9 @@ export async function POST(req) {
       .single();
 
     if (franjaError || !franja) {
-      console.error("Error franja:", franjaError);
+      if (process.env.NODE_ENV === "development") {
+        console.error("Error franja:", franjaError);
+      }
       throw new Error("Franja no encontrada");
     }
 
@@ -53,7 +55,9 @@ export async function POST(req) {
       .single();
 
     if (servicioError || !servicio) {
-      console.error("Error servicio:", servicioError);
+      if (process.env.NODE_ENV === "development") {
+        console.error("Error servicio:", servicioError);
+      }
       throw new Error("Servicio no encontrado");
     }
 
@@ -78,7 +82,9 @@ export async function POST(req) {
       .single();
 
     if (citaError) {
-      console.error("Error creando cita:", citaError);
+      if (process.env.NODE_ENV === "development") {
+        console.error("Error creando cita:", citaError);
+      }
       throw new Error("Error creando la cita");
     }
 
@@ -124,7 +130,9 @@ export async function POST(req) {
     try {
       resend = getResendClient();
     } catch (emailError) {
-      console.error("Resend no disponible:", emailError.message);
+      if (process.env.NODE_ENV === "development") {
+        console.error("Resend no disponible:", emailError.message);
+      }
     }
 
     /* ==============================
@@ -139,7 +147,7 @@ export async function POST(req) {
           <h2>${pago ? "Cita confirmada" : "Cita reservada"}</h2>
           <p>Hola ${cliente.nombre_completo},</p>
           <p>Tu cita de <strong>${servicio.nombre}</strong> ha sido registrada.</p>
-          <p><strong>${fecha} — ${hora}</strong></p>
+          <p><strong>${fecha} â€” ${hora}</strong></p>
         `,
       });
     }
@@ -156,7 +164,7 @@ export async function POST(req) {
           <h2>Nueva cita reservada</h2>
           <p><strong>Paciente:</strong> ${cliente?.nombre_completo ?? "N/A"}</p>
           <p><strong>Servicio:</strong> ${servicio.nombre}</p>
-          <p><strong>${fecha} — ${hora}</strong></p>
+          <p><strong>${fecha} â€” ${hora}</strong></p>
           <p><strong>Pago:</strong> ${pago ? "Pagado" : "Pendiente"}</p>
         `,
       });
@@ -164,10 +172,14 @@ export async function POST(req) {
 
     return NextResponse.json({ success: true, cita });
   } catch (err) {
-   
+    if (process.env.NODE_ENV === "development") {
+      console.error("Error en crear cita:", err.message);
+    }
     return NextResponse.json(
-      { success: false, error: err.message ?? "Error desconocido" },
+      { success: false, error: "No se pudo crear la cita" },
       { status: 500 }
     );
   }
 }
+
+

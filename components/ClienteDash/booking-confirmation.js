@@ -43,7 +43,7 @@ export default function BookingConfirmation({
         </button>
         <div>
           <h2 className="text-2xl font-bold text-[#0A4D68]">Confirma tu cita</h2>
-          <p className="text-[#245953]">Selecciona servicio y añade notas opcionales</p>
+          <p className="text-[#245953]">Selecciona servicio y aÃ±ade notas opcionales</p>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export default function BookingConfirmation({
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label className="mb-2 block text-sm font-semibold text-[#0A4D68]">
-            Tipo de sesión
+            Tipo de sesiÃ³n
           </label>
 
           <select
@@ -93,7 +93,7 @@ export default function BookingConfirmation({
             onChange={(e) => setNotes(e.target.value)}
             rows={4}
             className="w-full rounded-lg border-2 border-[#d9e6dd] px-4 py-2"
-            placeholder="Escribe aquí cualquier información relevante..."
+            placeholder="Escribe aquÃ­ cualquier informaciÃ³n relevante..."
           />
         </div>
 
@@ -103,7 +103,7 @@ export default function BookingConfirmation({
             onClick={onBack}
             className="flex-1 rounded-lg border-2 border-[#d9e6dd] px-6 py-3 font-semibold text-[#245953] hover:bg-[#f7faf9]"
           >
-            Atrás
+            AtrÃ¡s
           </button>
 
           <button

@@ -1,0 +1,16 @@
+<svg width="720" height="960" viewBox="0 0 720 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="960" rx="48" fill="url(#bg)"/>
+  <circle cx="360" cy="282" r="124" fill="#F6FAF8"/>
+  <path d="M242 760C242 678.814 307.814 613 389 613H331C412.186 613 478 678.814 478 760V830H242V760Z" fill="#F6FAF8"/>
+  <path d="M302 292C302 258.863 328.863 232 362 232C395.137 232 422 258.863 422 292V356C422 389.137 395.137 416 362 416C328.863 416 302 389.137 302 356V292Z" fill="#0A4D68"/>
+  <circle cx="236" cy="164" r="88" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="548" cy="780" r="120" fill="rgba(255,255,255,0.14)"/>
+  <text x="360" y="884" text-anchor="middle" fill="white" font-size="36" font-family="Poppins, Arial, sans-serif" font-weight="600">Psicología Demo</text>
+  <defs>
+    <linearGradient id="bg" x1="58" y1="66" x2="682" y2="914" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A4BE7B"/>
+      <stop offset="0.42" stop-color="#5E8E7E"/>
+      <stop offset="1" stop-color="#0A4D68"/>
+    </linearGradient>
+  </defs>
+</svg>

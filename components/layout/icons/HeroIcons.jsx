@@ -8,7 +8,7 @@
  */
 export const IconCheck = ({
   className = "w-8 h-8 text-[#A4BE7B]",
-  title = "Icono confirmación",
+  title = "Icono confirmaciÃ³n",
   ...props
 }) => (
   <svg
@@ -21,7 +21,7 @@ export const IconCheck = ({
   >
     <title>{title}</title>
 
-    {/* Círculo exterior verde dinámico */}
+    {/* CÃ­rculo exterior verde dinÃ¡mico */}
     <circle cx="49.125" cy="49.125" r="49.125" fill="currentColor" />
 
     {/* Check transparente con stroke azul corporativo */}
@@ -60,7 +60,7 @@ export const IconCheck = ({
  */
 export const IconSync = ({
   className = "w-8 h-8 text-[#A4BE7B]",
-  title = "Icono sincronización",
+  title = "Icono sincronizaciÃ³n",
   ...props
 }) => (
   <svg
@@ -74,7 +74,7 @@ export const IconSync = ({
   >
     <title>{title}</title>
 
-    {/* Fondo verde dinámico */}
+    {/* Fondo verde dinÃ¡mico */}
     <circle cx="32" cy="32" r="30" fill="currentColor" />
 
     {/* Flechas transparentes (solo contorno) */}
@@ -133,7 +133,7 @@ export const IconLaptop = ({
     {/* Pantalla (antes #0A4D68) */}
     <path d="M9 21h46v29.8H9z" fill="#1B6B73" opacity="0.35" />
 
-    {/* Cámara (tenías "##0A4D68" -> arreglado) */}
+    {/* CÃ¡mara (tenÃ­as "##0A4D68" -> arreglado) */}
     <circle cx="32" cy="19.6" r=".8" fill="currentColor" opacity="0.35" />
 
     {/* Detalle base */}

@@ -1,9 +1,10 @@
-﻿import "./globals.css";
+import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Poppins } from "next/font/google";
 import { AuthModalProvider } from "@/hooks/useAuthModal";
 import AuthModal from "@/components/Modal/AuthModal";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
+import { PORTFOLIO_SITE } from "@/lib/portfolioConfig";
 import { siteUrl } from "@/lib/siteUrl";
 import { buildMetadata, SITE_NAME } from "@/lib/seo";
 import { getLocalBusinessSchema } from "@/lib/schema";
@@ -18,17 +19,17 @@ const poppins = Poppins({
 export const metadata = {
   metadataBase: new URL(siteUrl),
   ...buildMetadata({
-    title: "Psicología y Fisioterapia en Madrid | Bivalente Salud",
+    title: `Psicología y Fisioterapia en Madrid | ${PORTFOLIO_SITE.name}`,
     description:
-      "Bivalente Salud en Madrid: psicología presencial y online, y fisioterapia a domicilio con un enfoque cercano, profesional y adaptado a cada persona.",
+      "Versión pública de portfolio de una plataforma clínica con psicología, fisioterapia, reservas, pagos y área privada.",
     path: "/",
   }),
   applicationName: SITE_NAME,
   twitter: {
     card: "summary_large_image",
-    title: "Psicología y Fisioterapia en Madrid | Bivalente Salud",
+    title: `Psicología y Fisioterapia en Madrid | ${PORTFOLIO_SITE.name}`,
     description:
-      "Bivalente Salud en Madrid: psicología presencial y online, y fisioterapia a domicilio con un enfoque cercano, profesional y adaptado a cada persona.",
+      "Versión pública de portfolio de una plataforma clínica con psicología, fisioterapia, reservas, pagos y área privada.",
   },
   robots: {
     index: true,

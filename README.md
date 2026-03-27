@@ -1,119 +1,258 @@
-# PsyManage — Gestor de clínica de psicología
+# Clinic Management Platform Public
 
-Aplicación web full-stack orientada a producción, diseñada con arquitectura modular, seguridad por roles y flujos reales de negocio (pagos, agenda, comunicación).
+Aplicacion web full-stack orientada a la gestion de una clinica, preparada como version publica de portfolio.
 
----
+Este proyecto muestra una plataforma realista con:
 
-## ▶ Demo en vivo
- En [Vercel] **[https://altamirasoftware.eu](https://altamirasoftware.eu)** ·
+- web publica orientada a conversion
+- autenticacion y separacion de roles
+- reserva de citas
+- pagos online
+- panel profesional
+- chat y videollamada
+- blog gestionable desde dashboard
 
----
+La version publicada en este repositorio ha sido saneada para GitHub publico:
 
-## Stack técnico
+- sin credenciales reales
+- sin datos personales identificables
+- sin marca original
+- sin configuracion sensible de produccion
 
-| Área | Tecnologías |
-|------|-------------|
-| **Frontend** | Next.js 16 (App Router), React 19, Tailwind CSS 4, FullCalendar, date-fns |
-| **Backend** | Supabase (PostgreSQL, Auth, Realtime) |
-| **Pagos** | Stripe (Checkout, Webhooks) |
-| **Comunicación** | Resend (emails), Supabase Realtime (chat), Daily.co (videollamadas) |
-| **DevOps** | Vercel (CI/CD, hosting) |
+## Resumen Ejecutivo
 
+Este repositorio esta pensado para que un recruiter o hiring manager pueda evaluar rapidamente capacidad de producto, criterio tecnico y solvencia full-stack.
 
-## Decisiones de arquitectura
+El proyecto no se limita a pantallas sueltas. Reune varias piezas que suelen aparecer en aplicaciones reales:
 
-- Next.js App Router para separación clara cliente/servidor.
-- Supabase con RLS para garantizar aislamiento de datos por rol.
-- Stripe Checkout + Webhooks para evitar lógica de pago en cliente.
+- frontend moderno con `Next.js` y `React`
+- backend con route handlers y logica en servidor
+- autenticacion, roles y persistencia con `Supabase`
+- integraciones de negocio con `Stripe`, `Resend` y `Daily`
+- foco en seguridad basica de publicacion
+- estructura modular mantenible
 
+## Que Demuestra
 
-## Competencias demostradas
+- Capacidad para construir una aplicacion full-stack completa.
+- Criterio para separar area publica, area cliente y dashboard privado.
+- Integracion de servicios externos con flujos reales de negocio.
+- Trabajo con autenticacion, sesiones y permisos por rol.
+- Manejo de pagos con confirmacion server-side por webhook.
+- Construccion de experiencia de usuario mas alla del CRUD clasico.
+- Atencion a SEO, metadata, schema y presentacion de producto.
+- Preparacion de una version publica segura para portfolio.
 
-- **Frontend:** React, Next.js App Router, componentes reutilizables, estado con hooks, diseño responsive (mobile-first)
-- **Backend/APIs:** API Routes (Next.js), integración con servicios externos (Stripe, Supabase, Resend, Daily.co)
-- **Base de datos:** PostgreSQL (Supabase), diseño relacional, RLS, triggers
-- **Autenticación y seguridad:** Supabase Auth, roles (cliente/profesional), protección de rutas, variables de entorno
-- **Pagos:** Stripe Checkout, webhooks, flujo pago → confirmación → email
-- **Tiempo real:** Supabase Realtime (chat), sincronización de disponibilidad
-- **Despliegue:** Vercel, configuración de entorno, dominio propio
+## Problema De Negocio Que Resuelve
 
----
+Muchas clinicas pequenas operan con herramientas separadas para:
 
-## Qué hace la aplicación
+- mostrar servicios
+- captar contactos
+- agendar sesiones
+- cobrar online
+- comunicarse con clientes
+- publicar contenido
 
-- **Profesionales:** Calendario de citas, gestión de disponibilidad semanal, servicios, chat con clientes, resumen semanal, emails automáticos.
-- **Clientes:** Registro/login, reserva de cita (calendario + franjas), pago con Stripe, panel con próximas citas, chat con el profesional, videollamadas (Daily.co), edición de perfil.
+Este proyecto unifica esos flujos dentro de una sola aplicacion web.
 
-Flujo típico: cliente elige fecha/hora/servicio → pago Stripe → webhook crea cita y envía emails → profesional y cliente pueden chatear y usar videollamada.
+## Funcionalidades Principales
 
----
+### Area Publica
 
-## Contexto del proyecto
+- Home comercial y paginas de servicio.
+- Blog publico.
+- Secciones SEO con metadata y schema markup.
+- Formularios de contacto y captacion.
 
-- **Tipo:** Trabajo intermodular / TFG (Grado Superior en Desarrollo de Aplicaciones Web).
-- **Desarrollo:** Proyecto individual (diseño, base de datos, frontend, backend e integraciones).
-- **Año:** 2025.
-Proyecto desarrollado íntegramente por mí como culminación del ciclo DAW, aplicando buenas prácticas y tecnologías actuales del ecosistema web.
+### Area Cliente
 
----
+- Registro e inicio de sesion.
+- Visualizacion de disponibilidad.
+- Reserva de citas.
+- Checkout de pago.
+- Seguimiento de proximas sesiones.
+- Chat con el profesional.
+- Acceso a videollamada.
 
-## Cómo ejecutarlo en local
+### Area Profesional
 
-```bash
-git clone <repo-url>
-cd gestor-clinica
-npm install
+- Dashboard privado.
+- Calendario operativo.
+- Gestion de disponibilidad.
+- Gestion de servicios.
+- Creacion manual de citas.
+- Gestion del blog.
+
+## Arquitectura
+
+El proyecto esta organizado como una aplicacion `Next.js` con `App Router`.
+
+### Estructura General
+
+```text
+app/
+  api/
+  auth/
+  blog/
+  cliente/
+  dashboard/
+  fisioterapia/
+  psicologia/
+  legal/
+
+components/
+  blog/
+  chat/
+  ClienteDash/
+  forms/
+  layout/
+  Modal/
+
+hooks/
+lib/
+public/
 ```
 
-Crear `.env.local` con: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `NEXT_PUBLIC_BASE_URL` (y opcionalmente `DAILY_API_KEY`, `RESEND_API_KEY`). Configurar la base de datos en Supabase según el esquema del proyecto.
+### Decisiones Relevantes
+
+- La parte publica y la privada conviven en la misma codebase.
+- La logica sensible se resuelve en servidor cuando tiene sentido.
+- Las integraciones externas estan aisladas en utilidades y clientes compartidos.
+- El proyecto diferencia claramente entre cliente publico y operaciones con privilegios.
+- Los pagos se confirman con webhook, no fiandose del estado desde cliente.
+
+## Flujo Funcional Principal
+
+1. El cliente consulta disponibilidad.
+2. Selecciona servicio y franja.
+3. El sistema crea una sesion de pago con `Stripe`.
+4. Tras el pago, el webhook confirma el evento firmado.
+5. La aplicacion crea la cita y bloquea la franja.
+6. Se registra el pago.
+7. Se notifican cliente y profesional.
+8. El seguimiento puede continuar por chat o videollamada.
+
+## Stack Tecnologico
+
+| Capa | Tecnologias |
+| --- | --- |
+| Frontend | `Next.js 16`, `React 19`, `Tailwind CSS 4` |
+| Estado / UI | Componentes modulares, formularios, modales, vistas de calendario |
+| Backend | Route Handlers de `Next.js`, logica server-side |
+| Auth y datos | `Supabase` |
+| Pagos | `Stripe` |
+| Email | `Resend` |
+| Videollamada | `Daily` |
+| Analitica | `Vercel Analytics` |
+
+## Integraciones Tecnicas
+
+### Supabase
+
+- autenticacion
+- perfiles de usuario
+- consultas por rol
+- persistencia de citas, servicios y disponibilidad
+- soporte para experiencia en tiempo real
+
+### Stripe
+
+- creacion de checkout session
+- recuperacion de sesion
+- webhook para confirmacion del pago
+
+### Resend
+
+- emails transaccionales de reserva y confirmacion
+
+### Daily
+
+- creacion dinamica de salas de videollamada
+
+## Seguridad Y Preparacion Para Publicacion
+
+Esta version publica fue adaptada especificamente para portfolio:
+
+- datos reales sustituidos por placeholders profesionales
+- emails y telefonos anonimizados
+- eliminacion de assets personales y restos exportados en `public/`
+- `.env.local` excluido por `.gitignore`
+- `.env.example` mantenido para onboarding local
+- respuestas de API con mensajes genericos al cliente
+- logs detallados limitados a desarrollo cuando aplica
+- `productionBrowserSourceMaps` desactivado
+- revision de `Content-Security-Policy` para evitar dominios privados innecesarios
+
+## Version Publica Vs Version Real
+
+Este repositorio busca mostrar el valor tecnico del proyecto sin comprometer informacion sensible.
+
+Por eso:
+
+- la marca original ha sido neutralizada
+- los textos legales se han adaptado a contexto portfolio
+- la configuracion de produccion no esta incluida
+- algunos textos publicos se han orientado a demo profesional
+
+## Variables De Entorno
+
+El proyecto espera variables como las siguientes:
+
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY`
+- `STRIPE_SECRET_KEY`
+- `STRIPE_WEBHOOK_SECRET`
+- `DAILY_API_KEY`
+- `RESEND_API_KEY`
+- `EMAIL_FROM`
+- `NEXT_PUBLIC_WEB_URL`
+- `NEXT_PUBLIC_BASE_URL`
+- `NEXT_PUBLIC_SITE_URL`
+
+Referencia: [`.env.example`](C:/Users/joaka/Desktop/clinic-management-platform-public/.env.example)
+
+## Como Ejecutarlo En Local
 
 ```bash
+npm install
 npm run dev
 ```
 
-Abrir [http://localhost:3000](http://localhost:3000).
+Aplicacion local:
 
----
-
-## Estructura del proyecto (resumida)
-
-```
-app/
-  api/          → citas, cliente, stripe, webhooks, email, video
-  auth/         → login, register
-  cliente/      → dashboard cliente (reservas, chat, perfil)
-  dashboard/   → dashboard profesional (calendario, disponibilidad, chat)
-components/    → layout (header, hero, features, CTA, footer), Modals, ClienteDash, chat
-hooks/         → useUser, useAuthModal, useChat
-lib/           → supabaseClient, supabaseAdmin, stripe, resend, getBaseUrl
+```text
+http://localhost:3000
 ```
 
----
+## Que Revisaria Un Equipo Tecnico
 
-## Seguridad y buenas prácticas
+Si este proyecto se reutilizara para produccion, las siguientes piezas serian el siguiente paso natural:
 
-- Autenticación y sesiones con Supabase Auth; rutas protegidas por rol.
-- Row Level Security (RLS) en Supabase para aislamiento de datos.
-- Claves y secretos en variables de entorno; uso de Service Role solo en servidor.
-- Stripe con validación de webhooks; HTTPS en producción (Vercel).
+- endurecimiento adicional de validaciones y observabilidad
+- testing automatizado de flujos criticos
+- refinado legal y de consentimiento
+- despliegue con entorno separado por ambientes
+- revision funcional completa de integraciones externas
 
----
+## Por Que Este Proyecto Es Relevante Para Un Recruiter IT
 
-## Scripts
+Porque permite evaluar en una sola base de codigo:
 
-| Comando | Uso |
-|--------|-----|
-| `npm run dev` | Desarrollo (Turbopack) |
-| `npm run build` | Build de producción |
-| `npm run start` | Servidor de producción |
-| `npm run lint` | ESLint |
+- nivel de autonomia
+- criterio de arquitectura
+- capacidad de conectar frontend, backend e integraciones
+- comprension de flujos reales de negocio
+- sensibilidad por seguridad y publicacion responsable
+- presentacion profesional de un proyecto complejo
 
----
+## Estado Del Repositorio
 
-## Contacto
+- listo para portfolio publico
+- saneado para GitHub
+- orientado a revision tecnica y de producto
 
-Si te interesa el proyecto o quieres más detalle técnico, puedes contactar a través del repositorio o de la [aplicación en producción](https://altamirasoftware.eu).
+## Nota Final
 
----
-
-*Proyecto de uso educativo. TFG — Desarrollo de Aplicaciones Web. © 2025.*
+Este repositorio no pretende ser una demo trivial. Está preparado para enseñar como se disena y conecta una aplicacion web con multiples flujos reales y dependencias externas, manteniendo al mismo tiempo una presentacion profesional y segura para contexto de seleccion.

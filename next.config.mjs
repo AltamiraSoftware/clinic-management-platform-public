@@ -6,7 +6,7 @@ const __dirname = path.dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false,
   reactStrictMode: true,
   turbopack: {
     root: __dirname,
@@ -45,7 +45,7 @@ const nextConfig = {
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: https:",
-      "connect-src 'self' https://*.supabase.co https://api.stripe.com https://api.daily.co https://altamirasoftware.eu https://bivalentesalud.es https://vitals.vercel-insights.com",
+      "connect-src 'self' https://*.supabase.co https://api.stripe.com https://api.daily.co https://vitals.vercel-insights.com",
       "frame-src 'self' https://js.stripe.com https://*.daily.co",
     ].join("; ");
 

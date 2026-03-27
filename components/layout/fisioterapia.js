@@ -35,8 +35,8 @@ export default function Fisioterapia() {
             <div className="relative flex flex-col items-center space-y-6 text-center">
               <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-white/28 shadow-[0_18px_34px_rgba(2,6,23,0.28)]">
                 <Image
-                  src="/borja.png"
-                  alt="Borja Estarellas, fisioterapeuta en Madrid"
+                  src="/professional-physiotherapy-demo.svg"
+                  alt="Fisioterapia Demo, fisioterapeuta en Madrid"
                   fill
                   sizes="144px"
                   priority
@@ -45,7 +45,7 @@ export default function Fisioterapia() {
               </div>
 
               <div className="space-y-2">
-                <p className="text-2xl font-bold text-[#eef6de]">Borja Estarellas</p>
+                <p className="text-2xl font-bold text-[#eef6de]">Fisioterapia Demo</p>
                 <p className="font-medium text-white/82">Fisioterapeuta</p>
                 <p className="text-sm text-white/62">Col. 15388</p>
               </div>
@@ -79,12 +79,12 @@ export default function Fisioterapia() {
                 <Dumbbell className="h-6 w-6 text-[#088395]" />
               </div>
               <h2 className="text-3xl font-bold text-[#A4BE7B] md:text-4xl">
-                Fisioterapia en Madrid - Bivalente Salud
+                Fisioterapia en Madrid - Clinic Demo
               </h2>
             </div>
 
             <p className="text-lg leading-relaxed text-white">
-              En Bivalente Salud ofrecemos fisioterapia a domicilio especializada
+              En Clinic Demo ofrecemos fisioterapia a domicilio especializada
               en Madrid para el tratamiento del dolor lumbar, cervical y lesiones
               deportivas. Trabajamos con terapia manual avanzada y ejercicio
               terapéutico basado en la evidencia científica.
@@ -107,7 +107,7 @@ export default function Fisioterapia() {
                 <Link href="/fisioterapia" className="bv-btn bv-btn-ghost bv-btn-lg">
                   Ver servicio de fisioterapia
                 </Link>
-                <Link href="/blog" className="bv-btn bv-btn-primary-dark bv-btn-lg">
+                <Link href="/blog" className="bv-btn bv-btn-primary bv-btn-lg">
                   Ver artículos de fisioterapia
                 </Link>
               </div>
@@ -118,3 +118,4 @@ export default function Fisioterapia() {
     </section>
   );
 }
+

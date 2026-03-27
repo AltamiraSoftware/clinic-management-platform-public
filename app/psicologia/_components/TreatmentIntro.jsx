@@ -10,7 +10,7 @@ export default function TreatmentIntro({ treatment }) {
         <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr]">
           <article className="rounded-[30px] border border-white/70 bg-white/55 p-8 shadow-[0_24px_60px_rgba(10,77,104,0.10)] backdrop-blur-sm">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#61764B]">
-              Qué es y cuándo puede ayudarte
+              QuÃ© es y cuÃ¡ndo puede ayudarte
             </p>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold !text-[#0A4D68]">
               {treatment.introTitle}
@@ -45,13 +45,13 @@ export default function TreatmentIntro({ treatment }) {
 
           <aside className="rounded-[30px] border border-white/70 bg-white/45 p-8 shadow-[0_24px_60px_rgba(10,77,104,0.10)] backdrop-blur-sm">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#61764B]">
-              Síntomas frecuentes
+              SÃ­ntomas frecuentes
             </p>
             <h2 className="mt-3 text-3xl font-bold !text-[#0A4D68]">
-              Señales que suelen aparecer
+              SeÃ±ales que suelen aparecer
             </h2>
             <p className="mt-4 text-sm leading-7 text-[#245953]">
-              Cada proceso es distinto, pero estas son algunas señales habituales por las que muchas personas consultan.
+              Cada proceso es distinto, pero estas son algunas seÃ±ales habituales por las que muchas personas consultan.
             </p>
 
             <div className="mt-8 space-y-4">

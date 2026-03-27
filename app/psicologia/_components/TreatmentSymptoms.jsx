@@ -4,13 +4,13 @@ export default function TreatmentSymptoms({ treatment }) {
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center mb-12">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#61764B]">
-            Señales frecuentes
+            SeÃ±ales frecuentes
           </p>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#0A4D68]!">
-            Síntomas que suelen aparecer
+            SÃ­ntomas que suelen aparecer
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[#245953]">
-            Cada proceso es distinto, pero estas son algunas señales habituales por las que muchas personas consultan.
+            Cada proceso es distinto, pero estas son algunas seÃ±ales habituales por las que muchas personas consultan.
           </p>
         </div>
 

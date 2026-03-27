@@ -29,7 +29,7 @@ export async function POST(req) {
     rawBody = await getRawBody(req);
   } catch (err) {
     if (process.env.NODE_ENV === "development") {
-      console.error("❌ No se pudo leer el body del webhook:", err.message);
+      console.error("âŒ No se pudo leer el body del webhook:", err.message);
     }
     return new NextResponse("Bad Request", { status: 400 });
   }
@@ -45,7 +45,7 @@ export async function POST(req) {
     );
   } catch (err) {
     if (process.env.NODE_ENV === "development") {
-      console.error("⛔ Firma inválida:", err.message);
+      console.error("â›” Firma invÃ¡lida:", err.message);
     }
     return new NextResponse("Signature error", { status: 400 });
   }
@@ -113,7 +113,7 @@ export async function POST(req) {
 
   if (citaError) {
     if (process.env.NODE_ENV === "development") {
-      console.error("❌ Error creando cita:", citaError.message);
+      console.error("âŒ Error creando cita:", citaError.message);
     }
     return NextResponse.json({ error: "Error creando cita" }, { status: 500 });
   }
@@ -124,7 +124,7 @@ export async function POST(req) {
     .update({ esta_disponible: false })
     .eq("id", id_franja_disponibilidad);
 
-  // 8. Registrar pago (CORREGIDO según tu tabla)
+  // 8. Registrar pago (CORREGIDO segÃºn tu tabla)
   const { error: pagoError } = await supabase.from("pagos").insert({
     id_cliente,
     id_cita_sesion: cita.id,
@@ -135,8 +135,8 @@ export async function POST(req) {
   });
 
   if (pagoError && process.env.NODE_ENV === "development") {
-    console.error("❌ Error registrando pago:", pagoError.message);
-    // No detenemos el proceso: la cita ya está creada
+    console.error("âŒ Error registrando pago:", pagoError.message);
+    // No detenemos el proceso: la cita ya estÃ¡ creada
   }
 
   // 9. Enviar emails
@@ -163,7 +163,9 @@ export async function POST(req) {
   try {
     resend = getResendClient();
   } catch (emailError) {
-    console.error("Resend no disponible:", emailError.message);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Resend no disponible:", emailError.message);
+    }
   }
 
  // Email paciente
@@ -176,7 +178,7 @@ if (cliente?.email && resend) {
       <h2>Cita Confirmada</h2>
       <p>Hola ${cliente.nombre_completo},</p>
       <p>Tu cita de <strong>${servicio.nombre}</strong> ha sido confirmada.</p>
-      <p><strong>${fecha} — ${hora}</strong></p>
+      <p><strong>${fecha} â€” ${hora}</strong></p>
     `,
   });
 }
@@ -191,7 +193,7 @@ if (profesional?.email && resend) {
       <h2>Nueva cita reservada</h2>
       <p><strong>Paciente:</strong> ${cliente?.nombre_completo}</p>
       <p><strong>Servicio:</strong> ${servicio.nombre}</p>
-      <p><strong>${fecha} — ${hora}</strong></p>
+      <p><strong>${fecha} â€” ${hora}</strong></p>
       <p>Estado del pago: <strong>PAGADO</strong></p>
     `,
   });
@@ -199,3 +201,5 @@ if (profesional?.email && resend) {
   // 10. Responder a Stripe
   return NextResponse.json({ received: true });
 }
+
+

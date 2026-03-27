@@ -49,7 +49,7 @@ export default function DashboardPage() {
   const [detalleCita, setDetalleCita] = useState(null);
 
   /* ====================================================
-     PROTECCIÓN DE RUTA
+     PROTECCIÃ“N DE RUTA
   ==================================================== */
   useEffect(() => {
     if (!isLoading) {
@@ -59,7 +59,7 @@ export default function DashboardPage() {
   }, [user, isLoading, router]);
 
   /* ====================================================
-     CARGAR CITAS DEL MES — CORREGIDO (estado_pago añadido)
+     CARGAR CITAS DEL MES â€” CORREGIDO (estado_pago aÃ±adido)
   ==================================================== */
   useEffect(() => {
     if (!user || user.rol !== "profesional") return;

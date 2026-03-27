@@ -40,14 +40,14 @@ export default function ClienteNextAppointments({ userId }) {
   return (
     <div className="mt-2 rounded-2xl border border-[#e6efe8] bg-white p-6 shadow-[0_18px_40px_rgba(10,77,104,0.08)]">
       {futuras.length === 0 ? (
-        <p className="text-[#245953]">No tienes citas próximas.</p>
+        <p className="text-[#245953]">No tienes citas prÃ³ximas.</p>
       ) : (
         futuras.map((cita) => (
           <div key={cita.id} className="mb-4 border-l-4 border-[#088395] pl-4">
             <p className="font-semibold text-[#0A4D68]">{cita.servicios.nombre}</p>
             <p className="text-[#245953]">
               {new Date(cita.hora_inicio).toLocaleDateString("es-ES")}
-              {" • "}
+              {" â€¢ "}
               {new Date(cita.hora_inicio).toLocaleTimeString("es-ES", {
                 hour: "2-digit",
                 minute: "2-digit",
@@ -103,7 +103,7 @@ function HistorialModal({ citas, onClose }) {
 
               <p className="text-[#245953]">
                 {new Date(cita.hora_inicio).toLocaleDateString("es-ES")}
-                {" • "}
+                {" â€¢ "}
                 {new Date(cita.hora_inicio).toLocaleTimeString("es-ES", {
                   hour: "2-digit",
                   minute: "2-digit",

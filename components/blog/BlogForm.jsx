@@ -61,17 +61,17 @@ export default function BlogForm({ userId, categories, post = null }) {
         ) {
           setFeedback({
             type: "error",
-            message: "Título, slug, extracto, contenido y categoría son obligatorios.",
+            message: "TÃ­tulo, slug, extracto, contenido y categorÃ­a son obligatorios.",
           });
           return;
         }
 
         if (post?.id) {
           await updateBlogPost(supabase, post.id, userId, payload);
-          setFeedback({ type: "success", message: "Artículo actualizado correctamente." });
+          setFeedback({ type: "success", message: "ArtÃ­culo actualizado correctamente." });
         } else {
           await createBlogPost(supabase, payload);
-          setFeedback({ type: "success", message: "Artículo creado correctamente." });
+          setFeedback({ type: "success", message: "ArtÃ­culo creado correctamente." });
         }
 
         router.push("/dashboard/blog");
@@ -79,7 +79,7 @@ export default function BlogForm({ userId, categories, post = null }) {
       } catch (error) {
         setFeedback({
           type: "error",
-          message: error.message || "No se pudo guardar el artículo.",
+          message: error.message || "No se pudo guardar el artÃ­culo.",
         });
       }
     });
@@ -95,7 +95,7 @@ export default function BlogForm({ userId, categories, post = null }) {
     if (!ALLOWED_IMAGE_TYPES.includes(file.type)) {
       setFeedback({
         type: "error",
-        message: "Solo se permiten imágenes JPG, JPEG, PNG o WEBP.",
+        message: "Solo se permiten imÃ¡genes JPG, JPEG, PNG o WEBP.",
       });
       event.target.value = "";
       return;
@@ -129,17 +129,17 @@ export default function BlogForm({ userId, categories, post = null }) {
           Dashboard blog
         </p>
         <h1 className="mt-2 text-3xl font-bold text-[#0A4D68]!">
-          {post ? "Editar artículo" : "Nuevo artículo"}
+          {post ? "Editar artÃ­culo" : "Nuevo artÃ­culo"}
         </h1>
         <p className="mt-2 max-w-2xl text-sm text-[#245953]">
-          Completa el contenido y decide si guardarlo como borrador o publicarlo. El SEO básico queda accesible desde el propio formulario.
+          Completa el contenido y decide si guardarlo como borrador o publicarlo. El SEO bÃ¡sico queda accesible desde el propio formulario.
         </p>
       </div>
 
       <div className="rounded-[30px] border border-[#d7e7e1] bg-white/92 p-6 shadow-[0_18px_40px_rgba(10,77,104,0.08)] md:p-8">
         <div className="grid gap-5 md:grid-cols-2">
           <label className="space-y-2 md:col-span-2">
-            <span className="text-sm font-semibold text-[#0A4D68]">Título</span>
+            <span className="text-sm font-semibold text-[#0A4D68]">TÃ­tulo</span>
             <input
               value={values.titulo}
               onChange={(event) => {
@@ -150,7 +150,7 @@ export default function BlogForm({ userId, categories, post = null }) {
                   slug: slugEditedManually ? current.slug : slugify(nextTitle),
                 }));
               }}
-              placeholder="Ej. Cómo identificar una contractura cervical"
+              placeholder="Ej. CÃ³mo identificar una contractura cervical"
               className="w-full"
             />
           </label>
@@ -185,7 +185,7 @@ export default function BlogForm({ userId, categories, post = null }) {
               value={values.contenido}
               onChange={(event) => handleChange("contenido", event.target.value)}
               rows={16}
-              placeholder={"Puedes escribir en texto plano o con markdown simple.\n\n# Encabezado\n## Subtítulo\n- Punto clave"}
+              placeholder={"Puedes escribir en texto plano o con markdown simple.\n\n# Encabezado\n## SubtÃ­tulo\n- Punto clave"}
               className="w-full"
             />
           </label>
@@ -206,7 +206,7 @@ export default function BlogForm({ userId, categories, post = null }) {
             <input
               value={values.imagen_destacada_url}
               readOnly
-              placeholder="La URL pública aparecerá aquí tras la subida"
+              placeholder="La URL pÃºblica aparecerÃ¡ aquÃ­ tras la subida"
               className="w-full bg-[#f7faf9]"
             />
 
@@ -220,19 +220,19 @@ export default function BlogForm({ userId, categories, post = null }) {
               </div>
             ) : (
               <div className="flex h-48 items-center justify-center rounded-2xl border border-dashed border-[#d7e7e1] bg-[#f8fbfa] text-sm text-[#61764B]">
-                La preview de la imagen aparecerá aquí.
+                La preview de la imagen aparecerÃ¡ aquÃ­.
               </div>
             )}
           </div>
 
           <label className="space-y-2">
-            <span className="text-sm font-semibold text-[#0A4D68]">Categoría</span>
+            <span className="text-sm font-semibold text-[#0A4D68]">CategorÃ­a</span>
             <select
               value={values.id_categoria}
               onChange={(event) => handleChange("id_categoria", event.target.value)}
               className="w-full"
             >
-              <option value="">Selecciona una categoría</option>
+              <option value="">Selecciona una categorÃ­a</option>
               {allowedCategories.map((category) => (
                 <option key={category.id} value={category.id}>
                   {category.nombre}
@@ -246,7 +246,7 @@ export default function BlogForm({ userId, categories, post = null }) {
             <input
               value={values.meta_title}
               onChange={(event) => handleChange("meta_title", event.target.value)}
-              placeholder="Si lo dejas vacío, se usará el título."
+              placeholder="Si lo dejas vacÃ­o, se usarÃ¡ el tÃ­tulo."
               className="w-full"
             />
           </label>
@@ -257,7 +257,7 @@ export default function BlogForm({ userId, categories, post = null }) {
               value={values.meta_description}
               onChange={(event) => handleChange("meta_description", event.target.value)}
               rows={3}
-              placeholder="Si lo dejas vacío, se usará el extracto."
+              placeholder="Si lo dejas vacÃ­o, se usarÃ¡ el extracto."
               className="w-full"
             />
           </label>

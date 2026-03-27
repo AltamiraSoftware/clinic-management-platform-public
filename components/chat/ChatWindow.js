@@ -165,14 +165,14 @@ export default function ChatWindow({ clienteId, profesionalId, userId }) {
               </p>
               <p className="text-sm text-white/84">{datosPaciente?.email}</p>
               {datosPaciente?.telefono && (
-                <p className="text-sm text-white/78">Teléfono: {datosPaciente.telefono}</p>
+                <p className="text-sm text-white/78">TelÃ©fono: {datosPaciente.telefono}</p>
               )}
             </div>
           </div>
 
           {proximaCita && (
             <div className={infoCardClassName}>
-              <p className="font-semibold">Próxima cita</p>
+              <p className="font-semibold">PrÃ³xima cita</p>
               <p>
                 {new Date(proximaCita.hora_inicio).toLocaleDateString("es-ES", {
                   day: "2-digit",
@@ -194,7 +194,7 @@ export default function ChatWindow({ clienteId, profesionalId, userId }) {
 
           {ultimaSesion && (
             <div className={infoCardClassName}>
-              <p className="font-semibold">Última sesión</p>
+              <p className="font-semibold">Ãšltima sesiÃ³n</p>
               <p>
                 {new Date(ultimaSesion.hora_inicio).toLocaleDateString("es-ES", {
                   day: "2-digit",

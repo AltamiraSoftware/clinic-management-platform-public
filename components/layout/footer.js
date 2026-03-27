@@ -2,6 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import {
+  PHYSIOTHERAPY_PROFILE,
+  PORTFOLIO_SITE,
+  PSYCHOLOGY_PROFILE,
+} from "@/lib/portfolioConfig";
 
 export default function Footer() {
   return (
@@ -11,8 +16,8 @@ export default function Footer() {
           <div className="space-y-5">
             <div className="flex items-center gap-3">
               <Image
-                src="/logo-bivalente-salud.webp"
-                alt="Logo Bivalente Salud"
+                src={PORTFOLIO_SITE.logo}
+                alt={`Logo ${PORTFOLIO_SITE.name}`}
                 width={850}
                 height={77}
                 priority
@@ -20,14 +25,13 @@ export default function Footer() {
                 style={{ height: "auto" }}
               />
               <span className="pl-2 text-xl font-bold text-[#A4BE7B]">
-                Bivalente Salud
+                {PORTFOLIO_SITE.name}
               </span>
             </div>
 
             <p className="max-w-sm text-sm leading-relaxed text-white/82">
-              {"Psicolog\u00EDa presencial y online, y fisioterapia a domicilio en Madrid. "}
-              {"Un proyecto sanitario pensado para orientar con claridad y facilitar "}
-              {"un primer paso profesional y cercano."}
+              Plataforma demo de gestión clínica preparada como portfolio técnico
+              público, con psicología, fisioterapia, reservas, pagos y áreas privadas.
             </p>
 
             <Link href="/sobre-nosotros#contacto" className="bv-btn bv-btn-primary bv-btn-lg">
@@ -40,7 +44,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-white/70">
               <li>
                 <Link href="/psicologia" className="transition hover:text-white">
-                  {"Psicolog\u00EDa"}
+                  Psicología
                 </Link>
               </li>
               <li>
@@ -59,28 +63,40 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="font-semibold text-white!">Contacto</h4>
             <ul className="space-y-2 text-sm text-white/70">
-              <li>Madrid</li>
-              <li>{"Psicolog\u00EDa presencial y online en Madrid"}</li>
+              <li>{PORTFOLIO_SITE.city}</li>
+              <li>Psicología presencial y online en Madrid</li>
               <li>Fisioterapia a domicilio en Madrid</li>
-              <li>{"Atenci\u00F3n presencial, online y a domicilio"}</li>
+              <li>Atención presencial, online y a domicilio</li>
               <li>
-                <a href="tel:+34674547577" className="transition hover:text-white">
-                  +34 674 547 577
+                <a
+                  href={`tel:${PSYCHOLOGY_PROFILE.phone.replace(/\s+/g, "")}`}
+                  className="transition hover:text-white"
+                >
+                  {PSYCHOLOGY_PROFILE.phone}
                 </a>
               </li>
               <li>
-                <a href="tel:+34618417971" className="transition hover:text-white">
-                  +34 618 417 971
+                <a
+                  href={`tel:${PHYSIOTHERAPY_PROFILE.phone.replace(/\s+/g, "")}`}
+                  className="transition hover:text-white"
+                >
+                  {PHYSIOTHERAPY_PROFILE.phone}
                 </a>
               </li>
               <li>
-                <a href="mailto:danilopezme1004@gmail.com" className="transition hover:text-white">
-                  danilopezme1004@gmail.com
+                <a
+                  href={`mailto:${PSYCHOLOGY_PROFILE.email}`}
+                  className="transition hover:text-white"
+                >
+                  {PSYCHOLOGY_PROFILE.email}
                 </a>
               </li>
               <li>
-                <a href="mailto:estarellas11088@gmail.com" className="transition hover:text-white">
-                  estarellas11088@gmail.com
+                <a
+                  href={`mailto:${PHYSIOTHERAPY_PROFILE.email}`}
+                  className="transition hover:text-white"
+                >
+                  {PHYSIOTHERAPY_PROFILE.email}
                 </a>
               </li>
             </ul>
@@ -110,7 +126,7 @@ export default function Footer() {
 
         <div className="border-t border-white/20 pt-8">
           <p className="text-center text-sm text-white/70">
-            {"2025 Bivalente Salud. Todos los derechos reservados. Madrid, Espa\u00F1a."}
+            {`2026 ${PORTFOLIO_SITE.name}. Versión pública de portfolio. ${PORTFOLIO_SITE.city}, ${PORTFOLIO_SITE.country}.`}
           </p>
         </div>
       </div>

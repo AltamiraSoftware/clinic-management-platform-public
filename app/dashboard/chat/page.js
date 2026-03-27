@@ -48,8 +48,8 @@ export default function ChatDashboard() {
         {clienteActivo ? (
           <ChatWindow
             clienteId={clienteActivo}
-            profesionalId={user.id}       // ✔ EL PROFESIONAL ES EL USER
-            userId={user.id}              // ✔ remitente real si escribe el profesional
+            profesionalId={user.id}       // âœ” EL PROFESIONAL ES EL USER
+            userId={user.id}              // âœ” remitente real si escribe el profesional
           />
         ) : (
           <div className="h-full flex items-center justify-center text-gray-500">

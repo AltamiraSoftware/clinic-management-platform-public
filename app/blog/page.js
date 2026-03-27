@@ -11,9 +11,9 @@ import { getBreadcrumbSchema } from "@/lib/schema";
 export const dynamic = "force-dynamic";
 
 export const metadata = buildMetadata({
-  title: "Blog de Psicolog\u00EDa y Fisioterapia en Madrid | Bivalente Salud",
+  title: "Blog de Psicología y Fisioterapia en Madrid | Clinic Demo",
   description:
-    "Art\u00EDculos de psicolog\u00EDa y fisioterapia en Madrid para resolver dudas, entender s\u00EDntomas y mejorar tu salud con criterio profesional.",
+    "Artículos de psicología y fisioterapia en Madrid para resolver dudas, entender síntomas y mejorar tu salud con criterio profesional.",
   path: "/blog",
 });
 

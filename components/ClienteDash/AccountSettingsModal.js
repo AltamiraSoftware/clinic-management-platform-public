@@ -95,7 +95,7 @@ export default function AccountSettingsModal({ open, onClose, user, profile }) {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#0A4D68]">Teléfono</label>
+            <label className="block text-sm font-semibold text-[#0A4D68]">TelÃ©fono</label>
             <input
               type="tel"
               className="mt-1 w-full rounded-lg border border-[#d9e6dd] px-3 py-2"
@@ -105,11 +105,11 @@ export default function AccountSettingsModal({ open, onClose, user, profile }) {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#0A4D68]">Nueva contraseña</label>
+            <label className="block text-sm font-semibold text-[#0A4D68]">Nueva contraseÃ±a</label>
             <input
               type="password"
               className="mt-1 w-full rounded-lg border border-[#d9e6dd] px-3 py-2"
-              placeholder="••••••••"
+              placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />

@@ -1,11 +1,11 @@
-﻿export const borjaProfile = {
-  name: "Borja Estarellas Botín",
+export const borjaProfile = {
+  name: "Profesional de Fisioterapia Demo",
   role: "Fisioterapeuta",
-  image: "/borja.png",
-  heroImageAlt: "Borja Estarellas Botín, fisioterapeuta en Madrid",
-  cardImageAlt: "Borja Estarellas Botín, fisioterapeuta de Bivalente",
-  recipientEmail: "estarellas11088@gmail.com",
-  phone: "618 417 971",
+  image: "/professional-physiotherapy-demo.svg",
+  heroImageAlt: "Profesional de Fisioterapia Demo, fisioterapeuta en Madrid",
+  cardImageAlt: "Profesional de Fisioterapia Demo, fisioterapeuta de Clinic Demo",
+  recipientEmail: "contact@clinic-demo.com",
+  phone: "600 000 000",
   location: "Madrid",
   credentials: [
     "Grado en Fisioterapia - Universidad Antonio de Nebrija (2020)",
@@ -19,7 +19,7 @@ const commonFaqs = [
   {
     question: "¿Trabajas en varias zonas de Madrid?",
     answer:
-      "Sí. Borja realiza atención en distintas zonas de Madrid. Si quieres confirmar tu dirección antes de reservar, puedes usar el formulario y se revisa contigo.",
+      "Sí. el profesional de fisioterapia demo realiza atención en distintas zonas de Madrid. Si quieres confirmar tu dirección antes de reservar, puedes usar el formulario y se revisa contigo.",
   },
   {
     question: "¿Qué tengo que preparar para una sesión a domicilio?",
@@ -41,12 +41,12 @@ export const tratamientosSeo = {
     cardTitle: "Fisioterapia a domicilio",
     cardDescription:
       "Servicio de fisioterapia a domicilio en Madrid con valoración, tratamiento manual y ejercicio terapéutico adaptado a tu dolor, tu lesión y tu ritmo de recuperación.",
-    metaTitle: "Fisioterapia a domicilio en Madrid | Borja Estarellas",
+    metaTitle: "Fisioterapia a domicilio en Madrid | Fisioterapia Demo",
     metaDescription:
-      "Fisioterapia a domicilio en Madrid para dolor, lesiones y recuperación funcional. Tratamiento profesional con Borja Estarellas desde 50 euros.",
+      "Fisioterapia a domicilio en Madrid para dolor, lesiones y recuperación funcional. Tratamiento profesional con Fisioterapia Demo desde 50 euros.",
     heroTitle: "Fisioterapia a domicilio en Madrid",
     heroSubtitle:
-      "Fisioterapia a domicilio en Madrid con Borja Estarellas desde 50 euros. Valoración, tratamiento y ejercicio terapéutico en casa para dolor, lesiones y recuperación funcional.",
+      "Fisioterapia a domicilio en Madrid con Fisioterapia Demo desde 50 euros. Valoración, tratamiento y ejercicio terapéutico en casa para dolor, lesiones y recuperación funcional.",
     heroBadges: ["Madrid", "Atención a domicilio", "Dolor y recuperación"],
     introTitle: "Cuándo merece la pena pedir fisioterapia a domicilio en Madrid",
     introBody:
@@ -68,7 +68,7 @@ export const tratamientosSeo = {
       {
         title: "Valoración clínica desde la primera sesión",
         description:
-          "Borja revisa tu dolor, tu movilidad, los antecedentes y las limitaciones que tienes ahora mismo para entender qué está pasando y qué necesita tu caso.",
+          "el profesional de fisioterapia demo revisa tu dolor, tu movilidad, los antecedentes y las limitaciones que tienes ahora mismo para entender qué está pasando y qué necesita tu caso.",
       },
       {
         title: "Tratamiento manual y ejercicio terapéutico",
@@ -88,7 +88,7 @@ export const tratamientosSeo = {
         "Si hace falta revisar ejercicios o dar continuidad entre sesiones, el seguimiento online puede servir como complemento puntual, sin sustituir el foco principal de la atención a domicilio.",
     },
     professionalBlurb:
-      "Borja es fisioterapeuta en Madrid y realiza atención a domicilio con un enfoque profesional, cercano y personalizado para dolor, lesiones y recuperación funcional.",
+      "el profesional de fisioterapia demo es fisioterapeuta en Madrid y realiza atención a domicilio con un enfoque profesional, cercano y personalizado para dolor, lesiones y recuperación funcional.",
     professionalHighlights: [
       "Combina valoración, tratamiento manual, ejercicio terapéutico y educación del paciente para adaptar cada sesión a lo que realmente necesitas en ese momento.",
       "La atención a domicilio permite trabajar con más comodidad y ajustar mejor el tratamiento a tu contexto diario, sin perder rigor clínico ni personalización.",
@@ -112,12 +112,12 @@ export const tratamientosSeo = {
       {
         question: "¿En qué zonas de Madrid haces fisioterapia a domicilio?",
         answer:
-          "Borja realiza atención en distintas zonas de Madrid. Si quieres confirmar tu dirección antes de reservar, puedes escribir por el formulario y se revisa contigo si la atención a domicilio encaja en tu zona.",
+          "el profesional de fisioterapia demo realiza atención en distintas zonas de Madrid. Si quieres confirmar tu dirección antes de reservar, puedes escribir por el formulario y se revisa contigo si la atención a domicilio encaja en tu zona.",
       },
       {
         question: "¿Hace falta tener material en casa para la sesión?",
         answer:
-          "No. Normalmente no necesitas material específico. Si para tu caso hiciera falta algo sencillo para continuar con ejercicios o pautas, Borja te lo indicará de forma clara.",
+          "No. Normalmente no necesitas material específico. Si para tu caso hiciera falta algo sencillo para continuar con ejercicios o pautas, el profesional de fisioterapia demo te lo indicará de forma clara.",
       },
       {
         question: "¿Cómo puedo reservar una sesión o consultar mi caso?",
@@ -146,9 +146,9 @@ export const tratamientosSeo = {
     cardTitle: "Dolor cervical y cervicalgia",
     cardDescription:
       "Fisioterapia para cervicalgia, rigidez y dolor de cuello con abordaje manual y ejercicio terapéutico adaptado a tu actividad diaria.",
-    metaTitle: "Fisioterapia para dolor cervical en Madrid | Bivalente Salud",
+    metaTitle: "Fisioterapia para dolor cervical en Madrid | Clinic Demo",
     metaDescription:
-      "Tratamiento de fisioterapia para dolor cervical en Madrid con Borja Estarellas. Abordaje de cervicalgia, rigidez, sobrecarga y dolor mecánico de cuello.",
+      "Tratamiento de fisioterapia para dolor cervical en Madrid con Fisioterapia Demo. Abordaje de cervicalgia, rigidez, sobrecarga y dolor mecánico de cuello.",
     heroTitle: "Fisioterapia para dolor cervical en Madrid",
     heroSubtitle:
       "Tratamiento para cervicalgia, rigidez y sobrecarga de cuello con un enfoque práctico orientado a reducir dolor y recuperar movilidad.",
@@ -188,12 +188,12 @@ export const tratamientosSeo = {
     ],
     modality: {
       presencial:
-        "Borja puede valorar y tratar el dolor cervical a domicilio en Madrid, evitando desplazamientos cuando el dolor o la rigidez lo hacen incómodo.",
+        "el profesional de fisioterapia demo puede valorar y tratar el dolor cervical a domicilio en Madrid, evitando desplazamientos cuando el dolor o la rigidez lo hacen incómodo.",
       online:
         "También se pueden revisar ejercicios y progresiones para continuar el trabajo activo cuando el dolor va mejorando.",
     },
     professionalBlurb:
-      "Borja aborda el dolor cervical con una mirada funcional, buscando aliviar la sobrecarga y mejorar la movilidad sin depender solo de tratamiento pasivo.",
+      "el profesional de fisioterapia demo aborda el dolor cervical con una mirada funcional, buscando aliviar la sobrecarga y mejorar la movilidad sin depender solo de tratamiento pasivo.",
     faqs: [
       {
         question: "¿La fisioterapia puede ayudar si el cuello se me carga por trabajo o por postura?",
@@ -220,9 +220,9 @@ export const tratamientosSeo = {
     cardTitle: "Dolor lumbar y ciática mecánica",
     cardDescription:
       "Fisioterapia para lumbalgia, rigidez lumbar y dolor mecánico con tratamiento orientado a reducir dolor y recuperar confianza al moverte.",
-    metaTitle: "Fisioterapia para dolor lumbar en Madrid | Bivalente Salud",
+    metaTitle: "Fisioterapia para dolor lumbar en Madrid | Clinic Demo",
     metaDescription:
-      "Tratamiento de fisioterapia para dolor lumbar y lumbalgia en Madrid con Borja Estarellas. Atención a domicilio para dolor mecánico y ciática.",
+      "Tratamiento de fisioterapia para dolor lumbar y lumbalgia en Madrid con Fisioterapia Demo. Atención a domicilio para dolor mecánico y ciática.",
     heroTitle: "Fisioterapia para dolor lumbar en Madrid",
     heroSubtitle:
       "Abordaje de lumbalgia y dolor lumbar mecánico con tratamiento manual, ejercicio terapéutico y atención a domicilio en Madrid.",
@@ -267,7 +267,7 @@ export const tratamientosSeo = {
         "También se pueden revisar ejercicios, progresión de carga y pautas cuando la evolución requiere seguimiento.",
     },
     professionalBlurb:
-      "Borja trabaja el dolor lumbar con una combinación de tratamiento manual, ejercicio terapéutico y educación para recuperar función con progresión.",
+      "el profesional de fisioterapia demo trabaja el dolor lumbar con una combinación de tratamiento manual, ejercicio terapéutico y educación para recuperar función con progresión.",
     faqs: [
       {
         question: "¿La fisioterapia es útil si llevo tiempo con dolor lumbar?",
@@ -294,9 +294,9 @@ export const tratamientosSeo = {
     cardTitle: "Tendinopatías",
     cardDescription:
       "Tratamiento de tendinopatías en hombro, codo, rodilla o Aquiles con enfoque progresivo y adaptado a carga y actividad.",
-    metaTitle: "Fisioterapia para tendinopatías en Madrid | Bivalente Salud",
+    metaTitle: "Fisioterapia para tendinopatías en Madrid | Clinic Demo",
     metaDescription:
-      "Fisioterapia para tendinopatías en Madrid con Borja Estarellas. Tratamiento de hombro, codo, rodilla o Aquiles con ejercicio terapéutico y seguimiento.",
+      "Fisioterapia para tendinopatías en Madrid con Fisioterapia Demo. Tratamiento de hombro, codo, rodilla o Aquiles con ejercicio terapéutico y seguimiento.",
     heroTitle: "Fisioterapia para tendinopatías en Madrid",
     heroSubtitle:
       "Abordaje de tendinopatías con tratamiento progresivo para reducir dolor, mejorar carga y volver a moverte con más confianza.",
@@ -336,12 +336,12 @@ export const tratamientosSeo = {
     ],
     modality: {
       presencial:
-        "Borja puede valorar tendinopatías a domicilio en Madrid y adaptar las pautas al contexto real en el que entrenas o te mueves.",
+        "el profesional de fisioterapia demo puede valorar tendinopatías a domicilio en Madrid y adaptar las pautas al contexto real en el que entrenas o te mueves.",
       online:
         "El seguimiento también sirve para ajustar ejercicios, progresiones y carga según tu evolución.",
     },
     professionalBlurb:
-      "Borja trabaja tendinopatías con un enfoque activo y progresivo, buscando mejorar la capacidad del tejido para tolerar movimiento y carga.",
+      "el profesional de fisioterapia demo trabaja tendinopatías con un enfoque activo y progresivo, buscando mejorar la capacidad del tejido para tolerar movimiento y carga.",
     faqs: [
       {
         question: "¿La fisioterapia ayuda aunque lleve meses con dolor tendinoso?",
@@ -368,9 +368,9 @@ export const tratamientosSeo = {
     cardTitle: "Contracturas y sobrecargas",
     cardDescription:
       "Fisioterapia para contracturas, sobrecargas y síndrome miofascial con tratamiento orientado a descargar y recuperar movimiento.",
-    metaTitle: "Fisioterapia para contracturas en Madrid | Bivalente Salud",
+    metaTitle: "Fisioterapia para contracturas en Madrid | Clinic Demo",
     metaDescription:
-      "Tratamiento de contracturas y sobrecargas musculares en Madrid con Borja Estarellas. Fisioterapia a domicilio para dolor muscular y puntos gatillo.",
+      "Tratamiento de contracturas y sobrecargas musculares en Madrid con Fisioterapia Demo. Fisioterapia a domicilio para dolor muscular y puntos gatillo.",
     heroTitle: "Fisioterapia para contracturas y sobrecargas en Madrid",
     heroSubtitle:
       "Tratamiento para dolor muscular, rigidez y síndrome miofascial con un enfoque práctico para aliviar y recuperar movilidad.",
@@ -415,7 +415,7 @@ export const tratamientosSeo = {
         "También se pueden revisar ejercicios, movilidad y recomendaciones para mantener la mejoría entre sesiones.",
     },
     professionalBlurb:
-      "Borja aborda contracturas y síndrome miofascial combinando descarga, movilidad y ejercicio para reducir dolor y mejorar función.",
+      "el profesional de fisioterapia demo aborda contracturas y síndrome miofascial combinando descarga, movilidad y ejercicio para reducir dolor y mejorar función.",
     faqs: [
       {
         question: "¿La fisioterapia puede ayudar si siempre se me carga la misma zona?",
@@ -442,9 +442,9 @@ export const tratamientosSeo = {
     cardTitle: "Esguinces y recuperación post-lesión",
     cardDescription:
       "Fisioterapia para esguinces y recuperación funcional tras lesión, con progresión de carga y vuelta gradual a la actividad.",
-    metaTitle: "Fisioterapia para esguinces en Madrid | Bivalente Salud",
+    metaTitle: "Fisioterapia para esguinces en Madrid | Clinic Demo",
     metaDescription:
-      "Tratamiento de fisioterapia para esguinces en Madrid con Borja Estarellas. Recuperación post-lesión con trabajo manual, ejercicio y seguimiento.",
+      "Tratamiento de fisioterapia para esguinces en Madrid con Fisioterapia Demo. Recuperación post-lesión con trabajo manual, ejercicio y seguimiento.",
     heroTitle: "Fisioterapia para esguinces en Madrid",
     heroSubtitle:
       "Recuperación funcional tras un esguince con tratamiento adaptado a la fase de la lesión y a la actividad que necesitas retomar.",
@@ -489,7 +489,7 @@ export const tratamientosSeo = {
         "El seguimiento permite revisar ejercicios, carga y evolución para ajustar el trabajo entre sesiones.",
     },
     professionalBlurb:
-      "Borja acompaña la recuperación post-lesión con un enfoque progresivo, buscando que la articulación recupere función y tolerancia con seguridad.",
+      "el profesional de fisioterapia demo acompaña la recuperación post-lesión con un enfoque progresivo, buscando que la articulación recupere función y tolerancia con seguridad.",
     faqs: [
       {
         question: "¿Se puede empezar fisioterapia aunque el esguince sea reciente?",
@@ -516,9 +516,9 @@ export const tratamientosSeo = {
     cardTitle: "Lesiones deportivas",
     cardDescription:
       "Fisioterapia deportiva para tratar dolor, recuperar función y volver a entrenar con una progresión coherente y segura.",
-    metaTitle: "Fisioterapia deportiva en Madrid | Bivalente Salud",
+    metaTitle: "Fisioterapia deportiva en Madrid | Clinic Demo",
     metaDescription:
-      "Fisioterapia deportiva en Madrid con Borja Estarellas. Tratamiento de lesiones, readaptación y vuelta progresiva al entrenamiento.",
+      "Fisioterapia deportiva en Madrid con Fisioterapia Demo. Tratamiento de lesiones, readaptación y vuelta progresiva al entrenamiento.",
     heroTitle: "Fisioterapia deportiva en Madrid",
     heroSubtitle:
       "Tratamiento de lesiones deportivas y readaptación para volver a entrenar con seguridad, criterio y progresión real.",
@@ -558,12 +558,12 @@ export const tratamientosSeo = {
     ],
     modality: {
       presencial:
-        "Borja trabaja lesiones deportivas tanto a domicilio como con seguimiento adaptado a tus objetivos de vuelta a la actividad.",
+        "el profesional de fisioterapia demo trabaja lesiones deportivas tanto a domicilio como con seguimiento adaptado a tus objetivos de vuelta a la actividad.",
       online:
         "El seguimiento también sirve para ajustar progresiones, carga y ejercicios cuando ya estás en fase activa de readaptación.",
     },
     professionalBlurb:
-      "Borja integra fisioterapia deportiva y ejercicio terapéutico para que la recuperación no se quede a medias y puedas volver a entrenar mejor.",
+      "el profesional de fisioterapia demo integra fisioterapia deportiva y ejercicio terapéutico para que la recuperación no se quede a medias y puedas volver a entrenar mejor.",
     faqs: [
       {
         question: "¿La fisioterapia deportiva sirve si sigo entrenando con molestias?",
@@ -590,9 +590,9 @@ export const tratamientosSeo = {
     cardTitle: "Fascitis plantar",
     cardDescription:
       "Tratamiento de fascitis plantar y dolor de pie con abordaje progresivo para mejorar apoyo, carga y vuelta a la actividad.",
-    metaTitle: "Fisioterapia para fascitis plantar en Madrid | Bivalente Salud",
+    metaTitle: "Fisioterapia para fascitis plantar en Madrid | Clinic Demo",
     metaDescription:
-      "Fisioterapia para fascitis plantar en Madrid con Borja Estarellas. Tratamiento del dolor de pie y apoyo con ejercicio terapéutico y seguimiento.",
+      "Fisioterapia para fascitis plantar en Madrid con Fisioterapia Demo. Tratamiento del dolor de pie y apoyo con ejercicio terapéutico y seguimiento.",
     heroTitle: "Fisioterapia para fascitis plantar en Madrid",
     heroSubtitle:
       "Tratamiento del dolor plantar para mejorar apoyo, carga y tolerancia al caminar, entrenar o estar de pie.",
@@ -637,7 +637,7 @@ export const tratamientosSeo = {
         "El seguimiento permite revisar progresiones, ejercicios y adaptación de carga cuando el dolor va cambiando.",
     },
     professionalBlurb:
-      "Borja trata fascitis plantar con una combinación de valoración funcional, trabajo manual y ejercicio progresivo orientado a recuperar apoyo y movimiento.",
+      "el profesional de fisioterapia demo trata fascitis plantar con una combinación de valoración funcional, trabajo manual y ejercicio progresivo orientado a recuperar apoyo y movimiento.",
     faqs: [
       {
         question: "¿La fascitis plantar mejora solo con reposo?",
@@ -668,8 +668,8 @@ export function getTreatmentMetadata(slug) {
 
   if (!treatment) {
     return {
-      title: "Fisioterapia en Madrid | Bivalente Salud",
-      description: "Fisioterapia a domicilio en Madrid con Bivalente Salud.",
+      title: "Fisioterapia en Madrid | Clinic Demo",
+      description: "Fisioterapia a domicilio en Madrid con Clinic Demo.",
     };
   }
 
@@ -678,3 +678,6 @@ export function getTreatmentMetadata(slug) {
     description: treatment.metaDescription,
   };
 }
+
+
+

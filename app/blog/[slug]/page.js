@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
 
   if (!post || post.estado !== "published") {
     return buildMetadata({
-      title: "Artículo no encontrado | Bivalente Salud",
+      title: "Artículo no encontrado | Clinic Demo",
       description: "El artículo solicitado no está disponible.",
       path: `/blog/${slug}`,
       robots: {
@@ -44,9 +44,9 @@ export async function generateMetadata({ params }) {
   }
 
   const baseTitle = post.meta_title || post.titulo;
-  const title = baseTitle.includes("Bivalente Salud")
+  const title = baseTitle.includes("Clinic Demo")
     ? baseTitle
-    : `${baseTitle} | Bivalente Salud`;
+    : `${baseTitle} | Clinic Demo`;
   const rawDescription =
     post.meta_description ||
     post.extracto ||
@@ -159,3 +159,4 @@ export default async function BlogPostPage({ params }) {
     </main>
   );
 }
+

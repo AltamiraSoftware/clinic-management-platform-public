@@ -30,7 +30,7 @@ export default function BlogDashboardTable({ initialPosts, userId }) {
   }, [posts, search]);
 
   async function handleDelete(postId) {
-    const confirmed = window.confirm("Esta acción borrará el artículo de forma permanente.");
+    const confirmed = window.confirm("Esta acciÃ³n borrarÃ¡ el artÃ­culo de forma permanente.");
 
     if (!confirmed) {
       return;
@@ -40,10 +40,10 @@ export default function BlogDashboardTable({ initialPosts, userId }) {
       try {
         await deleteBlogPost(supabase, postId, userId);
         setPosts((current) => current.filter((post) => post.id !== postId));
-        setFeedback("Artículo eliminado correctamente.");
+        setFeedback("ArtÃ­culo eliminado correctamente.");
         router.refresh();
       } catch (error) {
-        setFeedback(error.message || "No se pudo eliminar el artículo.");
+        setFeedback(error.message || "No se pudo eliminar el artÃ­culo.");
       }
     });
   }
@@ -56,7 +56,7 @@ export default function BlogDashboardTable({ initialPosts, userId }) {
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#61764B]">
               Dashboard blog
             </p>
-            <h1 className="mt-2 text-3xl font-bold text-[#0A4D68]!">Tus artículos</h1>
+            <h1 className="mt-2 text-3xl font-bold text-[#0A4D68]!">Tus artÃ­culos</h1>
             <p className="mt-2 max-w-2xl text-sm text-[#245953]">
               Gestiona borradores y publicaciones desde el mismo panel profesional. Cada profesional solo ve y modifica sus propios posts.
             </p>
@@ -65,13 +65,13 @@ export default function BlogDashboardTable({ initialPosts, userId }) {
           <div className="flex flex-col gap-3 sm:flex-row">
             <input
               type="search"
-              placeholder="Buscar por título o slug"
+              placeholder="Buscar por tÃ­tulo o slug"
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               className="w-full min-w-0 sm:w-72"
             />
             <Link href="/dashboard/blog/nuevo" className="bv-btn bv-btn-primary-dark bv-btn-lg">
-              Nuevo artículo
+              Nuevo artÃ­culo
             </Link>
           </div>
         </div>
@@ -84,9 +84,9 @@ export default function BlogDashboardTable({ initialPosts, userId }) {
           <table className="min-w-full">
             <thead className="bg-[#eef6f3]">
               <tr>
-                <th className="px-5 py-4 text-left text-sm font-semibold text-[#0A4D68]">Artículo</th>
+                <th className="px-5 py-4 text-left text-sm font-semibold text-[#0A4D68]">ArtÃ­culo</th>
                 <th className="px-5 py-4 text-left text-sm font-semibold text-[#0A4D68]">Estado</th>
-                <th className="px-5 py-4 text-left text-sm font-semibold text-[#0A4D68]">Categoría</th>
+                <th className="px-5 py-4 text-left text-sm font-semibold text-[#0A4D68]">CategorÃ­a</th>
                 <th className="px-5 py-4 text-left text-sm font-semibold text-[#0A4D68]">Fecha</th>
                 <th className="px-5 py-4 text-right text-sm font-semibold text-[#0A4D68]">Acciones</th>
               </tr>
@@ -112,7 +112,7 @@ export default function BlogDashboardTable({ initialPosts, userId }) {
                     </span>
                   </td>
                   <td className="px-5 py-5 align-top text-sm text-[#245953]">
-                    {post.categoria?.nombre || "Sin categoría"}
+                    {post.categoria?.nombre || "Sin categorÃ­a"}
                   </td>
                   <td className="px-5 py-5 align-top text-sm text-[#245953]">
                     {formatBlogDate(post.publicado_en || post.actualizado_en || post.creado_en)}
@@ -143,7 +143,7 @@ export default function BlogDashboardTable({ initialPosts, userId }) {
 
         {!filteredPosts.length ? (
           <div className="p-8 text-center text-sm text-[#245953]">
-            No hay artículos que coincidan con la búsqueda.
+            No hay artÃ­culos que coincidan con la bÃºsqueda.
           </div>
         ) : null}
       </div>

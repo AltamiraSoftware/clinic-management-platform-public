@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { PORTFOLIO_SITE } from "@/lib/portfolioConfig";
 
 const psychologyTreatments = [
   { label: "Ansiedad", href: "/psicologia/ansiedad" },
@@ -79,8 +80,8 @@ export default function Header({ openLogin, openRegister }) {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/logo-bivalente-salud.webp"
-            alt="Logo Bivalente Salud"
+            src={PORTFOLIO_SITE.logo}
+            alt={`Logo ${PORTFOLIO_SITE.name}`}
             width={850}
             height={77}
             priority
@@ -90,7 +91,7 @@ export default function Header({ openLogin, openRegister }) {
 
           {showBrandName && (
             <span className="-ml-3 text-[1.05rem] font-extrabold leading-none text-white transition-colors sm:text-[1.2rem] lg:-ml-5 lg:-mt-2 lg:text-2xl">
-              Bivalente Salud
+              {PORTFOLIO_SITE.name}
             </span>
           )}
         </Link>

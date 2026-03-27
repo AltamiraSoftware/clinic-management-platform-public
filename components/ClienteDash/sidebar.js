@@ -30,7 +30,7 @@ export default function DashboardSidebar() {
 
         <Link href="/logout" className="sidebar-link mt-4">
           <LogOut className="sidebar-icon" />
-          Cerrar sesión
+          Cerrar sesiÃ³n
         </Link>
 
       </nav>

@@ -7,9 +7,9 @@ import { HeartHandshake, Sparkles, CheckCircle2, MapPin, PhoneCall, Clock3 } fro
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Sobre nosotros | Bivalente Salud",
+  title: "Sobre nosotros | Clinic Demo",
   description:
-    "Conoce el enfoque, a los profesionales y la forma de trabajo de Bivalente Salud: psicología y fisioterapia con una atención cercana y clara en Madrid.",
+    "Conoce el enfoque, a los profesionales y la forma de trabajo de Clinic Demo: psicología y fisioterapia con una atención cercana y clara en Madrid.",
   path: "/sobre-nosotros",
 });
 
@@ -54,24 +54,24 @@ const trustItems = [
 
 const professionals = [
   {
-    name: "Daniela López Meléndez",
+    name: "Profesional de Psicología Demo",
     role: "Psicóloga General Sanitaria",
-    image: "/Daniela.webp",
+    image: "/professional-psychology-demo.svg",
     accent: "from-[#A4BE7B]/28 to-white/10",
     chips: ["Infanto-juvenil", "Adultos", "Pareja"],
     description:
-      "Daniela trabaja procesos terapéuticos con una mirada cercana, integradora y respetuosa. El foco está en comprender lo que pasa, ordenar el malestar y construir herramientas útiles desde el inicio.",
+      "El perfil de psicología demo trabaja procesos terapéuticos con una mirada cercana, integradora y respetuosa. El foco está en comprender lo que pasa, ordenar el malestar y construir herramientas útiles desde el inicio.",
     href: "/psicologia",
     cta: "Ver psicología",
   },
   {
-    name: "Borja Estarellas Botín",
+    name: "Profesional de Fisioterapia Demo",
     role: "Fisioterapeuta",
-    image: "/borja.png",
+    image: "/professional-physiotherapy-demo.svg",
     accent: "from-[#088395]/24 to-white/10",
     chips: ["Domicilio", "Deportiva", "Ecografía"],
     description:
-      "Borja aborda dolor, lesión y recuperación funcional combinando valoración clínica, tratamiento manual y ejercicio terapéutico. La idea es aliviar, recuperar movimiento y prevenir recaídas con un plan claro.",
+      "El perfil de fisioterapia demo aborda dolor, lesión y recuperación funcional combinando valoración clínica, tratamiento manual y ejercicio terapéutico. La idea es aliviar, recuperar movimiento y prevenir recaídas con un plan claro.",
     href: "/fisioterapia",
     cta: "Ver fisioterapia",
   },
@@ -90,7 +90,7 @@ export default function AboutPage() {
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div className="space-y-6">
               <span className="inline-flex rounded-full border border-white/16 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm">
-                Sobre Bivalente Salud
+                Sobre Clinic Demo
               </span>
               <h1 className="max-w-3xl text-4xl font-bold leading-tight text-white! md:text-5xl xl:text-6xl">
                 Psicología y fisioterapia con más{" "}
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 <span className="!text-[#A4BE7B]">criterio</span>.
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-white/82">
-                Bivalente Salud nace para hacer más fácil el primer paso: entender qué
+                Clinic Demo nace para hacer más fácil el primer paso: entender qué
                 necesitas, encontrar al profesional adecuado y empezar un proceso bien
                 orientado desde el inicio.
               </p>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 entender también en la propia web.
               </p>
 
-              <div className="flex flex-col gap-3 sm:flex-row">
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
                 <Link href="/sobre-nosotros#contacto" className="bv-btn bv-btn-primary bv-btn-lg">
                   Contactar
                 </Link>
@@ -123,9 +123,9 @@ export default function AboutPage() {
               {values.map(({ title, description, Icon }) => (
                 <article
                   key={title}
-                  className="rounded-[28px] border border-white/14 bg-white/10 p-5 shadow-[0_18px_44px_rgba(2,6,23,0.18)] backdrop-blur-md"
+                  className="rounded-[30px] border border-white/14 bg-white/10 p-5 text-center shadow-[0_18px_44px_rgba(2,6,23,0.18)] backdrop-blur-md"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-[#A4BE7B]">
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-[#A4BE7B]">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h2 className="mt-5 text-xl font-bold text-white!">{title}</h2>
@@ -138,6 +138,10 @@ export default function AboutPage() {
       </section>
 
       <section className="relative overflow-hidden bg-gradient-to-br from-[#f8faf5] to-[#A4BE7B] py-16 sm:py-18">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+        <div className="absolute -left-24 top-6 h-72 w-72 rounded-full bg-white/16 blur-3xl" />
+        <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-[#088395]/14 blur-3xl" />
+        <div className="absolute bottom-0 left-1/3 h-48 w-48 rounded-full bg-[#A4BE7B]/24 blur-3xl" />
         <div className="container mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex rounded-full border border-white/55 bg-white/35 px-4 py-2 text-sm font-semibold text-[#0A4D68] shadow-[0_10px_24px_rgba(10,77,104,0.08)] backdrop-blur-sm">
@@ -156,13 +160,25 @@ export default function AboutPage() {
             {trustItems.map(({ title, description, Icon }) => (
               <article
                 key={title}
-                className="rounded-[28px] border border-[#d8e7df] bg-white/88 p-6 shadow-[0_18px_44px_rgba(10,77,104,0.08)]"
+                className="group relative overflow-hidden rounded-[30px] border border-[#0A4D68]/12 bg-[linear-gradient(160deg,rgba(10,77,104,0.94)_0%,rgba(12,107,116,0.86)_56%,rgba(46,107,87,0.86)_100%)] p-6 text-center shadow-[0_20px_42px_rgba(10,77,104,0.14)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_28px_52px_rgba(10,77,104,0.20)] sm:p-7"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#0A4D68_0%,#088395_100%)] text-white">
-                  <Icon className="h-5 w-5" />
+                <div className="absolute inset-[1px] rounded-[29px] bg-[linear-gradient(180deg,rgba(255,255,255,0.10)_0%,rgba(255,255,255,0.03)_24%,rgba(0,0,0,0.08)_100%)]" />
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/45 to-transparent" />
+                <div className="absolute right-0 top-0 h-28 w-28 bg-[radial-gradient(circle,rgba(164,190,123,0.18)_0%,rgba(164,190,123,0)_72%)]" />
+                <div className="absolute left-0 bottom-0 h-24 w-24 bg-[radial-gradient(circle,rgba(255,255,255,0.10)_0%,rgba(255,255,255,0)_72%)]" />
+
+                <div className="relative mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-white/18 bg-white/10 text-white shadow-[0_14px_28px_rgba(2,6,23,0.18)] backdrop-blur-sm">
+                  <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-5 text-xl font-bold text-[#0A4D68]!">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#245953]">{description}</p>
+                <div className="relative mt-6">
+                  <h3 className="text-center text-xl font-bold tracking-[-0.01em] !text-white sm:text-[1.3rem]">
+                    {title}
+                  </h3>
+                  <div className="mx-auto mt-4 h-px w-16 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.82)_50%,rgba(164,190,123,0)_100%)]" />
+                </div>
+                <p className="relative mt-5 text-center text-sm leading-7 text-white/78 sm:text-base">
+                  {description}
+                </p>
               </article>
             ))}
           </div>
@@ -256,11 +272,11 @@ export default function AboutPage() {
 
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
             <ServiceContactForm
-              service="Bivalente Salud"
-              professionalName="Daniela López Meléndez y Borja Estarellas Botín"
+              service="Clinic Demo"
+              professionalName="Profesional de Psicología Demo y Profesional de Fisioterapia Demo"
               recipientEmail={[
-                "danilopezme1004@gmail.com",
-                "estarellas11088@gmail.com",
+                "hello@clinic-demo.com",
+                "contact@clinic-demo.com",
               ]}
               heading="Cuéntanos qué necesitas"
               description="Te responderemos orientándote sobre el servicio más adecuado y el siguiente paso posible."
@@ -308,3 +324,7 @@ export default function AboutPage() {
     </main>
   );
 }
+
+
+
+

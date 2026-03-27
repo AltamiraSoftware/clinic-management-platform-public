@@ -1,0 +1,16 @@
+<svg width="720" height="960" viewBox="0 0 720 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="960" rx="48" fill="url(#bg)"/>
+  <circle cx="360" cy="282" r="124" fill="#EEF6DE"/>
+  <path d="M238 760C238 678.814 303.814 613 385 613H335C416.186 613 482 678.814 482 760V830H238V760Z" fill="#EEF6DE"/>
+  <path d="M304 292C304 258.863 330.863 232 364 232C397.137 232 424 258.863 424 292V356C424 389.137 397.137 416 364 416C330.863 416 304 389.137 304 356V292Z" fill="#245953"/>
+  <circle cx="572" cy="150" r="96" fill="rgba(164,190,123,0.22)"/>
+  <circle cx="162" cy="794" r="124" fill="rgba(255,255,255,0.1)"/>
+  <text x="360" y="884" text-anchor="middle" fill="white" font-size="34" font-family="Poppins, Arial, sans-serif" font-weight="600">Fisioterapia Demo</text>
+  <defs>
+    <linearGradient id="bg" x1="56" y1="48" x2="666" y2="922" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A4D68"/>
+      <stop offset="0.5" stop-color="#088395"/>
+      <stop offset="1" stop-color="#61764B"/>
+    </linearGradient>
+  </defs>
+</svg>

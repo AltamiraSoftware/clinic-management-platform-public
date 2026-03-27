@@ -12,7 +12,7 @@ export async function POST() {
         properties: {
           enable_screenshare: true,
           enable_chat: false,
-          exp: Math.round(Date.now() / 1000) + 60 * 60, // expira en 1h
+          exp: Math.round(Date.now() / 1000) + 60 * 60,
         },
       }),
     });
@@ -20,18 +20,19 @@ export async function POST() {
     const room = await response.json();
 
     if (!response.ok) {
-      console.error("Daily API error:", room);
-      return NextResponse.json(
-        { error: "No se pudo crear la sala", details: room },
-        { status: 500 }
-      );
+      if (process.env.NODE_ENV === "development") {
+        console.error("Daily API error:", room);
+      }
+      return NextResponse.json({ error: "No se pudo crear la sala" }, { status: 500 });
     }
 
     return NextResponse.json({ url: room.url });
   } catch (err) {
-    console.error("Daily Unexpected Error:", err);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Daily unexpected error:", err);
+    }
     return NextResponse.json(
-      { error: "Error inesperado creando la sala" },
+      { error: "No se pudo crear la sala de videollamada" },
       { status: 500 }
     );
   }

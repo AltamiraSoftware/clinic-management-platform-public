@@ -14,10 +14,10 @@ export default function AppointmentCalendar({ availabilityData, onDateSelect }) 
     return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
   };
 
-  // 🟦 Semana de lunes a domingo
-  const weekDays = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
+  // ðŸŸ¦ Semana de lunes a domingo
+  const weekDays = ["Lun", "Mar", "MiÃ©", "Jue", "Vie", "SÃ¡b", "Dom"];
 
-  // 🟦 Primer día del mes con lunes como columna 1 (lunes = 0)
+  // ðŸŸ¦ Primer dÃ­a del mes con lunes como columna 1 (lunes = 0)
   const getFirstDayOfMonth = (date) => {
     const nativeDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
     return (nativeDay + 6) % 7;
@@ -28,10 +28,10 @@ export default function AppointmentCalendar({ availabilityData, onDateSelect }) 
 
   const days = [];
 
-  // 🟦 Días vacíos ajustados a calendario lunes–domingo
+  // ðŸŸ¦ DÃ­as vacÃ­os ajustados a calendario lunesâ€“domingo
   for (let i = 0; i < firstDay; i++) days.push(null);
 
-  // Días del mes
+  // DÃ­as del mes
   for (let i = 1; i <= monthDays; i++) days.push(i);
 
   // Chequear disponibilidad REAL del mapa
@@ -80,7 +80,7 @@ export default function AppointmentCalendar({ availabilityData, onDateSelect }) 
       {/* Calendario */}
       <div className="bg-[#f7faf9] rounded-lg p-4">
         
-        {/* 🟦 Semana de lunes → domingo */}
+        {/* ðŸŸ¦ Semana de lunes â†’ domingo */}
         <div className="grid grid-cols-7 gap-2 mb-4">
           {weekDays.map((d) => (
             <div
@@ -92,7 +92,7 @@ export default function AppointmentCalendar({ availabilityData, onDateSelect }) 
           ))}
         </div>
 
-        {/* Días */}
+        {/* DÃ­as */}
         <div className="grid grid-cols-7 gap-2">
           {days.map((day, idx) => (
             <div key={idx}>

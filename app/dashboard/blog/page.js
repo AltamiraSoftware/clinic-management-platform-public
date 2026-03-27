@@ -13,10 +13,10 @@ export default async function DashboardBlogPage() {
       <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
         <div className="mb-4 flex flex-wrap gap-3">
           <span className="rounded-full bg-[#e4f1ea] px-4 py-2 text-sm font-semibold text-[#256948]">
-            Categoría activa: Psicología
+            CategorÃ­a activa: PsicologÃ­a
           </span>
           <span className="rounded-full bg-[#e1eff4] px-4 py-2 text-sm font-semibold text-[#0A4D68]">
-            Categoría activa: Fisioterapia
+            CategorÃ­a activa: Fisioterapia
           </span>
         </div>
         <BlogDashboardTable initialPosts={posts} userId={user.id} />

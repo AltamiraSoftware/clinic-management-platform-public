@@ -22,7 +22,7 @@ export default function DayAppointments({
           </span>
 
           <div>
-            <h2 className="text-lg font-bold text-white">Citas del día</h2>
+            <h2 className="text-lg font-bold text-white">Citas del dÃ­a</h2>
             <p className="text-white/80 text-xs capitalize">
               {selectedDate.toLocaleDateString("es-ES", {
                 weekday: "long",
@@ -38,7 +38,7 @@ export default function DayAppointments({
           onClick={onOpenCreateModal}
           className="bv-btn bv-btn-primary"
         >
-          Añadir cita
+          AÃ±adir cita
         </button>
       </div>
 
@@ -86,7 +86,7 @@ export default function DayAppointments({
                             hora_inicio: c.hora_inicio,
                             hora_fin: c.hora_fin,
                             estado_cita: c.estado_cita,
-                            estado_pago: c.estado_pago,            // ✔ AHORA SE INCLUYE
+                            estado_pago: c.estado_pago,            // âœ” AHORA SE INCLUYE
                             notas_cliente: c.notas_cliente,
                             notas_profesional: c.notas_profesional,
                             id_franja_disponibilidad: c.id_franja_disponibilidad,

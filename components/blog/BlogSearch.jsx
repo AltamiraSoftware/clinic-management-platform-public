@@ -25,24 +25,24 @@ export default function BlogSearch({ posts, categories }) {
         <div className="mb-8 rounded-[30px] border border-white/70 bg-white/88 p-6 shadow-[0_24px_60px_rgba(10,77,104,0.12)] backdrop-blur-sm md:p-8">
           <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_260px]">
             <label className="space-y-2">
-              <span className="text-sm font-semibold text-[#0A4D68]">Buscar por título</span>
+              <span className="text-sm font-semibold text-[#0A4D68]">Buscar por tÃ­tulo</span>
               <input
                 type="search"
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
-                placeholder="Ej. ansiedad, suelo pélvico, ejercicio terapéutico..."
+                placeholder="Ej. ansiedad, suelo pÃ©lvico, ejercicio terapÃ©utico..."
                 className="w-full"
               />
             </label>
 
             <label className="space-y-2">
-              <span className="text-sm font-semibold text-[#0A4D68]">Filtrar por categoría</span>
+              <span className="text-sm font-semibold text-[#0A4D68]">Filtrar por categorÃ­a</span>
               <select
                 value={selectedCategory}
                 onChange={(event) => setSelectedCategory(event.target.value)}
                 className="w-full"
               >
-                <option value="all">Todas las categorías</option>
+                <option value="all">Todas las categorÃ­as</option>
                 {categories.map((category) => (
                   <option key={category.id} value={String(category.id)}>
                     {category.nombre}
@@ -53,7 +53,7 @@ export default function BlogSearch({ posts, categories }) {
           </div>
 
           <p className="mt-4 text-sm text-[#245953]">
-            {filteredPosts.length} artículo{filteredPosts.length === 1 ? "" : "s"} encontrado{filteredPosts.length === 1 ? "" : "s"}.
+            {filteredPosts.length} artÃ­culo{filteredPosts.length === 1 ? "" : "s"} encontrado{filteredPosts.length === 1 ? "" : "s"}.
           </p>
         </div>
 

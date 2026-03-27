@@ -1,5 +1,5 @@
 {
-  "name": "gestor-clinica",
+  "name": "clinic-management-platform-public",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -34,3 +34,4 @@
     "tailwindcss": "^4"
   }
 }
+

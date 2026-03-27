@@ -11,7 +11,7 @@ export async function POST(req) {
     const body = await req.json().catch(() => null);
 
     if (!body) {
-      return NextResponse.json({ error: "Body inválido" }, { status: 400 });
+      return NextResponse.json({ error: "Body invÃ¡lido" }, { status: 400 });
     }
 
     const { id_cliente, id_servicio, id_franja } = body;
@@ -47,7 +47,7 @@ export async function POST(req) {
 
     if (!franja.esta_disponible) {
       return NextResponse.json(
-        { error: "La franja ya no está disponible" },
+        { error: "La franja ya no estÃ¡ disponible" },
         { status: 409 }
       );
     }
@@ -57,7 +57,7 @@ export async function POST(req) {
     const successUrl = `${baseUrl}/cliente?success=true&session_id={CHECKOUT_SESSION_ID}`;
     const cancelUrl = `${baseUrl}/cliente?canceled=true`;
 
-    // 4. Crear sesión Stripe (con metadata para el webhook)
+    // 4. Crear sesiÃ³n Stripe (con metadata para el webhook)
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       payment_method_types: ["card"],
@@ -88,10 +88,10 @@ export async function POST(req) {
 
   } catch (err) {
     if (process.env.NODE_ENV === "development") {
-      console.error("❌ Error creando sesión Stripe:", err.message);
+      console.error("âŒ Error creando sesiÃ³n Stripe:", err.message);
     }
     return NextResponse.json(
-      { error: err.message ?? "Error desconocido" },
+      { error: "No se pudo crear la sesiÃ³n de pago" },
       { status: 500 }
     );
   }

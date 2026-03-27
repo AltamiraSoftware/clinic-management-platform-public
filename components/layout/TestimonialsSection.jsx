@@ -15,7 +15,7 @@ const defaultTestimonials = [
   },
   {
     name: "Lucía M.",
-    role: "Paciente de Bivalente",
+    role: "Paciente de Clinic Demo",
     quote:
       "Reservar fue sencillo y la atención estuvo muy cuidada en todo momento. Se nota un enfoque humano y una forma de trabajar muy seria.",
   },
@@ -30,7 +30,7 @@ const defaultTestimonials = [
 export default function TestimonialsSection({
   eyebrow = "Reseñas",
   title = "La confianza de quienes ya han dado el paso",
-  description = "Opiniones breves y creíbles de pacientes que valoran la cercanía, la claridad y el acompañamiento profesional de Bivalente.",
+  description = "Opiniones breves y creíbles de pacientes que valoran la cercanía, la claridad y el acompañamiento profesional de Clinic Demo.",
   testimonials = defaultTestimonials,
   theme = "light",
 }) {
@@ -87,7 +87,7 @@ export default function TestimonialsSection({
               </div>
 
               <p className={`relative mt-5 text-center text-[15px] leading-7 ${isHeroTheme ? "text-white/90" : "text-slate-700"}`}>
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
 
               <div className={`relative mt-6 pt-5 text-center ${isHeroTheme ? "border-t border-white/12" : "border-t border-[#0A4D68]/8"}`}>
@@ -117,3 +117,4 @@ function QuoteIcon({ className }) {
     </svg>
   );
 }
+

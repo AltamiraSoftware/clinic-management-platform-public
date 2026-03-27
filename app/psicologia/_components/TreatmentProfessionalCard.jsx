@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { CheckCircle, Mail, MapPin, Phone, Sparkles } from "lucide-react";
 
 const defaultServiceConfig = {
@@ -7,7 +7,7 @@ const defaultServiceConfig = {
   professionalPerspectiveEyebrow: "Enfoque clínico",
   professionalPerspectiveTitle: "Un espacio terapéutico cercano y estructurado",
   professionalHighlights: [
-    "Daniela trabaja desde una mirada integradora, adaptando las herramientas clínicas a la historia, las necesidades y el momento vital de cada persona.",
+    "la profesional de psicología demo trabaja desde una mirada integradora, adaptando las herramientas clínicas a la historia, las necesidades y el momento vital de cada persona.",
     "El proceso busca ofrecer un espacio seguro, respetuoso y útil para comprender lo que ocurre y construir nuevas formas de relación contigo y con los demás.",
   ],
 };
@@ -48,7 +48,7 @@ export default function TreatmentProfessionalCard({
               <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-[#0A4D68]/12 shadow-lg">
                 <Image
                   src={professional.image}
-                  alt={professional.cardImageAlt || `${professional.name}, profesional de Bivalente`}
+                  alt={professional.cardImageAlt || `${professional.name}, profesional de Clinic Demo`}
                   width={600}
                   height={800}
                   className="rounded-xl object-cover"
@@ -142,5 +142,7 @@ export default function TreatmentProfessionalCard({
     </section>
   );
 }
+
+
 
 
